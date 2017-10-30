@@ -1,19 +1,19 @@
 const User = require("../../models/user");
 
-const deleteUser = (req, cb) => {
-  return User.deleteUser(req.data.id, cb);
+const deleteUser = (ctx) => {
+  return User.deleteUser(ctx.request.data.id, ctx);
 }
 
-const getUserInfo = (req, cb) => {
-  return User.getUserInfo(req.data.id, cb);
+const getUserInfo = (ctx) => {
+  return User.getUserInfo(ctx.request.data.id, ctx);
 }
 
-const putUserInfo = (req, cb) => {
-  return User.putUserInfo(req.body,req.data.id, cb);
+const putUserInfo = (ctx) => {
+  return User.putUserInfo(ctx.request.body,ctx.request.data.id, ctx);
 }
 
-const userLogin = (req, cb) => {
-  return User.userLogin(req.body,cb);
+const userLogin = (ctx) => {
+  return User.userLogin(ctx.request.body,ctx);
 }
 
 module.exports = {

@@ -1,7 +1,7 @@
 const Staff = require("../../models/staff");
 
-const staffLogin = (req, cb) => {
-  return Staff.staffLogin(req.body,cb);
+const staffLogin = (ctx) => {
+  return Staff.staffLogin(ctx.request.body,ctx);
 }
 
 module.exports = {

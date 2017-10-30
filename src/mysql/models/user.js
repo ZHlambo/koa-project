@@ -32,40 +32,32 @@ var User = sequelize.define('user', userData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
-const queryKey = (id, key) => {
-  return {
-    where: {
-      [key]: id
-    }
-  }
-}
-
-const listUser = (query, cb) => {
+const listUser = (query, ctx) => {
   return User.findAll(query).then((result) => {
-    return cb(200, result)
+    return ctx.send(200, result)
   });
 }
 
-const createUser = (body, cb) => {
+const createUser = (body, ctx) => {
   body = body || {}
   if (body.password) {
     body.password = encrypt(body.password);
   }
   return User.create(body).then((result) => {
-    return cb(200, result)
+    return ctx.send(200, result)
   });
 }
 
-const deleteUser = async(id, cb) => {
-  let result = await getUserInfo(id, cb);
+const deleteUser = async(id, ctx) => {
+  let result = await getUserInfo(id, ctx);
   if (result) {
     let data = {
       deletedAt: result.dataValues.deletedAt
         ? null
         : new Date()
     }
-    return User.update(data, queryKey(id, "id")).then(() => {
-      return cb(200, {
+    return User.update(data, ctx.querykey(id, "id")).then(() => {
+      return ctx.send(200, {
         msg: result.dataValues.deletedAt
           ? "恢复成功"
           : "删除成功"
@@ -74,37 +66,37 @@ const deleteUser = async(id, cb) => {
   }
 }
 
-const getUserInfo = async(id, cb) => {
-  let result = await User.findOne(queryKey(id, "id"));
+const getUserInfo = async(id, ctx) => {
+  let result = await User.findOne(ctx.querykey(id, "id"));
   if (!result) {
-    return cb(401, {msg: "无效对象"});
+    return ctx.send(404, {msg: "无效对象"});
   }
-  cb(200, result);
+  ctx.send(200, result);
   return result;
 }
 
-const putUserInfo = async(body, id, cb) => {
-  let result = await getUserInfo(id, cb);
+const putUserInfo = async(body, id, ctx) => {
+  let result = await getUserInfo(id, ctx);
   if (result) {
     body = body || {}
     if (body.password) {
       body.password = encrypt(body.password);
     }
-    return User.update(body, queryKey(id, "id")).then(() => {
-      cb(200, {msg: "操作成功"})
+    return User.update(body, ctx.querykey(id, "id")).then(() => {
+      ctx.send(200, {msg: "操作成功"})
     });
   }
 }
 
 // var decoded = jwt.verify(token, 'secret');
-const userLogin = async(body, cb) => {
+const userLogin = async(body, ctx) => {
   let result = await User.findOne({
     where: {
       name: body.name
     }
   });
   if (!result) {
-    return cb(400, {msg: "该用户未注册"});
+    return ctx.send(400, {msg: "该用户未注册"});
   }
   body = body || {}
   if (body.password) {
@@ -116,9 +108,9 @@ const userLogin = async(body, cb) => {
       id: user.id,
       type: "client"
     });
-    cb(200, user);
+    ctx.send(200, user);
   } else {
-    cb(400, {msg: "密码错误"});
+    ctx.send(400, {msg: "密码错误"});
   }
 }
 

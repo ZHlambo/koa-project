@@ -1,32 +1,32 @@
 import cat from "../../models/cat";
 import sku from "../../models/sku";
 
-const rootCat = (req, cb) => {
-  return cat.rootCat(req.q, cb)
+const rootCat = (ctx) => {
+  return cat.rootCat(ctx.request.q, ctx)
 }
 
-const createCat = (req, cb) => {
-  return cat.createCat(req.body || {}, cb);
+const createCat = (ctx) => {
+  return cat.createCat(ctx.request.body || {}, ctx);
 }
 
-const getCatChild = (req, cb) => {
-  return cat.getCatChild(req.params.id, cb);
+const getCatChild = (ctx) => {
+  return cat.getCatChild(ctx.request.params.id, ctx);
 }
 
-const deleteCat = (req, cb) => {
-  return cat.deleteCat(req.params.id, cb);
+const deleteCat = (ctx) => {
+  return cat.deleteCat(ctx.request.params.id, ctx);
 }
 
-const getCatInfo = (req, cb) => {
-  return cat.getCatInfo(req.params.id, cb);
+const getCatInfo = (ctx) => {
+  return cat.getCatInfo(ctx.request.params.id, ctx);
 }
 
-const putCatInfo = (req, cb) => {
-  return cat.putCatInfo(req.params.id, req.body, cb);
+const putCatInfo = (ctx) => {
+  return cat.putCatInfo(ctx.request.params.id, ctx.request.body, ctx);
 }
 
-const getCatSkus = (req, cb) => {
-  return sku.getCatSkus(req.params.id, cb);
+const getCatSkus = (ctx) => {
+  return sku.getCatSkus(ctx.request.params.id, ctx);
 }
 
 module.exports = {

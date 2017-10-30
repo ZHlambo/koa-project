@@ -1,16 +1,16 @@
 import cat from "../../models/cat";
 import sku from "../../models/sku";
 
-const rootCat = (req, cb) => {
-  return cat.rootCat(req.q, cb)
+const rootCat = (ctx) => {
+  return cat.rootCat(ctx.request.q, ctx)
 }
 
-const getCatChild = (req, cb) => {
-  return cat.getCatChild(req.params.id, cb);
+const getCatChild = (ctx) => {
+  return cat.getCatChild(ctx.request.params.id, ctx);
 }
 
-const getCatSkus = (req, cb) => {
-  return sku.getCatSkus(req.params.id, cb);
+const getCatSkus = (ctx) => {
+  return sku.getCatSkus(ctx.request.params.id, ctx);
 }
 
 module.exports = {

@@ -48,28 +48,28 @@ const attrData = {
   "描述": "descs"
 }
 
-const listSku = (query, cb) => {
+const listSku = (query, ctx) => {
   return sqlSku.findAll(query).then((result) => {
-    return cb(200, result)
+    return ctx.send(200, result)
   });
 }
 
-const createSku = async(body, cb) => {
+const createSku = async(body, ctx) => {
   let check = checkData(body, skuJson.createSku);
   if (check) {
-    return cb(400, check);
+    return ctx.send(400, check);
   }
-  let cat = await Cat.getCatInfo(body.catid, cb);
+  let cat = await Cat.getCatInfo(body.catid, ctx);
   if (!cat) {
     return;
   }
   return sqlSku.create(body).then((result, err) => {
-    return cb(200, result)
+    return ctx.send(200, result)
   });
 }
 
-const deleteSku = async(id, cb) => {
-  let result = await getSkuInfo(id, cb);
+const deleteSku = async(id, ctx) => {
+  let result = await getSkuInfo(id, ctx);
   if (result) {
     let data = {
       deletedAt: result.deletedAt
@@ -79,7 +79,7 @@ const deleteSku = async(id, cb) => {
     return sqlSku.update(data, {where: {
         id
       }}).then(() => {
-      return cb(200, {
+      return ctx.send(200, {
         msg: result.deletedAt
           ? "恢复成功"
           : "删除成功"
@@ -88,38 +88,38 @@ const deleteSku = async(id, cb) => {
   }
 }
 
-const getSkuInfo = async(id, cb) => {
+const getSkuInfo = async(id, ctx) => {
   let result = await sqlSku.findOne({where: {
       id
     }});
   if (!result) {
-    return cb(401, {msg: "无效对象"});
+    return ctx.send(404, {msg: "无效对象"});
   }
-  cb(200, result);
+  ctx.send(200, result);
   return result;
 }
 
-const putSkuInfo = async(id, body, cb) => {
+const putSkuInfo = async(id, body, ctx) => {
   let check = checkData(body, skuJson.putSkuInfo);
   if (check) {
-    return cb(400, check);
+    return ctx.send(400, check);
   }
-  let result = await getSkuInfo(id, cb);
+  let result = await getSkuInfo(id, ctx);
   if (result) {
     return sqlSku.update(body, {where: {
         id
       }}).then(() => {
-      cb(200, {msg: "操作成功"})
+      ctx.send(200, {msg: "操作成功"})
     });
   }
 }
 
-const getCatSkus = async(id, cb) => {
+const getCatSkus = async(id, ctx) => {
   return listSku({
     where: {
       catid: id
     }
-  }, cb);
+  }, ctx);
 }
 
 module.exports = {

@@ -1,22 +1,22 @@
 const sku = require("../../models/sku");
 
-const listSku = (req, cb) => {
-  return sku.listSku(req.query, cb)
+const listSku = (ctx) => {
+  return sku.listSku(ctx.request.query, ctx)
 }
-const createSku = (req, cb) => {
-  return sku.createSku(req.body, cb);
-}
-
-const deleteSku = (req, cb) => {
-  return sku.deleteSku(req.params.id, cb);
+const createSku = (ctx) => {
+  return sku.createSku(ctx.request.body, ctx);
 }
 
-const getSkuInfo = (req, cb) => {
-  return sku.getSkuInfo(req.params.id, cb);
+const deleteSku = (ctx) => {
+  return sku.deleteSku(ctx.request.params.id, ctx);
 }
 
-const putSkuInfo = (req, cb) => {
-  return sku.putSkuInfo(req.params.id, req.body, cb);
+const getSkuInfo = (ctx) => {
+  return sku.getSkuInfo(ctx.request.params.id, ctx);
+}
+
+const putSkuInfo = (ctx) => {
+  return sku.putSkuInfo(ctx.request.params.id, ctx.request.body, ctx);
 }
 
 module.exports = {

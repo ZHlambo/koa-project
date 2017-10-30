@@ -1,31 +1,23 @@
 const User = require("../../models/user");
 
-const listUser = (req, cb) => {
-  return User.listUser(req.q, cb)
+const listUser = (ctx) => {
+  return User.listUser(ctx.request.q, ctx)
 }
 
-const queryKey = (req, key) => {
-  return {
-    where: {
-      [key]: req.params[key]
-    }
-  }
+const createUser = (ctx) => {
+  return User.createUser(ctx.request.body || {}, ctx);
 }
 
-const createUser = (req, cb) => {
-  return User.createUser(req.body || {}, cb);
+const deleteUser = (ctx) => {
+  return User.deleteUser(ctx.request.params.id, ctx);
 }
 
-const deleteUser = (req, cb) => {
-  return User.deleteUser(req.params.id, cb);
+const getUserInfo = (ctx) => {
+  return User.getUserInfo(ctx.request.params.id, ctx);
 }
 
-const getUserInfo = (req, cb) => {
-  return User.getUserInfo(req.params.id, cb);
-}
-
-const putUserInfo = (req, cb) => {
-  return User.putUserInfo(req.body,req.params.id, cb);
+const putUserInfo = (ctx) => {
+  return User.putUserInfo(ctx.request.body,ctx.request.params.id, ctx);
 }
 
 module.exports = {

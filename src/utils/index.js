@@ -1,11 +1,12 @@
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 
-export const checkData = (data,checkTemplate) => {
-  if (!data) return ;
+export const checkData = (data, checkTemplate) => {
+  if (!data)
+    return;
   for (let key in data) {
     if (!checkTemplate[key]) {
-      delete data[key];
+      return {msg: `不允许参数 ${key}`}
     } else {
       if (typeof data[key] != checkTemplate[key].type) {
         return {msg: `${key}格式有误，格式必须为${checkTemplate[key].type}`}
@@ -25,13 +26,6 @@ export const encrypt = (str) => {
   // sha1.update(str);
   // var password = sha1.digest("hex");  //加密后的值d
   return password;
-}
-export const queryKey = (obj, key, element) => {
-  return {
-    where: {
-      [element || key]: getOOKS(obj, key)
-    }
-  }
 }
 
 export const getOOKS = (obj, keys) => {

@@ -28,87 +28,79 @@ const sqlCat = sequelize.define('cat', catData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
-const queryKey = (id, key) => {
-  return {
-    where: {
-      [key]: id
-    }
-  }
-}
-
-const rootCat = (query, cb) => {
+const rootCat = (query, ctx) => {
   return sqlCat.findAll(Object.assign(query || {}, {
     where: {
       level: 0
     }
   })).then((result) => {
-    return cb(200, result);
+    ctx.send(200, result);
   });
 }
 
-const getCatChild = (id, cb) => {
+const getCatChild = (id, ctx) => {
   return sqlCat.findAll({
     where: {
       parentid: id
     }
   }).then((result) => {
-    return cb(200, result);
+    return ctx.send(200, result);
   });
 }
 
-const createCat = async (body, cb) => {
+const createCat = async(body, ctx) => {
   let result = true;
   if (body.parentid != undefined) {
-    result = await getCatInfo(body.parentid, cb);
-    if (result) body.level = result.level + 1;
-  } else {
+    result = await getCatInfo(body.parentid, ctx);
+    if (result)
+      body.level = result.level + 1;
+    }
+  else {
     body.level = 0;
   }
   if (result) {
     return sqlCat.create(body).then((result) => {
-      return cb(200, result)
+      return ctx.send(200, result)
     });
   }
 }
 
-const deleteCat = async (id, cb) => {
-  let result = await getCatInfo(id, cb);
+const deleteCat = async(id, ctx) => {
+  let result = await getCatInfo(id, ctx);
   if (result) {
     let data = {
-      deletedAt: result.deletedAt ?
-        null : new Date()
+      deletedAt: result.deletedAt
+        ? null
+        : new Date()
     }
-    return sqlCat.update(data, queryKey(id, "id")).then(() => {
-      return cb(200, {
-        msg: result.deletedAt ?
-          "恢复成功" : "删除成功"
+    return sqlCat.update(data, ctx.querykey(id, "id")).then(() => {
+      return ctx.send(200, {
+        msg: result.deletedAt
+          ? "恢复成功"
+          : "删除成功"
       });
     });
   }
 }
 
-const getCatInfo = async (id, cb) => {
-  let result = await sqlCat.findOne(queryKey(id, "id"));
+const getCatInfo = async(id, ctx) => {
+  let result = await sqlCat.findOne(ctx.querykey(id, "id"));
   if (!result) {
-    return cb(401, {
-      msg: "无效对象"
-    });
+    return ctx.send(404, {msg: "无效对象"});
   }
-  cb(200, result);
+  ctx.send(200, result);
   return result;
 }
 
-const putCatInfo = async (id, body, cb) => {
-  let result = await getCatInfo(id, cb);
+const putCatInfo = async(id, body, ctx) => {
+  let result = await getCatInfo(id, ctx);
   if (result) {
-    return sqlCat.update(body, queryKey(id, "id")).then(() => {
-      cb(200, {
-        msg: "操作成功"
-      })
+    return sqlCat.update(body, ctx.querykey(id, "id")).then(() => {
+      ctx.send(200, {msg: "操作成功"})
     });
   }
 }
-console.log(getCatInfo);
+
 module.exports = {
   rootCat,
   getCatChild,
