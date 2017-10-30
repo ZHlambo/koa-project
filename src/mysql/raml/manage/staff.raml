@@ -1,0 +1,25 @@
+#%RAML 1.0
+title: DORD-user
+version: 1.0
+baseUri: http://localhost
+mediaType: application/json
+annotationTypes:
+    handlerFunc: string
+    groupBy: string
+securitySchemes:
+    JWT: !include securitySechmes/jwt.raml
+types:
+    ID:
+        type: string
+        description: ����IDֵ
+        example: 57e627441bf42a657034cb07
+        pattern: ^[0-9a-fA-F]{24}$
+    User: !include types/user.json
+securBy: [JWT]
+/staff:
+    description: 单个员工
+    /login:
+        post:
+            description: 员工登录
+            (handlerFunc): staffLogin
+            (groupBy): staff

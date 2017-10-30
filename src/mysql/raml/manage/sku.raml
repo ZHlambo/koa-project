@@ -1,0 +1,45 @@
+#%RAML 1.0
+title: DORD-sku
+version: 1.0
+baseUri: http://localhost
+mediaType: application/json
+annotationTypes:
+    handlerFunc: string
+    groupBy: string
+securitySchemes:
+    JWT: !include securitySechmes/jwt.raml
+types:
+    ID:
+        type: string
+        description: ����IDֵ
+        example: 57e627441bf42a657034cb07
+        pattern: ^[0-9a-fA-F]{24}$
+    Sku: !include types/sku.json
+securBy: [JWT]
+/skus:
+    get:
+        description: 获取产品列表
+        (handlerFunc): listSku
+        (groupBy): sku
+/sku:
+    description: 单个产品
+    post:
+        description: 创建单个产品
+        (handlerFunc): createSku
+        (groupBy): auth
+    /:id:
+        uriParameters:
+            id: ID
+        delete:
+            description: 删除单个产品
+            (handlerFunc): deleteSku
+            (groupBy): auth
+        /info:
+            get:
+                description: 获取单个产品信息
+                (handlerFunc): getSkuInfo
+                (groupBy): auth
+            put:
+                description: 修改单个产品信息
+                (handlerFunc): putSkuInfo
+                (groupBy): auth

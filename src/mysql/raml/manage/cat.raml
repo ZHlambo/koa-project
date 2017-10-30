@@ -1,0 +1,54 @@
+#%RAML 1.0
+title: DORD-sku
+version: 1.0
+baseUri: http://localhost
+mediaType: application/json
+annotationTypes:
+    handlerFunc: string
+    groupBy: string
+securitySchemes:
+    JWT: !include securitySechmes/jwt.raml
+types:
+    ID:
+        type: string
+        description: ����IDֵ
+        example: 57e627441bf42a657034cb07
+        pattern: ^[0-9a-fA-F]{24}$
+    Sku: !include types/sku.json
+securBy: [JWT]
+/cat:
+    post:
+        description: 创建分类
+        (handlerFunc): createCat
+        (groupBy): auth
+    /root:
+      get:
+          description: 获取第一级分类
+          (handlerFunc): rootCat
+          (groupBy): cat
+    /:id:
+        uriParameters:
+            id: ID
+        delete:
+            description: 删除单个分类
+            (handlerFunc): deleteCat
+            (groupBy): auth
+        /child:
+            get:
+                description: 获取分类的子集分类
+                (handlerFunc): getCatChild
+                (groupBy): cat
+        /info:
+            get:
+                description: 获取单个分类信息
+                (handlerFunc): getCatInfo
+                (groupBy): cat
+            put:
+                description: 修改单个分类信息
+                (handlerFunc): putCatInfo
+                (groupBy): auth
+        /sku:
+            get:
+                description: 获取分类下所有产品
+                (handlerFunc): getCatSkus
+                (groupBy): cat

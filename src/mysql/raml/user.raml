@@ -1,0 +1,55 @@
+#%RAML 1.0
+title: DORD-user
+version: 1.0
+baseUri: http://localhost
+mediaType: application/json
+annotationTypes:
+    handlerFunc: string
+    groupBy: string
+securitySchemes:
+    JWT: !include securitySechmes/jwt.raml
+types:
+    ID:
+        type: string
+        description: ����IDֵ
+        example: 57e627441bf42a657034cb07
+        pattern: ^[0-9a-fA-F]{24}$
+    User: !include types/user.json
+securBy: [JWT]
+/users:
+    get:
+        description: 获取用户列表
+        (handlerFunc): listUser
+        (groupBy): user
+        responses:
+            200:
+                body:
+                    application/json:
+                        example: !include examples/listUser.res.json
+/user:
+    description: 单个用户
+    post:
+        description: 创建单个用户
+        (handlerFunc): createUser
+        (groupBy): user
+    /:id:
+        uriParameters:
+            id: ID
+        delete:
+            description: 删除单个用户
+            (handlerFunc): deleteUser
+            (groupBy): user
+        /info:
+            get:
+                description: 获取单个用户信息
+                (handlerFunc): getUserInfo
+                (groupBy): user
+            put:
+                description: 修改单个用户信息
+                (handlerFunc): putUserInfo
+                (groupBy): user
+    /login:
+        post:
+            description: 用户登录
+            (handlerFunc): userLogin
+            (groupBy): user

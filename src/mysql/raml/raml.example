@@ -1,0 +1,408 @@
+#%RAML 1.0
+title: 商城－管理端－商品
+version: 1.0
+baseUri: http://item.api.dev/manage
+mediaType: application/json
+securitySchemes:
+  JWT: !include securitySchemes/jwt.raml
+  RBAC: !include securitySchemes/rbac.raml
+types:
+  ID:
+    type: string
+    description: 对象ID值
+    example: 57e627441bf42a657034cb07
+    pattern: ^[0-9a-fA-F]{24}$
+  ArchivePrice: !include types/db/archivePrice.json
+  ArchivePricePiece: !include types/db/archivePricePiece.json
+  User: !include types/db/user.json
+  Attr: !include types/db/attr.json
+  Cat: !include types/db/cat.json
+  Item: !include types/db/item.json
+  Sku: !include types/db/sku.json
+  TemplatePrice: !include types/db/templatePrice.json
+  TemplatePricePiece: !include types/db/templatePricePiece.json
+  UserPrice: !include types/db/userPrice.json
+  CreateUser: !include types/createUser.json
+  CreateAttr: !include types/createAttr.json
+  CreateCat: !include types/createCat.json
+  CreateItem: !include types/createItem.json
+  CreateSku: !include types/createSku.json
+  CreateArchivePrice: !include types/createArchivePrice.json
+  CreateTemplatePrice: !include types/createTemplatePrice.json
+  PricePieces: !include types/PricePieces.json
+  Skuids: !include types/skuids.json
+  UpdateCatInfo: !include types/updateCatInfo.json
+  Updown: !include types/updown.json
+  UpdownSku: !include types/updownSku.json
+  UpdateAttrInfo: !include types/updateAttrInfo.json
+  UpdateItemInfo: !include types/updateItemInfo.json
+  UpdateSkuInfo: !include types/updateSkuInfo.json
+  UpdateTemplatePriceInfo: !include types/updateTemplatePriceInfo.json
+  UpdateArchivePriceInfo: !include types/updateArchivePriceInfo.json
+annotationTypes:
+  handlerFunc: string
+  groupBy: string
+securedBy: [RBAC]
+/cats:
+  description: 商品类目列表
+  /root:
+    get:
+      description: 获取商品根类目列表
+      (handlerFunc): listRootCats
+      (groupBy): cat
+/cat:
+  description: 单个商品类目
+  post:
+    description: 新增商品类目
+    (handlerFunc): createCat
+    (groupBy): cat
+    body:
+      application/json:
+        type: CreateCat
+        example: !include examples/createCat.req.json
+  /{catid}:
+    uriParameters:
+       catid: ID
+    delete:
+      description: 删除商品类目
+      (handlerFunc): removeCat
+      (groupBy): cat
+    /updown:
+      put:
+        description: 类目上下架
+        (handlerFunc): updownCat
+        (groupBy): cat
+        body:
+          application/json:
+            type: Updown
+            example: !include examples/updown.req.json
+    /info:
+      get:
+        description: 获取商品类目信息
+        (handlerFunc): getCatInfo
+        (groupBy): cat
+      put:
+        description: 更新商品类目信息
+        (handlerFunc): updateCatInfo
+        (groupBy): cat
+        body:
+          application/json:
+            example: !include examples/updateCatInfo.req.json
+    /children:
+      get:
+        description: 获取商品子类目列表
+        (handlerFunc): getCatChildren
+        (groupBy): cat
+/attrs:
+  description: 商品属性集列表
+  delete:
+    description: 批量删除属性集
+    (handlerFunc): removeAttrs
+    (groupBy): attr
+  /{catid}:
+    uriParameters:
+      catid: ID
+    get:
+      description: 获取某品类下的属性集列表
+      (handlerFunc): listCatAttrs
+      (groupBy): attr
+/attr:
+  description: 单个商品属性集
+  post:
+    description: 新增属性集
+    (handlerFunc): createAttr
+    (groupBy): attr
+    body:
+      application/json:
+        type: CreateAttr
+        example: !include examples/createAttr.req.json
+  /{attrid}:
+    uriParameters:
+      attrid: ID
+    /info:
+      put:
+        description: 修改属性集
+        (handlerFunc): updateAttrInfo
+        (groupBy): attr
+        body:
+          application/json:
+            type: UpdateAttrInfo
+            example: !include examples/updateAttrInfo.req.json
+      get:
+        description: 获取属性集信息
+        (handlerFunc): getAttrInfo
+        (groupBy): attr
+/items:
+  description: 商品列表
+  /{catid}:
+    uriParameters:
+      catid: ID
+    get:
+      description: 获取某类目下的商品列表
+      (handlerFunc): listItems
+      (groupBy): item
+/item:
+  description: 单个商品
+  post:
+    description: 新增商品
+    (handlerFunc): createItem
+    (groupBy): item
+    body:
+      application/json:
+        type: CreateItem
+        example: !include examples/createItem.req.json
+  delete:
+    description: 删除商品
+    (handlerFunc): removeItem
+    (groupBy): item
+  /{itemid}:
+    uriParameters:
+      itemid: ID
+    delete:
+      description: 删除商品
+      (handlerFunc): removeItem
+      (groupBy): item
+    /updown:
+      put:
+        description: 商品上下架
+        (handlerFunc): updownItem
+        (groupBy): item
+        body:
+          application/json:
+            type: Updown
+            example: !include examples/updown.req.json
+    /info:
+      get:
+        description: 获取商品信息
+        (handlerFunc): getItemInfo
+        (groupBy): item
+      put:
+        description: 修改商品信息
+        (handlerFunc): updateItemInfo
+        (groupBy): item
+        body:
+          application/json:
+            type: UpdateAttrInfo
+            example: !include examples/updateAttrInfo.req.json
+    /skus:
+      get:
+        description: 获取某商品下的产品列表
+        (handlerFunc): getItemSkus
+        (groupBy): item
+/sku:
+  description: 单个产品
+  post:
+    description: 添加产品
+    (handlerFunc): createSku
+    (groupBy): sku
+    body:
+      application/json:
+        type: CreateSku
+        example: !include examples/createSku.req.json
+  /{skuid}:
+    uriParameters:
+      skuid: ID
+    delete:
+      description: 删除产品
+      (handlerFunc): removeSku
+      (groupBy): sku
+    /updown:
+      put:
+        description: 产品上下架
+        (handlerFunc): updownSku
+        (groupBy): sku
+        body:
+          application/json:
+            type: UpdownSku
+            example: !include examples/updown.req.json
+    /info:
+      get:
+        description: 获取产品信息
+        (handlerFunc): getSkuInfo
+        (groupBy): sku
+      put:
+        description: 修改产品信息
+        (handlerFunc): updateSkuInfo
+        (groupBy): sku
+        body:
+          application/json:
+            type: UpdateSkuInfo
+            example: !include examples/updateSkuInfo.req.json
+    /templatePrices:
+      get:
+        description: 获取产品在各模板下价格
+        (handlerFunc): getSkuTemplatePrices
+        (groupBy): sku
+    /userPrices:
+      get:
+        description: 获取产品用户价格
+        (handlerFunc): getSkuUserPrices
+        (groupBy): sku
+        queryParameters:
+          q:
+            description: 查询
+            type: string
+            required: true
+            example: '{"q":{"skuids":["58148336a1b890369d373a13"]}}'
+/templatePrices:
+  description: 价格模板列表
+  get:
+    description: 获取价格模板列表
+    (handlerFunc): listTemplatePrices
+    (groupBy): templatePrice
+    queryParameters:
+      q:
+        description: 查询
+        type: string
+        required: true
+        example: '{"q":{"skuids":["58148336a1b890369d373a14"]}}'
+/templatePrice:
+  description: 单个价格模板
+  post:
+    description: 新增价格模板
+    (handlerFunc): createTemplatePrice
+    (groupBy): templatePrice
+    body:
+      application/json:
+        type: CreateTemplatePrice
+        example: !include examples/createTemplatePrice.req.json
+  /{tempid}:
+    uriParameters:
+      tempid: ID
+    delete:
+      description: 删除价格模板
+      (handlerFunc): removeTemplatePrice
+      (groupBy): templatePrice
+    /info:
+      get:
+        description: 获取价格模板信息
+        (handlerFunc): getTemplatePriceInfo
+        (groupBy): templatePrice
+      put:
+        description: 修改价格模板信息
+        (handlerFunc): updateTemplatePriceInfo
+        (groupBy): templatePrice
+        body:
+          application/json:
+            type: UpdateTemplatePriceInfo
+            example: !include examples/updateTemplatePriceInfo.req.json
+    /pieces:
+      put:
+        description: 批量修改模板价
+        (handlerFunc): updateTemplatePricePieces
+        (groupBy): templatePrice
+        body:
+          application/json:
+            type: PricePieces
+            example: !include examples/PricePieces.req.json
+      get:
+        description: 获取模板下报价
+        (handlerFunc): getTemplatePricePieces
+        (groupBy): templatePrice
+/userPrices:
+  description: 用户价格列表
+  /{userid}:
+    uriParameters:
+      userid: ID
+    get:
+      description: 获取产品的自定义价格
+      (handlerFunc): getUserPrices
+      (groupBy): userPrice
+      queryString:
+        type: Skuids
+        example: !include examples/skuids.req.json
+    delete:
+      description: 批量删除用户价格
+      (handlerFunc): removeUserPrices
+      (groupBy): userPrice
+      body:
+        application/json:
+          type: Skuids
+          example: !include examples/skuids.req.json
+    put:
+      description: 批量添加或修改用户价格
+      (handlerFunc): upsertUserPrices
+      (groupBy): userPrice
+      body:
+        application/json:
+          type: PricePieces
+          example: !include examples/PricePieces.req.json
+/archivePrices:
+  description: 价格归档单列表
+  get:
+    description: 获取价格归档单列表
+    (handlerFunc): listArchivePrices
+    (groupBy): archivePrice
+/archivePrice:
+  description: 单个价格归档单
+  post:
+    description: 新增价格归档单
+    (handlerFunc): createArchivePrice
+    (groupBy): archivePrice
+    body:
+      application/json:
+        type: CreateArchivePrice
+        example: !include examples/createArchivePrice.req.json
+  /{archiveid}:
+    uriParameters:
+      archiveid: ID
+    delete:
+      description: 删除价格归档单
+      (handlerFunc): removeArchivePrice
+      (groupBy): archivePrice
+    /info:
+      get:
+        description: 获取价格归档单
+        (handlerFunc): getArchivePriceInfo
+        (groupBy): archivePrice
+      put:
+        description: 修改价格归档单
+        (handlerFunc): updateArchivePrice
+        (groupBy): archivePrice
+        body:
+          application/json:
+            type: UpdateArchivePriceInfo
+            example: !include examples/updateArchivePriceInfo.req.json
+    /pieces:
+      get:
+        description: 获取报价列表
+        (handlerFunc): listArchivePricesPieces
+        (groupBy): archivePrice
+      delete:
+        description: 批量删除报价
+        (handlerFunc): removeArchivePricePieces
+        (groupBy): archivePrice
+        body:
+          application/json:
+            type: Skuids
+            example: !include examples/skuids.req.json
+      put:
+        description: 批量添加或修改报价
+        (handlerFunc): upsertArchivePricePieces
+        (groupBy): archivePrice
+        body:
+          application/json:
+            type: PricePieces
+            example: !include examples/PricePieces.req.json
+/users:
+  get:
+    description: 获取用户列表
+    (handlerFunc): listUsers
+    (groupBy): user
+/user:
+  description: 价格归档单列表
+  post:
+    description: 新建用户
+    (handlerFunc): createUser
+    (groupBy): user
+    body:
+      application/json:
+        type: CreateUser
+        example: !include examples/createUser.req.json
+  /{userid}:
+    uriParameters:
+      itemid: ID
+    delete:
+      description: 删除用户
+      (handlerFunc): removeUser
+      (groupBy): user
