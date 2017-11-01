@@ -6,18 +6,7 @@ module.exports = async function(ctx, next) {
 
   let token = request.header.authorization,
     user;
-  /* 解析query并重新赋值给request.q    */
-  if (request.query)
-    request.q = JSON.parse(request.query.q || "{}");
 
-  /* 解析token并重新赋值给request.data    */
-  console.log(token);
-  try {
-    user = jwt.verify(token, 'secret');
-    request.data = user;
-  } catch (e) {
-    console.log(e, "catch");
-  } finally {}
   /* 定义ctx.send 响应请求  */
   ctx.set('Access-Control-Allow-Origin', '*');
   ctx.set('Access-Control-Request-Method', '*');

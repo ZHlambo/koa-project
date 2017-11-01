@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>koa-project docs</title>
+  <link href="https://cdn.bootcss.com/codemirror/5.30.0/codemirror.min.css" rel="stylesheet">
+  <style media="screen">
+    body{
+      background-color: #eee;
+    }
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      color: #333;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 10px 10%;
+    }
+
+    .handler {
+      display: flex;
+      position: relative;
+      align-items: center;
+      border-bottom: 1px solid #aaa;
+      cursor: pointer;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 5px 5px 0 0;
+    }
+    .urlBody{
+        display: flex;
+        background: white;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    .close .urlBody{
+        height: 0px;
+    }
+    .open .urlBody {
+        height: 400px;
+    }
+    .open .handler {
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+    .btn {
+      position: absolute;
+      right: 0;
+      bottom: 1px;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 5px 5px 0 0;
+      margin-bottom: -1px;
+      cursor: pointer;
+    }
+
+    .post {
+      background: #1EA18D;
+    }
+
+    .delete {
+      background: #d14956;
+    }
+
+    .put {
+      background: #87538f;
+    }
+
+    .get {
+      background: #0B88B9;
+    }
+    .req{
+      padding: 0 10px;
+      width: 50%;
+      border-right: 1px solid #ddd;
+    }
+    .res{
+      background: #f3f4f5;
+      padding: 0 10px;
+      width: 50%;
+    }
+    .body{
+      border:1px solid #ccc;
+      margin:5px 0;
+      padding:5px;
+      min-height: 200px;
+    }
+    .title{
+      font-family: "Lato, Helvetica Neue, Helvetica, Arial, sans-serif";
+      margin: 10px 0;
+      color: #4c5272;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+    }
+    .header{
+      color: #000;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .input{
+      max-width: 50%;
+      height: 36px;
+      padding: 0 5px;
+      border: 1px solid #d6d7d9;
+      border-radius: 3px;
+      background-color: #fff;
+      color: #333;
+      font-size: 16px;
+    }
+    .add{
+      background: #9ea0ad;
+      color: white;
+      font-weight: bold;
+    }
+  </style>
+  <script src="https://cdn.bootcss.com/codemirror/5.30.0/codemirror.min.js"></script>
+  <script src="https://cdn.bootcss.com/codemirror/5.30.0/addon/lint/lint.min.js"></script>
+  <script src="https://cdn.bootcss.com/codemirror/5.30.0/addon/lint/json-lint.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <div>
+      <%= str %>
+    </div>
+    <ul id="ul" data-handlers=<%= JSON.stringify(handlers) %>>
+      <%
+        for(var i= 0; i < handlers.length; i++) {
+        %>
+        <li class="close">
+          <div class="handler" onclick="openbody(this,<%= JSON.stringify(handlers[i]) %>)">
+            <div><%= handlers[i].uri %></div>
+            <button class="<%= handlers[i].verb %> btn"><%= handlers[i].verb %></button>
+          </div>
+          <div class="urlBody">
+            <div class="req">
+              <div class="title">description:</div>
+              <div>
+                <%= handlers[i].description %>
+              </div>
+              <div class="title">
+                <span>HEADERS:</span>
+                <button class="add">Add</button>
+              </div>
+              <div>
+                <div class="header">
+                  <span>Authorization:</span>
+                  <input class="input"/>
+                </div>
+              </div>
+              <div>
+                <span class="header">body:</span>
+                <div class="body">
+                  <textarea class="textarea">
+
+                  </textarea>
+                </div>
+              </div>
+            </div>
+            <div class="res">
+              <span class="header">response:</span>
+              <div class="body">
+
+              </div>
+            </div>
+          </div>
+        </li>
+        <% } %>
+    </ul>
+  </div>
+</body>
+
+<script type="text/javascript">
+function openbody(e,handler){
+  var methods = document.getElementsByTagName("li");
+  var action = e.parentElement.className == "open" ? "close" : "open";
+  for (var i = 0; i < methods.length; i++) {
+    if (methods[i] != e.parentElement) {
+      methods[i].className = "close";
+    } else {
+      methods[i].className = action;
+    }
+  }
+  console.log(CodeMirror.lint.json(JSON.stringify(handler.body.example)));
+  var textareas = e.parentElement.getElementsByClassName("textarea");
+  for (var i = 0; i < textareas.length; i++) {
+    var editor = CodeMirror.fromTextArea(textareas[i], {
+        mode: "application/json",
+      lineNumbers: true,
+      lint:true,
+      gutters:["CodeMirror-json-lint"],
+      linter:true,
+    });
+    console.log(editor);
+      editor.setValue(handler.body && JSON.stringify(handler.body.example))
+      console.log(handler.body && JSON.stringify(handler.body.example));
+  }
+}
+</script>
+</html>

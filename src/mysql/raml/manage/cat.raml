@@ -1,26 +1,17 @@
 #%RAML 1.0
-title: DORD-sku
+title: DORD-cat
 version: 1.0
-baseUri: http://localhost
+baseUri: http://localhost:3000
 mediaType: application/json
-annotationTypes:
-    handlerFunc: string
-    groupBy: string
-securitySchemes:
-    JWT: !include securitySechmes/jwt.raml
-types:
-    ID:
-        type: string
-        description: ����IDֵ
-        example: 57e627441bf42a657034cb07
-        pattern: ^[0-9a-fA-F]{24}$
-    Sku: !include types/sku.json
-securBy: [JWT]
 /cat:
     post:
         description: 创建分类
         (handlerFunc): createCat
         (groupBy): auth
+        body:
+          application/json:
+            type: createCat
+            example: !include json/createCat.req.json
     /root:
       get:
           description: 获取第一级分类

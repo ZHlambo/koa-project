@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>koa-project docs</title>
+  <style media="screen">
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    li {
+      list-style-type: none;
+      margin: 5px;
+    }
+
+    button {
+      padding: 5px;
+      font-size: 15px;
+    }
+
+    a {
+      color: black;
+      text-decoration-line: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <%
+    for(var type in ramls) {
+      var typeRamls = ramls[type];
+    %>
+      <h2><strong><%= type %></strong></h2>
+      <ul>
+        <%
+        for(var i= 0; i < typeRamls.length; i++) {
+        %>
+          <li>
+            <button><a href=<%= "docs/" + type + "/" + typeRamls[i].file %>><%= typeRamls[i].path.replace(__dirname,"") %></a></button>
+          </li>
+          <% } %>
+      </ul>
+      <% } %>
+  </div>
+</body>
+
+</html>

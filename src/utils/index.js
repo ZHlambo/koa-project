@@ -1,5 +1,6 @@
-const crypto = require('crypto');
-const jwt = require('jsonwebtoken');
+import crypto from 'crypto';
+import xlsx from "node-xlsx";
+import jwt from 'jsonwebtoken';
 
 export const checkData = (data, checkTemplate) => {
   if (!data)
@@ -20,15 +21,15 @@ export const jwtSign = (data, time) => {
   })
 }
 export const encrypt = (str) => {
-  var md5 = crypto.createHash('md5');
-  var password = md5.update('lambo_koa_project').digest('base64');
-  // var sha1 = crypto.createHash("sha1");//定义加密方式:md5不可逆,此处的md5可以换成任意hash加密的方法名称；
+  let md5 = crypto.createHash('md5');
+  let password = md5.update('lambo_koa_project').digest('base64');
+  // let sha1 = crypto.createHash("sha1");//定义加密方式:md5不可逆,此处的md5可以换成任意hash加密的方法名称；
   // sha1.update(str);
-  // var password = sha1.digest("hex");  //加密后的值d
+  // let password = sha1.digest("hex");  //加密后的值d
   return password;
 }
 
-export const getOOKS = (obj, keys) => {
+export const getVOO = (obj, keys) => {
   if (!obj) {
     return obj;
   }
@@ -44,23 +45,30 @@ export const getOOKS = (obj, keys) => {
   return value;
 }
 
-const parseExcel = (path) => {
-  var workSheetsFromFile = xlsx.parse(path);
-  let attr;
+export const parseExcel = (path) => {
+  let workSheetsFromFile = xlsx.parse(path);
+  let attr,obj={};
   let array = [];
-  for (var i = 0; i < workSheetsFromFile.length; i++) {
+  let attrData = {
+    "名称": "title",
+    "属性": "attr",
+    "价格": "pirce",
+    "图片": "images",
+    "描述": "descs"
+  }
+  for (let i = 0; i < workSheetsFromFile.length; i++) {
     if (workSheetsFromFile[i].data && workSheetsFromFile[i].data instanceof Array) {
       attr = workSheetsFromFile[i].data[0];
-      for (var l = 0; l < attr.length; l++) {
-        attr[l] = attrData[attr[l]];
+      if (!attr) break;
+      for (let m = 0; m < attr.length; m++) {
+        attr[m] = attrData[attr[m]];
       }
-      for (var j = 0; j < workSheetsFromFile[i].data.length; j++) {
+      for (let j = 0; j < workSheetsFromFile[i].data.length; j++) {
         if (workSheetsFromFile[i].data[j].length == attr.length) {
-          for (var k = 0; k < attr.length; k++) {
-            array.push({
-              [attr[k]]: workSheetsFromFile[i].data[j][k]
-            })
+          for (let k = 0; k < attr.length; k++) {
+            obj[attr[k]] = workSheetsFromFile[i].data[j][k];
           }
+          array.push(obj);
         } else {
           return {msg: "数据格式有误，请重新下载模版并填写"};
         }

@@ -1,7 +1,7 @@
 const User = require("../../models/user");
 
 const listUser = (ctx) => {
-  return User.listUser(ctx.request.q, ctx)
+  return User.listUser(ctx.query, ctx)
 }
 
 const createUser = (ctx) => {
@@ -9,15 +9,15 @@ const createUser = (ctx) => {
 }
 
 const deleteUser = (ctx) => {
-  return User.deleteUser(ctx.request.params.id, ctx);
+  return User.deleteUser(ctx.params.id, ctx);
 }
 
 const getUserInfo = (ctx) => {
-  return User.getUserInfo(ctx.request.params.id, ctx);
+  return User.getUserInfo(ctx.params.id, ctx);
 }
 
 const putUserInfo = (ctx) => {
-  return User.putUserInfo(ctx.request.body,ctx.request.params.id, ctx);
+  return User.putUserInfo(ctx.request.body,ctx.params.id, ctx);
 }
 
 module.exports = {

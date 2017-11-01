@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 import Cat from "./cat"
-import {checkData} from '../../utils';
+import {checkData,parseExcel} from '../../utils';
 import skuJson from '../json/sku';
 
 const sequelize = new Sequelize('lambo', 'root', 'root', {
@@ -39,14 +39,6 @@ const skuData = {
 const sqlSku = sequelize.define('sku', skuData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
-
-const attrData = {
-  "名称": "title",
-  "属性": "attr",
-  "价格": "pirce",
-  "图片": "images",
-  "描述": "descs"
-}
 
 const listSku = (query, ctx) => {
   return sqlSku.findAll(query).then((result) => {

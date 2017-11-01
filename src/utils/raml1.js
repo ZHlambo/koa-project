@@ -17,51 +17,40 @@ class Raml {
   routes() {
     if (this._routes.length) {
       return this._routes
-
     }
-    let parseMethod = (ancestorUri, method) => {
-      let annotations = method.annotations
-      if (annotations.handlerFunc && annotations.groupBy) {
-        this._routes.push({
-          verb: method.method,
-          uri: ancestorUri,
-          description: method.description,
-          securedBy: method.securedBy,
-          handlerFunc: annotations.handlerFunc.structuredValue,
-          groupBy: annotations.groupBy.structuredValue
-        })
-
-      }
-
-    }
-    let parseResource = (ancestorUri, resource) => {
-      let methods = resource.methods
-      ancestorUri = ancestorUri + resource.relativeUri
-      if (methods) {
-        for (let method of methods) {
-          parseMethod(ancestorUri, method)
-
+    let parseResource = (resources, uri) => {
+      let resource,
+        methods,
+        obj;
+      for (let i = 0; i < resources.length; i++) {
+        resource = resources[i];
+        methods = resource.methods;
+        if (methods) {
+          for (let j = 0; j < methods.length; j++) {
+            obj = {
+              verb: methods[j].method,
+              uri: uri + resource.relativeUri,
+              description: methods[j].description,
+              handlerFunc: methods[j].annotations.handlerFunc.structuredValue,
+              groupBy: methods[j].annotations.groupBy.structuredValue
+            };
+            if (methods[j].body) {
+              obj.body = {
+                example: methods[j].body["application/json"].example,
+                type: methods[j].body["application/json"].type
+              };
+            }
+            this._routes.push(obj)
+          }
         }
 
-      }
-      let resources = resource.resources
-      if (resources) {
-        for (let resource of resources) {
-          parseResource(ancestorUri, resource)
-
+        if (resource.resources) {
+          parseResource(resource.resources, uri + resource.relativeUri);
         }
-
       }
-
     }
-    let resources = this.api.resources
-    if (resources) {
-      for (let resource of resources) {
-        parseResource('', resource)
 
-      }
-
-    }
+    parseResource(this.api.resources, "");
     return this._routes
 
   }
@@ -124,7 +113,6 @@ class Raml {
 module.exports = function raml(filepath) {
   let _api = parser.loadApiSync(filepath)
   let api = _api.toJSON()
-  console.log(JSON.stringify(api));
   return new Raml(api)
 
 }
