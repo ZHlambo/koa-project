@@ -59,6 +59,15 @@ const createCat = async(body, ctx) => {
     body.level = 0;
   }
   if (result) {
+    result = await getListCat({
+      where: {
+        level: body.level,
+        name: body.name
+      }
+    }, ctx);
+    if (result.length > 0) {
+      return ctx.send(400, {msg: "该分类已存在"});
+    }
     return sqlCat.create(body).then((result) => {
       return ctx.send(200, result)
     });
@@ -88,6 +97,11 @@ const getCatInfo = async(id, ctx) => {
   if (!result) {
     return ctx.send(404, {msg: "无效对象"});
   }
+  ctx.send(200, result);
+  return result;
+}
+const getListCat = async(query, ctx) => {
+  let result = await sqlCat.findAll(query);
   ctx.send(200, result);
   return result;
 }

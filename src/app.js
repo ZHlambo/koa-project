@@ -46,7 +46,8 @@ let typeRouter = (typeRaml, typeHandler, type) => {
         /* 解析query并重新赋值给query */
         ctx.query = JSON.parse(getVOO(ctx, "request.query.q") || "{}");
         /* 验权 */
-        if (route.groupBy == "auth" && (getVOO(ctx, "request.data.type") != type)) {
+        if (route.groupBy == "auth" && (getVOO(ctx, "user.type") != type)) {
+          console.log(route.groupBy == "auth", getVOO(ctx, "user.type"));
           return ctx.send(401, {msg: "token无效"});
         }
         try {

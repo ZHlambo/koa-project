@@ -106,7 +106,7 @@ const userLogin = async(body, ctx) => {
   if (result.password === encrypt(body.password)) {
     user.token = jwtSign({
       id: user.id,
-      type: "client"
+      role: "client"
     });
     ctx.send(200, user);
   } else {

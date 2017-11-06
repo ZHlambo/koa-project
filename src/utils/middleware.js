@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken');
 
 //  自定义中间件
 module.exports = async function(ctx, next) {
@@ -6,6 +6,15 @@ module.exports = async function(ctx, next) {
 
   let token = request.header.authorization,
     user;
+
+  /* 解析token并重新赋值给request.data    */
+  try {
+    user = jwt.verify(token, 'secret');
+    ctx.user = user;
+  } catch (e) {
+    console.log(e, "catch");
+  } finally {
+  };
 
   /* 定义ctx.send 响应请求  */
   ctx.set('Access-Control-Allow-Origin', '*');

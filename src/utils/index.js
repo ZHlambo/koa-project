@@ -16,9 +16,15 @@ export const checkData = (data, checkTemplate) => {
   }
 }
 export const jwtSign = (data, time) => {
-  return jwt.sign(data, 'secret', {
-    expiresIn: time || 60 * 60 * 24
-  })
+  let token;
+  try {
+    token = jwt.sign(data, 'secret', {
+      expiresIn: time || 60 * 60 * 24
+    })
+  } catch (e) {
+  } finally {
+  };
+  return token;
 }
 export const encrypt = (str) => {
   let md5 = crypto.createHash('md5');
@@ -36,18 +42,20 @@ export const getVOO = (obj, keys) => {
 
   let value;
   keys = keys && keys.split(".");
+  console.log(keys);
   if (keys instanceof Array && keys.length > 0) {
+    value = obj;
     for (let i = 0; i < keys.length; i++) {
-      value = obj[keys[i]];
+      value = value[keys[i]];
     }
   }
-
   return value;
 }
 
 export const parseExcel = (path) => {
   let workSheetsFromFile = xlsx.parse(path);
-  let attr,obj={};
+  let attr,
+    obj = {};
   let array = [];
   let attrData = {
     "名称": "title",
@@ -59,7 +67,8 @@ export const parseExcel = (path) => {
   for (let i = 0; i < workSheetsFromFile.length; i++) {
     if (workSheetsFromFile[i].data && workSheetsFromFile[i].data instanceof Array) {
       attr = workSheetsFromFile[i].data[0];
-      if (!attr) break;
+      if (!attr)
+        break;
       for (let m = 0; m < attr.length; m++) {
         attr[m] = attrData[attr[m]];
       }
