@@ -21,14 +21,12 @@ export const jwtSign = (data, time) => {
     token = jwt.sign(data, 'secret', {
       expiresIn: time || 60 * 60 * 24
     })
-  } catch (e) {
-  } finally {
-  };
+  } catch (e) {} finally {};
   return token;
 }
 export const encrypt = (str) => {
   let md5 = crypto.createHash('md5');
-  let password = md5.update('lambo_koa_project').digest('base64');
+  let password = md5.update(str || "").digest('base64');
   // let sha1 = crypto.createHash("sha1");//定义加密方式:md5不可逆,此处的md5可以换成任意hash加密的方法名称；
   // sha1.update(str);
   // let password = sha1.digest("hex");  //加密后的值d
@@ -36,20 +34,31 @@ export const encrypt = (str) => {
 }
 
 export const getVOO = (obj, keys) => {
-  if (!obj) {
-    return obj;
-  }
-
   let value;
   keys = keys && keys.split(".");
-  console.log(keys);
   if (keys instanceof Array && keys.length > 0) {
     value = obj;
     for (let i = 0; i < keys.length; i++) {
+      if (!value) return value;
       value = value[keys[i]];
     }
   }
   return value;
+}
+
+export const getVOA = (array, key, value, returnKey) => {
+  // if(!array || !(array instanceof Array)) return ""
+  if (!array)
+    return undefined;
+  for (let i in array) {
+    if (getVOO(array[i], key) === value) {
+      if (returnKey)
+        return array[i][returnKey]
+      else
+        return array[i]
+    }
+  }
+  return undefined;
 }
 
 export const parseExcel = (path) => {

@@ -24,12 +24,12 @@ const catData = {
     type: Sequelize.DataTypes.DATE
   }
 }
-const sqlCat = sequelize.define('cat', catData, {
+const Cat = sequelize.define('cat', catData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
 const rootCat = (query, ctx) => {
-  return sqlCat.findAll(Object.assign(query || {}, {
+  return Cat.findAll(Object.assign(query || {}, {
     where: {
       level: 0
     }
@@ -38,8 +38,20 @@ const rootCat = (query, ctx) => {
   });
 }
 
+const hadName = async(body, id, ctx) => {// name 检查冲突
+  if (body && body.name) {
+    let result = await Cat.findAll({where: {name: body.name}});
+    for (var i = 0; i < result.length; i++) {
+      if ((result[i].id != id || !id) && body.level == result[i].level) {
+        ctx.send(400, {msg: "分类名已存在"});
+        return true;
+      }
+    }
+  }
+}
+
 const getCatChild = (id, ctx) => {
-  return sqlCat.findAll({
+  return Cat.findAll({
     where: {
       parentid: id
     }
@@ -49,29 +61,17 @@ const getCatChild = (id, ctx) => {
 }
 
 const createCat = async(body, ctx) => {
-  let result = true;
+  let result = {level: -1};
   if (body.parentid != undefined) {
     result = await getCatInfo(body.parentid, ctx);
-    if (result)
-      body.level = result.level + 1;
-    }
-  else {
-    body.level = 0;
   }
-  if (result) {
-    result = await getListCat({
-      where: {
-        level: body.level,
-        name: body.name
-      }
-    }, ctx);
-    if (result.length > 0) {
-      return ctx.send(400, {msg: "该分类已存在"});
-    }
-    return sqlCat.create(body).then((result) => {
-      return ctx.send(200, result)
-    });
-  }
+  if (!result) return ;
+  body.level = result.level + 1;
+  result = !await hadName(body, result.id, ctx);
+  if (!result) return ;
+  return Cat.create(body).then((result) => {
+    return ctx.send(200, result);
+  });
 }
 
 const deleteCat = async(id, ctx) => {
@@ -82,7 +82,7 @@ const deleteCat = async(id, ctx) => {
         ? null
         : new Date()
     }
-    return sqlCat.update(data, ctx.querykey(id, "id")).then(() => {
+    return Cat.update(data, ctx.querykey(id, "id")).then(() => {
       return ctx.send(200, {
         msg: result.deletedAt
           ? "恢复成功"
@@ -93,26 +93,23 @@ const deleteCat = async(id, ctx) => {
 }
 
 const getCatInfo = async(id, ctx) => {
-  let result = await sqlCat.findOne(ctx.querykey(id, "id"));
+  let result = await Cat.findOne(ctx.querykey(id, "id"));
   if (!result) {
     return ctx.send(404, {msg: "无效对象"});
   }
   ctx.send(200, result);
   return result;
 }
-const getListCat = async(query, ctx) => {
-  let result = await sqlCat.findAll(query);
-  ctx.send(200, result);
-  return result;
-}
 
 const putCatInfo = async(id, body, ctx) => {
-  let result = await getCatInfo(id, ctx);
-  if (result) {
-    return sqlCat.update(body, ctx.querykey(id, "id")).then(() => {
-      ctx.send(200, {msg: "操作成功"})
-    });
-  }
+  let canUpdate = await getCatInfo(id, ctx);
+  if (!canUpdate) return ;
+  body.level = canUpdate.level;
+  canUpdate = !await hadName(body, id, ctx);
+  if (!canUpdate) return ;
+  return Cat.update(body, ctx.querykey(id, "id")).then(() => {
+    ctx.send(200, {msg: "操作成功"})
+  });
 }
 
 module.exports = {

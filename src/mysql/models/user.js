@@ -32,17 +32,29 @@ var User = sequelize.define('user', userData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
+const hadName = async(body, id, ctx) => {// name 检查冲突
+  if (body && body.name) {
+    let result = await listUser({where: {name: body.name}}, ctx);
+    for (var i = 0; i < result.length; i++) {
+      if (result[i].id != id || !id) {
+        ctx.send(400, {msg: "用户名已存在"});
+        return true;
+      }
+    }
+  }
+}
+
 const listUser = (query, ctx) => {
   return User.findAll(query).then((result) => {
-    return ctx.send(200, result)
+    ctx.send(200, result)
+    return result;
   });
 }
 
-const createUser = (body, ctx) => {
-  body = body || {}
-  if (body.password) {
-    body.password = encrypt(body.password);
-  }
+const createUser = async(body, ctx) => {
+  let canUpdate = !await hadName(body, undefined, ctx);
+  if (!canUpdate) return ;
+  body.password = encrypt(body.password);
   return User.create(body).then((result) => {
     return ctx.send(200, result)
   });
@@ -76,9 +88,9 @@ const getUserInfo = async(id, ctx) => {
 }
 
 const putUserInfo = async(body, id, ctx) => {
-  let result = await getUserInfo(id, ctx);
-  if (result) {
-    body = body || {}
+  let canUpdate = await getUserInfo(id, ctx);
+  canUpdate = !canUpdate ? canUpdate : !await hadName(body, id, ctx);
+  if (canUpdate) {
     if (body.password) {
       body.password = encrypt(body.password);
     }
@@ -88,7 +100,6 @@ const putUserInfo = async(body, id, ctx) => {
   }
 }
 
-// var decoded = jwt.verify(token, 'secret');
 const userLogin = async(body, ctx) => {
   let result = await User.findOne({
     where: {
@@ -98,15 +109,12 @@ const userLogin = async(body, ctx) => {
   if (!result) {
     return ctx.send(400, {msg: "该用户未注册"});
   }
-  body = body || {}
-  if (body.password) {
-    body.password = encrypt(body.password);
-  }
+
   let user = result.dataValues;
-  if (result.password === encrypt(body.password)) {
+  if (user.password === encrypt(body.password)) {
     user.token = jwtSign({
       id: user.id,
-      role: "client"
+      type: "client"
     });
     ctx.send(200, user);
   } else {

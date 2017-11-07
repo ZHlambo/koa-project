@@ -36,26 +36,40 @@ const skuData = {
     type: Sequelize.DataTypes.DATE
   }
 }
-const sqlSku = sequelize.define('sku', skuData, {
+const Sku = sequelize.define('sku', skuData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
+const hadTitle = async(body, id, ctx) => {// name 检查冲突
+  if (body && body.title) {
+    let result = await listSku({where: {title: body.title}}, ctx);
+    for (var i = 0; i < result.length; i++) {
+      if (result[i].id != id || !id) {
+        ctx.send(400, {msg: "产品名已存在"});
+        return true;
+      }
+    }
+  }
+}
+
 const listSku = (query, ctx) => {
-  return sqlSku.findAll(query).then((result) => {
-    return ctx.send(200, result)
+  return Sku.findAll(query).then((result) => {
+    ctx.send(200, result);
+    return result;
   });
 }
 
 const createSku = async(body, ctx) => {
   let check = checkData(body, skuJson.createSku);
-  if (check) {
-    return ctx.send(400, check);
-  }
-  let cat = await Cat.getCatInfo(body.catid, ctx);
-  if (!cat) {
-    return;
-  }
-  return sqlSku.create(body).then((result, err) => {
+  if (check) return ctx.send(400, check);
+
+  let canUpdate = await Cat.getCatInfo(body.catid, ctx);
+  if (!canUpdate) return;
+
+  canUpdate = !await hadTitle(body, undefined, ctx);
+  if (!canUpdate) return ;
+
+  return Sku.create(body).then((result, err) => {
     return ctx.send(200, result)
   });
 }
@@ -68,7 +82,7 @@ const deleteSku = async(id, ctx) => {
         ? null
         : new Date()
     }
-    return sqlSku.update(data, {where: {
+    return Sku.update(data, {where: {
         id
       }}).then(() => {
       return ctx.send(200, {
@@ -81,7 +95,7 @@ const deleteSku = async(id, ctx) => {
 }
 
 const getSkuInfo = async(id, ctx) => {
-  let result = await sqlSku.findOne({where: {
+  let result = await Sku.findOne({where: {
       id
     }});
   if (!result) {
@@ -96,14 +110,17 @@ const putSkuInfo = async(id, body, ctx) => {
   if (check) {
     return ctx.send(400, check);
   }
-  let result = await getSkuInfo(id, ctx);
-  if (result) {
-    return sqlSku.update(body, {where: {
-        id
-      }}).then(() => {
-      ctx.send(200, {msg: "操作成功"})
-    });
-  }
+  let canUpdate = await getSkuInfo(id, ctx);
+  if (!canUpdate) return;
+
+  canUpdate = !await hadTitle(body, id, ctx);
+  if (!canUpdate) return;
+
+  return Sku.update(body, {where: {
+      id
+    }}).then(() => {
+    ctx.send(200, {msg: "操作成功"})
+  });
 }
 
 const getCatSkus = async(id, ctx) => {

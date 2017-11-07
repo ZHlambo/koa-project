@@ -12,7 +12,7 @@ module.exports = async function(ctx, next) {
     user = jwt.verify(token, 'secret');
     ctx.user = user;
   } catch (e) {
-    console.log(e, "catch");
+    // console.log(e, "catch");
   } finally {
   };
 
