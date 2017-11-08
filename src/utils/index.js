@@ -47,7 +47,6 @@ export const getVOO = (obj, keys) => {
 }
 
 export const getVOA = (array, key, value, returnKey) => {
-  // if(!array || !(array instanceof Array)) return ""
   if (!array)
     return undefined;
   for (let i in array) {

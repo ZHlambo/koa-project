@@ -60,6 +60,7 @@ const listSku = (query, ctx) => {
 }
 
 const createSku = async(body, ctx) => {
+  console.log(body,"body");
   let check = checkData(body, skuJson.createSku);
   if (check) return ctx.send(400, check);
 
