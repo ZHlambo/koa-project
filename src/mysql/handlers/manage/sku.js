@@ -1,7 +1,7 @@
 const sku = require("../../models/sku");
 
 const listSku = (ctx) => {
-  return sku.listSku(ctx.queryuery, ctx)
+  return sku.listSku(ctx.query, ctx)
 }
 const createSku = (ctx) => {
   return sku.createSku(ctx.request.body, ctx);

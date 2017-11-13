@@ -22,6 +22,7 @@ const getCatInfo = (ctx) => {
 }
 
 const putCatInfo = (ctx) => {
+  console.log(ctx.request);
   return cat.putCatInfo(ctx.params.id, ctx.request.body, ctx);
 }
 

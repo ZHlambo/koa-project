@@ -1,7 +1,7 @@
 import sku from "../../models/sku";
 
 const listSku = (ctx) => {
-  return sku.listSku(ctx.queryuery, ctx);
+  return sku.listSku(ctx.query, ctx);
 }
 
 const getSkuInfo = (ctx) => {

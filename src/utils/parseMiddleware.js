@@ -17,11 +17,11 @@ module.exports = async function(ctx, next) {
   };
 
   /* 定义ctx.send 响应请求  */
-  ctx.set('Access-Control-Allow-Origin', '*');
-  ctx.set('Access-Control-Request-Method', '*');
-  ctx.set('Access-Control-Allow-Methods', 'OPTIONS,GET,DELETE,PUT,POST');
-  ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  ctx.set('Content-Type', 'application/json;charset=utf-8');
+  // ctx.set('Access-Control-Allow-Origin', '*');
+  // ctx.set('Access-Control-Request-Method', '*');
+  // ctx.set('Access-Control-Allow-Methods', 'OPTIONS,GET,DELETE,PUT,POST');
+  // ctx.set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  // ctx.set('Content-Type', 'application/json;charset=utf-8');
   ctx.send = function(status, body) {
     ctx.response.status = status;
     ctx.response.body = body;
@@ -35,5 +35,19 @@ module.exports = async function(ctx, next) {
       }
     }
   }
+
+  // 解析put和post 请求的 body并赋值给request.body
+  let body = "";
+	ctx.req.addListener("data", (data) => {
+		body += data
+	})
+	ctx.req.addListener("end", function() {
+    try {
+      request.body = JSON.parse(body);
+    } catch (e) {
+      ctx.send(500, {msg: e.message});
+    } finally {
+    }
+	})
   await next();
 }
