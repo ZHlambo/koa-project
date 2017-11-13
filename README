@@ -1,0 +1,25 @@
+koa项目
+app.js    端口监听，数据处理以及路由分发
+
+mysql     使用mysql数据库的路由以及各种连接数据库方法
+  handlers    分client用户端接口以及manage管理端接口
+  raml        api接口设计，遵从RESTFUL 的api设计模式
+  models      实际与数据库交互的方法，给handlers调用（实现用户管理用统一接口）
+  json        未完待续
+
+spider        爬虫（获取mfz的产品数据列表，并生成自己的skus统一设置catid=1）
+
+utils         工具类
+  index           工具类方法
+  parseMiddleware koa中间件，统一解析接口请求数据
+  logMiddleware   koa中间件，于路由方法后，生成api接口put，post，del等操作的日志
+  raml            解析raml文件，在用
+  raml1           自己写的解析方法，（不使用，之后可能自己重写）
+  request         使用superagent做网络请求，请求外部接口
+  resolvefiles    解析handlers文件的所有方法，与raml中的handlerFunc对应，给路由使用
+  resovePath      解析某目录下的raml文件路径数组，给路由使用
+
+window
+1、安装nodejs >=7.0的版本
+2、运行cmd   npm install （太慢建议使用cnpm淘宝镜像）
+3、运行cmd   npm run dev  即可访问 app.js 中 const port = 3000 的端口;
