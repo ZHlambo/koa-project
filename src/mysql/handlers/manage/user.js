@@ -1,7 +1,7 @@
 const User = require("../../models/user");
 
 const listUser = (ctx) => {
-  return User.listUser(ctx.query, ctx)
+  return User.listUser(ctx.q, ctx)
 }
 
 const createUser = (ctx) => {

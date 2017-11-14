@@ -6,6 +6,7 @@ import raml2html from "raml2html";
 import parserRaml from "./utils/raml1";
 import resolvefiles from "./utils/resolvefiles";
 import resolvePath from "./utils/resolvePath";
+import bodyParser from "koa-bodyparser";
 import parseMiddleware from "./utils/parseMiddleware";
 import logMiddleware from "./utils/logMiddleware";
 import cors from 'koa-cors';
@@ -25,6 +26,7 @@ let sendResbond = (ctx, status, body) => {
 
 // 初始化koa
 let app = new koa();
+app.use(bodyParser());
 // 中间件  自定义的中间件
 app.use(parseMiddleware);
 // 中间件  解决跨域
@@ -47,8 +49,8 @@ let typeRouter = (typeRaml, typeHandler, type) => {
       koaRouter[route.verb]("/" + type + route.uri, async function(ctx, next) {
         /* 解析query并重新赋值给query */
         try {
-          ctx.query = JSON.parse(getVOO(ctx, "request.query.q") || "{}");
-          ctx.query.limit = ctx.query.limit > 100 ? 100 : (ctx.query.limit || 10)
+          ctx.q = JSON.parse(getVOO(ctx.query, "q") || "{}");
+          ctx.q.limit = ctx.q.limit > 100 ? 100 : (ctx.q.limit || 10)
           /* 验权 */
           if (route.groupBy == "auth" && (getVOO(ctx, "user.type") != type)) {
             console.log(route.groupBy == "auth", getVOO(ctx, "user.type"));

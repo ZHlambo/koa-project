@@ -2,7 +2,7 @@ import cat from "../../models/cat";
 import sku from "../../models/sku";
 
 const rootCat = (ctx) => {
-  return cat.rootCat(ctx.query, ctx)
+  return cat.rootCat(ctx.q, ctx)
 }
 
 const getCatChild = (ctx) => {

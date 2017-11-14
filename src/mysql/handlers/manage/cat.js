@@ -2,7 +2,7 @@ import cat from "../../models/cat";
 import sku from "../../models/sku";
 
 const rootCat = (ctx) => {
-  return cat.rootCat(ctx.query, ctx)
+  return cat.rootCat(ctx.q, ctx)
 }
 
 const createCat = (ctx) => {
@@ -22,7 +22,7 @@ const getCatInfo = (ctx) => {
 }
 
 const putCatInfo = (ctx) => {
-  console.log(ctx.request);
+  console.log(ctx.request.body);
   return cat.putCatInfo(ctx.params.id, ctx.request.body, ctx);
 }
 

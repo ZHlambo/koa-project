@@ -43,6 +43,7 @@ export const getVOO = (obj, keys) => {
       value = value[keys[i]];
     }
   }
+  console.log(value,"value");
   return value;
 }
 

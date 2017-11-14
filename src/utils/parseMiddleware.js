@@ -36,18 +36,20 @@ module.exports = async function(ctx, next) {
     }
   }
 
-  // 解析put和post 请求的 body并赋值给request.body
-  let body = "";
-	ctx.req.addListener("data", (data) => {
-		body += data
-	})
-	ctx.req.addListener("end", function() {
-    try {
-      request.body = JSON.parse(body);
-    } catch (e) {
-      ctx.send(500, {msg: e.message});
-    } finally {
-    }
-	})
+  // // 解析put和post 请求的 body并赋值给request.body
+  // let body = "";
+	// ctx.req.addListener("data", async (data) => {
+  //   console.log(data);
+	// 	body += data;
+	// })
+	// ctx.req.addListener("end", async() => {
+  //   try {
+  //     console.log(body);
+  //     request.body = JSON.parse(body || "{}");
+  //   } catch (e) {
+  //     ctx.send(500, {msg: e.message});
+  //   } finally {
+  //   }
+	// })
   await next();
 }

@@ -51,11 +51,10 @@ const hadName = async(body, id, ctx) => {// name 检查冲突
 }
 
 const getCatChild = (id, ctx) => {
-  return Cat.findAll({
-    where: {
-      parentid: id
-    }
-  }).then((result) => {
+  let filter = ctx.q;
+  filter.where = filter.where || {};
+  filter.where.parentid = id;
+  return Cat.findAll(filter).then((result) => {
     return ctx.send(200, result);
   });
 }
@@ -106,6 +105,7 @@ const putCatInfo = async(id, body, ctx) => {
   if (!canUpdate) return ;
   body.level = canUpdate.level;
   canUpdate = !await hadName(body, id, ctx);
+  console.log(ctx.querykey(id, "id"),canUpdate);
   if (!canUpdate) return ;
   return Cat.update(body, ctx.querykey(id, "id")).then(() => {
     ctx.send(200, {msg: "操作成功"})
