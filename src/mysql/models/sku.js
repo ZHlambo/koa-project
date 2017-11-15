@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 import Cat from "./cat"
-import {checkData,parseExcel} from '../../utils';
+import {checkData, parseExcel} from '../../utils';
 import skuJson from '../json/sku';
 
 const sequelize = new Sequelize('lambo', 'root', 'root', {
@@ -8,7 +8,7 @@ const sequelize = new Sequelize('lambo', 'root', 'root', {
   host: 'localhost'
 });
 const skuData = {
-  title: {
+  name: {
     type: Sequelize.DataTypes.STRING
   },
   attr: {
@@ -40,9 +40,13 @@ const Sku = sequelize.define('sku', skuData, {
   freezeTableName: true, // Model 对应的表名将与model名相同
 });
 
-const hadTitle = async(body, id, ctx) => {// name 检查冲突
-  if (body && body.title) {
-    let result = await listSku({where: {title: body.title}}, ctx);
+const hadName = async(body, id, ctx) => { // name 检查冲突
+  if (body && body.name) {
+    let result = await listSku({
+      where: {
+        name: body.name
+      }
+    }, ctx);
     for (var i = 0; i < result.length; i++) {
       if (result[i].id != id || !id) {
         ctx.send(400, {msg: "产品名已存在"});
@@ -53,6 +57,7 @@ const hadTitle = async(body, id, ctx) => {// name 检查冲突
 }
 
 const listSku = (query, ctx) => {
+  console.log(query);
   return Sku.findAll(query).then((result) => {
     ctx.send(200, result);
     return result;
@@ -60,15 +65,17 @@ const listSku = (query, ctx) => {
 }
 
 const createSku = async(body, ctx) => {
-  console.log(body,"body");
   let check = checkData(body, skuJson.createSku);
-  if (check) return ctx.send(400, check);
+  if (check)
+    return ctx.send(400, check);
 
   let canUpdate = await Cat.getCatInfo(body.catid, ctx);
-  if (!canUpdate) return;
+  if (!canUpdate)
+    return;
 
-  canUpdate = !await hadTitle(body, undefined, ctx);
-  if (!canUpdate) return ;
+  canUpdate = !await hadName(body, undefined, ctx);
+  if (!canUpdate)
+    return;
 
   return Sku.create(body).then((result, err) => {
     return ctx.send(200, result)
@@ -112,10 +119,12 @@ const putSkuInfo = async(id, body, ctx) => {
     return ctx.send(400, check);
   }
   let canUpdate = await getSkuInfo(id, ctx);
-  if (!canUpdate) return;
+  if (!canUpdate)
+    return;
 
-  canUpdate = !await hadTitle(body, id, ctx);
-  if (!canUpdate) return;
+  canUpdate = !await hadName(body, id, ctx);
+  if (!canUpdate)
+    return;
 
   return Sku.update(body, {where: {
       id

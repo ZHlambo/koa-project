@@ -198,3 +198,58 @@ time: 2017-11-14 19:34:11(1510659251923)
 body: {}
 err : {"msg":"Cannot create property 'limit' on string '{\"limit\":1}'"}
 
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:02:53(1510729373876)
+body: {}
+err : {"msg":"Order must be type of array or instance of a valid sequelize method."}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:02:55(1510729375056)
+body: {}
+err : {"msg":"Order must be type of array or instance of a valid sequelize method."}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:02:56(1510729376569)
+body: {}
+err : {"msg":"Order must be type of array or instance of a valid sequelize method."}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:03:53(1510729433294)
+body: {}
+err : {"msg":"Unknown column 'sku.DESC' in 'order clause'"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:04:37(1510729477842)
+body: {}
+err : {"msg":"Unknown column 'sku.DESC' in 'order clause'"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:07:34(1510729654896)
+body: {}
+err : {"msg":"Unknown column 'sku.DESC' in 'order clause'"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:08:17(1510729697763)
+body: {}
+err : {"msg":"Order must be type of array or instance of a valid sequelize method."}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:09:07(1510729747132)
+body: {}
+err : {"msg":"Order must be type of array or instance of a valid sequelize method."}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:09:39(1510729779473)
+body: {}
+err : {"msg":"Unknown column 'sku.DESC' in 'order clause'"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:10:17(1510729817649)
+body: {}
+err : {"msg":"Unknown column 'sku.id DESC' in 'order clause'"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%7D
+time: 2017-11-15 15:10:19(1510729819531)
+body: {}
+err : {"msg":"Unknown column 'sku.id DESC' in 'order clause'"}
+

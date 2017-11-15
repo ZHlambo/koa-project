@@ -193,7 +193,6 @@ function openbody(e,handler){
       methods[i].className = action;
     }
   }
-  console.log(CodeMirror.lint.json(JSON.stringify(handler.body.example)));
   var textareas = e.parentElement.getElementsByClassName("textarea");
   for (var i = 0; i < textareas.length; i++) {
     var editor = CodeMirror.fromTextArea(textareas[i], {
@@ -202,9 +201,7 @@ function openbody(e,handler){
       mode: "application/ld+json",
       lineWrapping: true
     });
-    console.log(editor);
       editor.setValue(handler.body && JSON.stringify(handler.body.example || {}));
-      console.log(handler.body && JSON.stringify(handler.body.example || {}));
   }
 }
 </script>

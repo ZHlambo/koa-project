@@ -105,7 +105,6 @@ const putCatInfo = async(id, body, ctx) => {
   if (!canUpdate) return ;
   body.level = canUpdate.level;
   canUpdate = !await hadName(body, id, ctx);
-  console.log(ctx.querykey(id, "id"),canUpdate);
   if (!canUpdate) return ;
   return Cat.update(body, ctx.querykey(id, "id")).then(() => {
     ctx.send(200, {msg: "操作成功"})

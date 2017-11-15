@@ -35,32 +35,6 @@ methods.forEach(method => {
     headers = headers || {}
     headers['X-STORE-ID'] = "57eb727ff228f203b339ba33"
     params = params || {}
-    // let iterater = (object)=>{
-    //   for (var key in object) {
-    //     let func = (value,returnKey) => {
-    //       let fegExp = new RegExp(value+"$")
-    //       if(fegExp.test(key.toLowerCase())){
-    //         if (typeof object[key] === "string") {object[key] = `::${returnKey}::${object[key]}`}
-    //         else if (typeof object[key] === "object") {
-    //           for (var keyC in object[key]) {
-    //             if(keyC == '$in'){
-    //               for (var i = 0; i < object[key][keyC].length; i++) {
-    //                 object[key][keyC][i] = `::${returnKey}::${object[key][keyC][i]}`
-    //               }
-    //             }else{
-    //               object[key][keyC] = `::${returnKey}::${object[key][keyC]}`
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //     func("created","date")
-    //     func("updated","date")
-    //     func("id","id")
-    //     func("ids","id")
-    //     if (typeof object[key] === "object") {console.log(object[key]);iterater(object[key])}
-    //   }
-    // }
     if (query) {
       // if(query.find) iterater(query.find)
       params.q = JSON.stringify(query)

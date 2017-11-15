@@ -50,7 +50,7 @@ let typeRouter = (typeRaml, typeHandler, type) => {
         /* 解析query并重新赋值给query */
         try {
           ctx.q = JSON.parse(getVOO(ctx.query, "q") || "{}");
-          ctx.q.limit = ctx.q.limit > 100 ? 100 : (ctx.q.limit || 10)
+          ctx.q.limit = ctx.q.limit > 100 ? 100 : (ctx.q.limit || 10);
           /* 验权 */
           if (route.groupBy == "auth" && (getVOO(ctx, "user.type") != type)) {
             console.log(route.groupBy == "auth", getVOO(ctx, "user.type"));
