@@ -56,6 +56,10 @@ let typeRouter = (typeRaml, typeHandler, type) => {
             console.log(route.groupBy == "auth", getVOO(ctx, "user.type"));
             return ctx.send(401, {msg: "token无效"});
           }
+          /* 缓存验证，有则不再去查询数据库 */
+          if (ctx.response.body) {
+            return ;
+          }
           await typeHandler[typeRaml[i].file][route.handlerFunc](ctx);
         } catch (err) {
           ctx.err = err;

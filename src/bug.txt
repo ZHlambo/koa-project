@@ -253,3 +253,43 @@ time: 2017-11-15 15:10:19(1510729819531)
 body: {}
 err : {"msg":"Unknown column 'sku.id DESC' in 'order clause'"}
 
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 14:54:03(1510815243870)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 14:54:44(1510815284220)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:15:11(1510816511524)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:15:42(1510816542031)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:15:46(1510816546118)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:16:42(1510816602047)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:16:46(1510816606428)
+body: {}
+err : {"msg":"request is not defined"}
+
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-16 15:17:16(1510816636369)
+body: {}
+err : {"msg":"request is not defined"}
+
