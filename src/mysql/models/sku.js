@@ -1,12 +1,9 @@
-const Sequelize = require('sequelize');
-import Cat from "./cat"
+import sequelize from "../sequelize";
+import Sequelize from "sequelize";
+import Cat from "./cat";
 import {checkData, parseExcel} from '../../utils';
 import skuJson from '../json/sku';
 
-const sequelize = new Sequelize('lambo', 'root', 'root', {
-  dialect: 'mysql',
-  host: 'localhost'
-});
 const skuData = {
   name: {
     type: Sequelize.DataTypes.STRING
@@ -57,7 +54,6 @@ const hadName = async(body, id, ctx) => { // name 检查冲突
 }
 
 const listSku = (query, ctx) => {
-  console.log(query);
   return Sku.findAll(query).then((result) => {
     ctx.send(200, result);
     return result;

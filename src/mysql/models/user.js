@@ -1,10 +1,7 @@
-const Sequelize = require('sequelize');
+import sequelize from "../sequelize";
+import Sequelize from "sequelize";
 import {encrypt, jwtSign} from '../../utils';
 
-var sequelize = new Sequelize('lambo', 'root', 'root', {
-  dialect: 'mysql',
-  host: 'localhost'
-});
 var userData = {
   name: {
     type: Sequelize.DataTypes.STRING

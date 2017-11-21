@@ -9,7 +9,7 @@ import resolvePath from "./utils/resolvePath";
 import bodyParser from "koa-bodyparser";
 import parseMiddleware from "./utils/parseMiddleware";
 import logMiddleware from "./utils/logMiddleware";
-import cors from 'koa-cors';
+import cors from '@koa/cors';
 import {getVOO} from "./utils";
 
 import builder from "api-console-builder";

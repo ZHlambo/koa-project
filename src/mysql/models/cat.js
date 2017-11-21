@@ -1,9 +1,6 @@
-const Sequelize = require('sequelize');
+import sequelize from "../sequelize";
+import Sequelize from "sequelize";
 
-const sequelize = new Sequelize('lambo', 'root', 'root', {
-  dialect: 'mysql',
-  host: 'localhost'
-});
 const catData = {
   name: {
     type: Sequelize.DataTypes.STRING

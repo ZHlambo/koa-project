@@ -293,3 +293,8 @@ time: 2017-11-16 15:17:16(1510816636369)
 body: {}
 err : {"msg":"request is not defined"}
 
+url : localhost:3000/manage/skus?q={%22where%22:{%22id%22:{%22$in%22:[%22888%22,%22889%22]}},%22limit%22:25,%22order%22:[[%22id%22,%22DESC%22]]}
+time: 2017-11-21 10:31:40(1511231500879)
+body: {}
+err : {"msg":"Invalid value { '$in': [ '888', '889' ] }"}
+

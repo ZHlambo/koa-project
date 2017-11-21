@@ -1,10 +1,7 @@
+import sequelize from "../sequelize";
+import Sequelize from "sequelize";
 import {jwtSign} from '../../utils';
-const Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('lambo', 'root', 'root', {
-  dialect: 'mysql',
-  host: 'localhost'
-});
 var logData = {
   url: {
     type: Sequelize.DataTypes.STRING
