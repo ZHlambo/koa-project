@@ -125,7 +125,7 @@ koaRouter.get("/docs", (ctx, next) => {
 
 koaRouter.get("/doc/*", (ctx, next) => {
   let file = fs.readFileSync(__dirname + ctx.url, "utf-8");
-  ctx.set('Content-Type', /[.css]&/.test(ctx.url) && 'text/css' || 'application/javascript');
+  ctx.set('Content-Type', /([.]css){1}$/.test(ctx.url) && 'text/css' || 'application/javascript');
   ctx.response.status = 200;
   ctx.response.body = file;
   // if (ctx.url)
