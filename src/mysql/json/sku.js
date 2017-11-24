@@ -10,7 +10,7 @@ module.exports = {
     },
     catid: {
       type: "number",
-      content: 0
+      content: 1
     },
     images: {
       type: "string",
@@ -29,6 +29,10 @@ module.exports = {
     title: {
       type: "string",
       content: "title"
+    },
+    catid: {
+      type: "number",
+      content: 1
     },
     attr: {
       type: "string",

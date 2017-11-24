@@ -129,11 +129,11 @@
     }
   </style>
   <script src="//cdn.bootcss.com/codemirror/5.30.0/codemirror.min.js"></script>
-  <!-- <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/edit/matchbrackets.min.js"></script> -->
+  <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/edit/matchbrackets.min.js"></script>
   <script src="//cdn.bootcss.com/codemirror/5.30.0/mode/javascript/javascript.min.js"></script>
-  <!-- <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/comment/comment.min.js"></script>
+  <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/comment/comment.min.js"></script>
   <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/comment/continuecomment.min.js"></script>
-  <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/lint/lint.min.js"></script> -->
+  <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/lint/lint.min.js"></script>
   <script src="//cdn.bootcss.com/codemirror/5.30.0/addon/lint/json-lint.min.js"></script>
 </head>
 
@@ -159,7 +159,7 @@
               </div>
               <div class="title">
                 <span>HEADERS:</span>
-                <button class="add" onclick="addHeaders(this)">Add</button>
+                <button class="add">Add</button>
               </div>
               <div>
                 <div class="header">
@@ -170,7 +170,7 @@
               <div>
                 <span class="header">body:</span>
                 <div class="body">
-                  <textarea class="textarea"></textarea>
+                  <textarea id="req<%= handlers[i].uri.replace(/\//g,"") %>" data-handler="<%= JSON.stringify(handlers[i]) %>" class="textarea"></textarea>
                 </div>
               </div>
             </div>
@@ -188,41 +188,43 @@
 </body>
 
 <script type="text/javascript">
-  function openbody(e, handler) {
-    var methods = document.getElementsByTagName("li");
-    var action = e.parentElement.className == "open" ? "close" : "open";
-    for (var i = 0; i < methods.length; i++) {
-      if (methods[i] != e.parentElement) {
-        methods[i].className = "close";
-      } else {
-        methods[i].className = action;
-      }
-    }
-    var textareas = e.parentElement.getElementsByClassName("textarea");
-    for (var i = 0; i < textareas.length; i++) {
-      if (textareas[i].style.display == "none") {
-        return;
-      }
-      var editorReq = CodeMirror.fromTextArea(textareas[i], {
-        matchBrackets: true,
-        autoCloseBrackets: true,
-        mode: "application/ld+json",
-        lineWrapping: true
-      });
-      editorReq.setValue(handler.body && JSON.stringify(handler.body.example || {}) || "");
-      var totalLines = editorReq.lineCount();
-      editorReq.autoFormatRange({
-        line: 0,
-        ch: 0
-      }, {
-        line: totalLines
-      });
+function openbody(e,handler){
+  var methods = document.getElementsByTagName("li");
+  var action = e.parentElement.className == "open" ? "close" : "open";
+  for (var i = 0; i < methods.length; i++) {
+    if (methods[i] != e.parentElement) {
+      methods[i].className = "close";
+    } else {
+      methods[i].className = action;
     }
   }
+};
 
-  function addHeaders (a, e) {
-    window.aa =a;
-    window.bb =e;
+  var textareas = document.getElementsByClassName("textarea");
+  for (var i = 0; i < textareas.length; i++) {
+    var editorReq = CodeMirror.fromTextArea(textareas[i], {
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      mode: "application/ld+json",
+      lineWrapping: true
+    });
+    if(i == 0) {
+console.log(textareas[i].id);
+    try {
+      var handler = textareas[i].getAttribute("data-handler");
+      handler = JSON.parse(handler);
+      window[textareas[i].id] = editorReq;
+      window[textareas[i].id].setValue(handler.body && JSON.stringify(handler.body.example || {}));
+      var totalLines = window[textareas[i].id].lineCount();
+      window[textareas[i].id].autoFormatRange({line:0, ch:0}, {line:totalLines});
+
+    } catch (e) {
+
+    } finally {
+
+    }
+
+    }
   }
 </script>
 <script type="text/javascript">

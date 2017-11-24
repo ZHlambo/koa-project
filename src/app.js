@@ -82,22 +82,23 @@ let typeRouter = (typeRaml, typeHandler, type) => {
       // });
 
       // return raml2html.render(typeRaml[i].path, raml2html.getConfigForTheme()).then((result)=>{
-      //   console.log("result");
+      //   console.log("result", 1);
       //   ctx.set('Content-Type', 'text/html;charset=utf-8');
-      //   ctx.send(200, result);
+      //   ctx.send(200, result, 1);
       //
       // },(err) =>{
       //   console.log("err");
       //
       // });
+
       routes = parserRaml(typeRaml[i].path).routes();
-      let html = fs.readFileSync(__dirname + "/docs/main.ejs", "utf-8");
+      let html = fs.readFileSync(__dirname + "/doc/index.ejs", "utf-8");
       html = ejs.render(html, {
         handlers: routes,
         str: JSON.stringify(routes)
       });
       ctx.set('Content-Type', 'text/html;charset=utf-8');
-      ctx.send(200, html);
+      ctx.send(200, html, 1);
     });
 
   }
@@ -120,6 +121,14 @@ koaRouter.get("/docs", (ctx, next) => {
   });
   ctx.set('Content-Type', 'text/html;charset=utf-8');
   ctx.send(200, html);
+});
+
+koaRouter.get("/doc/*", (ctx, next) => {
+  let file = fs.readFileSync(__dirname + ctx.url, "utf-8");
+  ctx.set('Content-Type', /[.css]&/.test(ctx.url) && 'text/css' || 'application/javascript');
+  ctx.response.status = 200;
+  ctx.response.body = file;
+  // if (ctx.url)
 });
 
 app.use(koaRouter.routes());

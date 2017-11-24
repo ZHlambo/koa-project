@@ -1,0 +1,24 @@
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:26:13.411Z"}
+{"level":"error","message":"\u001b[31mundefined\u001b[39m","timestamp":"2017-11-22T10:26:13.413Z"}
+{"level":"error","message":"\u001b[31mundefined\u001b[39m","timestamp":"2017-11-22T10:26:13.415Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:26:13.430Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:39:25.055Z"}
+{"level":"error","message":"\u001b[31mENOENT: no such file or directory, stat 'C:\\Users\\Administrator\\Desktop\\koa-project\\mysql\\raml\\manage\\cat.raml'\u001b[39m","timestamp":"2017-11-22T10:39:25.057Z"}
+{"level":"error","message":"\u001b[31mError: ENOENT: no such file or directory, stat 'C:\\Users\\Administrator\\Desktop\\koa-project\\mysql\\raml\\manage\\cat.raml'\u001b[39m","timestamp":"2017-11-22T10:39:25.057Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:39:25.058Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:40:06.638Z"}
+{"level":"error","message":"\u001b[31mSource is a file but sourceIsZip option is not set. Please, set this option to determine how to handle the source file.\u001b[39m","timestamp":"2017-11-22T10:40:06.640Z"}
+{"level":"error","message":"\u001b[31mError: Source is a file but sourceIsZip option is not set. Please, set this option to determine how to handle the source file.\n    at fs.stat.then (C:\\Users\\Administrator\\Desktop\\koa-project\\node_modules\\_api-console-sources-resolver@0.1.0@api-console-sources-resolver\\lib\\api-console-sources.js:121:15)\n    at <anonymous>\u001b[39m","timestamp":"2017-11-22T10:40:06.641Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:40:06.642Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:42:57.619Z"}
+{"level":"error","message":"\u001b[31mENOENT: no such file or directory, stat 'C:\\Users\\Administrator\\Desktop\\koa-project\\src\\mysql\\raml\\manage\\cat.raml.zip'\u001b[39m","timestamp":"2017-11-22T10:42:57.621Z"}
+{"level":"error","message":"\u001b[31mError: ENOENT: no such file or directory, stat 'C:\\Users\\Administrator\\Desktop\\koa-project\\src\\mysql\\raml\\manage\\cat.raml.zip'\u001b[39m","timestamp":"2017-11-22T10:42:57.622Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:42:57.622Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:43:30.749Z"}
+{"level":"error","message":"\u001b[31mSource is a file but sourceIsZip option is not set. Please, set this option to determine how to handle the source file.\u001b[39m","timestamp":"2017-11-22T10:43:30.751Z"}
+{"level":"error","message":"\u001b[31mError: Source is a file but sourceIsZip option is not set. Please, set this option to determine how to handle the source file.\n    at fs.stat.then (C:\\Users\\Administrator\\Desktop\\koa-project\\node_modules\\_api-console-sources-resolver@0.1.0@api-console-sources-resolver\\lib\\api-console-sources.js:121:15)\n    at <anonymous>\u001b[39m","timestamp":"2017-11-22T10:43:30.753Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:43:30.753Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:43:58.551Z"}
+{"level":"error","message":"\u001b[31mENOENT: no such file or directory, open 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmp-14288ShXS01TbBTOz\\bower_components\\webcomponentsjs\\webcomponents-lite.min.js'\u001b[39m","timestamp":"2017-11-22T10:43:58.553Z"}
+{"level":"error","message":"\u001b[31mError: ENOENT: no such file or directory, open 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmp-14288ShXS01TbBTOz\\bower_components\\webcomponentsjs\\webcomponents-lite.min.js'\n    at ApiConsoleBuilder.errorFn (C:\\Users\\Administrator\\Desktop\\koa-project\\node_modules\\_api-console-builder@0.4.3@api-console-builder\\lib\\builder.js:135:16)\n    at emitOne (events.js:120:20)\n    at ResolveTransform.emit (events.js:210:7)\n    at VinylReaderTransform._dependenciesProcessingStream._dependenciesStream.on.pipe.on (C:\\Users\\Administrator\\Desktop\\koa-project\\node_modules\\_polymer-build@1.5.1@polymer-build\\lib\\analyzer.js:180:74)\n    at emitOne (events.js:120:20)\n    at VinylReaderTransform.emit (events.js:210:7)\n    at transformDonePromise.then (C:\\Users\\Administrator\\Desktop\\koa-project\\node_modules\\_polymer-build@1.5.1@polymer-build\\lib\\streams.js:241:30)\n    at <anonymous>\u001b[39m","timestamp":"2017-11-22T10:43:58.555Z"}
+{"meta":"","level":"error","message":"","timestamp":"2017-11-22T10:43:58.556Z"}

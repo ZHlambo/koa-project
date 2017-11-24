@@ -298,3 +298,13 @@ time: 2017-11-21 10:31:40(1511231500879)
 body: {}
 err : {"msg":"Invalid value { '$in': [ '888', '889' ] }"}
 
+url : localhost:3000/manage/skus?q=%7B%22limit%22%3A25%2C%22where%22%3A%7B%22catid%22%3A%7B%7D%7D%2C%22order%22%3A%5B%5B%22id%22%2C%22DESC%22%5D%5D%7D
+time: 2017-11-22 15:20:05(1511335205261)
+body: {}
+err : {"msg":"Invalid value {}"}
+
+url : localhost:3000/manage/cat
+time: 2017-11-23 17:52:24(1511430744832)
+body: {"level":0}
+err : {"msg":"Field 'name' doesn't have a default value"}
+

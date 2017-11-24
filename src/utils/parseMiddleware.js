@@ -32,13 +32,15 @@ module.exports = async function(ctx, next) {
   } finally {};
 
   /* 工具类函数: 定义ctx.send 回包请求  */
-  ctx.send = function(status, body) {
-    if (typeof body == "string") {
-      body = JSON.parse(body);
-    } else {  // 缓存: 启用缓存
-      // if (request.method == "GET") {
-      //   redis.set(request.url, JSON.stringify(body.dataValues || body));
-      // }
+  ctx.send = function(status, body, html) {
+    if (!html) {
+      if (typeof body == "string") {
+        body = JSON.parse(body);
+      } else {  // 缓存: 启用缓存
+        // if (request.method == "GET") {
+        //   redis.set(request.url, JSON.stringify(body.dataValues || body));
+        // }
+      }
     }
     response.status = status;
     response.body = body;
