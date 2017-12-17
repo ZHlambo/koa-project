@@ -12,7 +12,7 @@ import logMiddleware from "./utils/logMiddleware";
 import cors from '@koa/cors';
 import {getVOO} from "./utils";
 
-import builder from "api-console-builder";
+// import builder from "api-console-builder";
 
 const port = 3000;
 
@@ -69,7 +69,40 @@ let typeRouter = (typeRaml, typeHandler, type) => {
         return;
       });
     }
+    // koaRouter.get("cat/catid/sku/skuid/info",()=>{
+    // ctx.set('Content-Type', 'text/html;charset=utf-8');
+    // ctx.send(200, html);
+    //   return mysql
+    // })
+    //
+    // [
+    //   {api:"cat",method:"post",func:"funcName"},
+    //   {api:"cat/root",method:"post",func:"funcName"}
+    // ]
+    // for (var i = 0; i < array.length; i++) {
+    //   Router(array[i].api,method = array[i].method)
+    //     {
+    //       array[i].func
+    //     }
+    // }
+    // Router("http://xinglongjiancai.baicaiyun.cn/",method = "GET")
+    //   {
+    //     ctx.set('Content-Type', 'application/html');
+    //     return redirect("client.html")
+    //   }
+    //
+    // Router("http://xinglongjiancai.baicaiyun.cn/api/cat",method = "GET")
+    //   {
+    //     ctx.set('Content-Type', 'application/json');
+    //     return {}
+    //   }
+    // Router("http://xinglongjiancai.baicaiyun.cn/api/sku",method = "GET")
+    //   {
+    //     ctx.set('Content-Type', 'application/json');
+    //     return {}
+    //   }
 
+    
     // api 文档主页
     koaRouter.get("/docs/" + type + "/" + typeRaml[i].file, (ctx, next) => {
 

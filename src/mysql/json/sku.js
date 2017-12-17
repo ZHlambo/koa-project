@@ -1,8 +1,8 @@
 module.exports = {
   createSku: {
-    title: {
+    name: {
       type: "string",
-      content: "title"
+      content: "name"
     },
     attr: {
       type: "string",
@@ -26,9 +26,9 @@ module.exports = {
     }
   },
   putSkuInfo: {
-    title: {
+    name: {
       type: "string",
-      content: "title"
+      content: "name"
     },
     catid: {
       type: "number",

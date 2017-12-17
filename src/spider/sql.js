@@ -1,9 +1,10 @@
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
 
-const sequelize = new Sequelize('dord', 'root', 'root', {
+const sequelize = new Sequelize('spider', 'root', 'root', {
   dialect: 'mysql',
   host: 'localhost',
+  logging: false,
   operatorsAliases: {
     $eq: Op.eq,
     $ne: Op.ne,
@@ -42,4 +43,27 @@ const sequelize = new Sequelize('dord', 'root', 'root', {
   }
 });
 
-module.exports = sequelize;
+const data = {
+  text: {
+    type: Sequelize.DataTypes.STRING
+  },
+  url: {
+    type: Sequelize.DataTypes.STRING
+  },
+  createdAt: {
+    type: Sequelize.DataTypes.DATE
+  },
+  updatedAt: {
+    type: Sequelize.DataTypes.DATE
+  },
+  deletedAt: {
+    type: Sequelize.DataTypes.DATE
+  }
+}
+const Joke = sequelize.define('joke', data, {
+  freezeTableName: true, // Model 对应的表名将与model名相同
+});
+
+module.exports = function (data) {
+  Joke.create(data)
+};

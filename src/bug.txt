@@ -308,3 +308,1728 @@ time: 2017-11-23 17:52:24(1511430744832)
 body: {"level":0}
 err : {"msg":"Field 'name' doesn't have a default value"}
 
+url : localhost:3000/manage/cat
+time: 2017-12-11 10:41:44(1512960104252)
+body: {"name":"化妆品","parentid":1}
+err : {"msg":"Unknown database 'lambo'"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:52:51(1512960771040)
+body: {"title":"title1","attr":"red","catid":1,"images":"http://f12.baidu.com/it/u=177654419,2327794738&fm=76","price":0.12,"descs":"Adfasfa"}
+err : {"msg":"Field 'name' doesn't have a default value"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:28(1512960988338)
+body: {"name":"Mac-眼影- Burgundytimesnine九色眼影","attr":"Mac-眼影- Burgundytimesnine九色眼影","catid":1,"images":"/mfzmanage/1499479263_1.jpg,/mfzmanage/1499479263_ambertimesnine九色眼盘.jpg","price":25,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:28(1512960988338)
+body: {"name":"KATE（凯朵）BK-1漆黑眼线笔","attr":"KATE（凯朵）BK-1漆黑眼线笔","catid":1,"images":"manage/1502875668_BK.jpg","price":10,"descs":"出水流畅，可粗可细，力道自由掌控，轻松描绘粗细均匀眼线，长久持妆，大开双眼，彰显魅力色彩"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:28(1512960988494)
+body: {"name":"Mac（魅可）duskyroserimesnine 九色眼影盘","attr":"Mac（魅可）duskyroserimesnine 九色眼影盘","catid":1,"images":"manage/1501218662_ambertimesnine.jpg,manage/1501218662_ambertimesnine1.jpg,manage/1501218662_ambertimesnine2.jpg","price":25,"descs":"从哑光，绒光到闪亮星泽，适合打造一系列的日常和夜间妆容。饱和，柔软，光滑的色调都组合在一个眼影盘中，便于携带。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:29(1512960989805)
+body: {"name":"Mac-ambertimesnine 九色眼影盘","attr":"Mac-ambertimesnine 九色眼影盘","catid":1,"images":"/mfzmanage/1499743847_1.jpg,/mfzmanage/1499743851_ambertimesnine九色眼盘.jpg","price":25,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:29(1512960989892)
+body: {"name":"Tom Ford（TF）Seductiverose眼影","attr":"Tom Ford（TF）Seductiverose眼影","catid":1,"images":"/mfzmanage/1499744327_TFSeductiverose.jpg,manage/1501155357_TFCocoamirage展示图.jpg,manage/1501155357_TFCocoamirage展示图2.jpg","price":45,"descs":"自然的粉紫棕盘，温柔百搭，两种TOM Ford亮片色，颜色柔和淡雅，不挑肤色，冷暖皮都可适用，约会必杀盘"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:29(1512960989908)
+body: {"name":"Tom Ford（TF）Cocoamirage眼影","attr":"Tom Ford（TF）Cocoamirage眼影","catid":1,"images":"/mfzmanage/1499744510_TFCocoamirage.jpg,manage/1501155345_TFCocoamirage展示图.jpg,manage/1501155345_TFCocoamirage展示图2.jpg","price":45,"descs":"哑光大地色眼影，质地细腻，色调比较中性，左下的颜色有少许珠光，好晕染而延展性强，营造裸妆妆效"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:29(1512960989957)
+body: {"name":"Tom Ford（TF）Orchidhaze眼影","attr":"Tom Ford（TF）Orchidhaze眼影","catid":1,"images":"/mfzmanage/1499744640_TFOrchidhaze.jpg,manage/1501155335_TFCocoamirage展示图.jpg,manage/1501155335_TFCocoamirage展示图2.jpg","price":45,"descs":"中规中矩的粉紫调，温柔日常，无亮片格，更合适上班族，配色也略成熟，给人温柔内敛的感觉没事，是整个系列里的气质盘"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:29(1512960989967)
+body: {"name":"Tom Ford（TF）Disco Dust眼影","attr":"Tom Ford（TF）Disco Dust眼影","catid":1,"images":"/mfzmanage/1499744820_TFDiscodust.jpg,manage/1501155313_TFCocoamirage展示图.jpg,manage/1501155313_TFCocoamirage展示图2.jpg","price":45,"descs":"属于暖橘棕色调，右上弱珠光，左下金属光泽，右下偏紫色的棕色带橘色的珠光，加上左上清透的闪片后，耀眼夺目"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:30(1512960990737)
+body: {"name":"Shu Uemura（植村秀）MCR342口红","attr":"Shu Uemura（植村秀）MCR342口红","catid":1,"images":"/mfzmanage/1499763862_植村秀MCR342.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:30(1512960990753)
+body: {"name":"Shu Uemura（植村秀）MOR570口红","attr":"Shu Uemura（植村秀）MOR570口红","catid":1,"images":"/mfzmanage/1499763984_植村秀MOR570.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:30(1512960990753)
+body: {"name":"Shu Uemura（植村秀）MPK375口红","attr":"Shu Uemura（植村秀）MPK375口红","catid":1,"images":"/mfzmanage/1499764068_植村秀MPK375.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:30(1512960990816)
+body: {"name":"Shu Uemura（植村秀）MPK376口红","attr":"Shu Uemura（植村秀）MPK376口红","catid":1,"images":"/mfzmanage/1499764134_植村秀MPK376.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:30(1512960990826)
+body: {"name":"Shu Uemura（植村秀）MRD165口红","attr":"Shu Uemura（植村秀）MRD165口红","catid":1,"images":"/mfzmanage/1499764278_植村秀MRD165.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991155)
+body: {"name":"Shu Uemura（植村秀）PK325口红","attr":"Shu Uemura（植村秀）PK325口红","catid":1,"images":"/mfzmanage/1499764404_植村秀PK325.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991155)
+body: {"name":"Shu Uemura（植村秀）PK340口红","attr":"Shu Uemura（植村秀）PK340口红","catid":1,"images":"/mfzmanage/1499764498_植村秀PK340.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991155)
+body: {"name":"Shu Uemura（植村秀）PK345口红","attr":"Shu Uemura（植村秀）PK345口红","catid":1,"images":"/mfzmanage/1499764545_植村秀PK345.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991182)
+body: {"name":"Shu Uemura（植村秀）PK355口红","attr":"Shu Uemura（植村秀）PK355口红","catid":1,"images":"/mfzmanage/1499764611_植村秀PK355.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991241)
+body: {"name":"Shu Uemura（植村秀）PK357口红","attr":"Shu Uemura（植村秀）PK357口红","catid":1,"images":"/mfzmanage/1499764711_植村秀PK357.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991241)
+body: {"name":"Shu Uemura（植村秀）PK358口红","attr":"Shu Uemura（植村秀）PK358口红","catid":1,"images":"/mfzmanage/1499765756_植村秀PK358.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991241)
+body: {"name":"Shu Uemura（植村秀）PK366口红","attr":"Shu Uemura（植村秀）PK366口红","catid":1,"images":"/mfzmanage/1499765871_植村秀PK366.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991241)
+body: {"name":"Shu Uemura（植村秀）RD150口红","attr":"Shu Uemura（植村秀）RD150口红","catid":1,"images":"/mfzmanage/1499766038_植村秀RD150.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991288)
+body: {"name":"Shu Uemura（植村秀）RD164口红","attr":"Shu Uemura（植村秀）RD164口红","catid":1,"images":"/mfzmanage/1499766095_植村秀RD164.jpg","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991363)
+body: {"name":"Chanel（香奈儿）44#口红","attr":"Chanel（香奈儿）44#口红","catid":1,"images":"/mfzmanage/1499767743_香奈儿44号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991364)
+body: {"name":"Shu Uemura（植村秀）764#塑颜粉底","attr":"Shu Uemura（植村秀）764#塑颜粉底","catid":1,"images":"/mfzmanage/1499770551_植村秀.jpg,/mfzmanage/1499768936_植村秀764.jpg","price":20,"descs":"众多美容达人和美容编辑的必备！护肤保养型粉底，质地清新，即刻隐匿毛孔和细纹的。贴合肌肤，毫无负担感。将面部的立体轮廓充分展现的同时，赋予肌肤柔和匀润的质感，指尖一旦触碰便想立即拥有！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991364)
+body: {"name":"Shu Uemura（植村秀）784#塑颜粉底","attr":"Shu Uemura（植村秀）784#塑颜粉底","catid":1,"images":"manage/1501050676_植村秀.jpg,/mfzmanage/1499768703_植村秀784.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991364)
+body: {"name":"Shu Uemura（植村秀）774#塑颜粉底","attr":"Shu Uemura（植村秀）774#塑颜粉底","catid":1,"images":"manage/1501050568_植村秀.jpg,/mfzmanage/1499768881_植村秀774.jpg","price":20,"descs":"众多美容达人和美容编辑的必备！护肤保养型粉底，质地清新，即刻隐匿毛孔和细纹的。贴合肌肤，毫无负担感。将面部的立体轮廓充分展现的同时，赋予肌肤柔和匀润的质感，指尖一旦触碰便想立即拥有！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991407)
+body: {"name":"Mac（魅可）ambertimesnine九色眼影盘","attr":"Mac（魅可）ambertimesnine九色眼影盘","catid":1,"images":"/mfzmanage/1499769173_ambertimesnine.jpg","price":25,"descs":"琥珀色调的魅可眼影盘，提供了无数眼影颜色组合。从哑光，绒光到闪亮星泽，适合打造一系列的日常和夜间妆容。饱和，柔软，光滑的色调都组合在一个眼影盘中，便于携带。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991455)
+body: {"name":"KATE（凯朵）BK眼线笔","attr":"KATE（凯朵）BK眼线笔","catid":1,"images":"/mfzmanage/1499769433_BK.jpg","price":10,"descs":"出水流畅，可粗可细，力道自由掌控，轻松描绘粗细均匀眼线，长久持妆，大开双眼，彰显魅力色彩"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991454)
+body: {"name":"NARS（纳斯）Silk-road3077眼影","attr":"NARS（纳斯）Silk-road3077眼影","catid":1,"images":"/mfzmanage/1499769287_NARS眼影Silkroad3077.jpg","price":40,"descs":"让人意想不到的新潮眼影色彩组合。这个双色眼影的微细粉体具长效持妆，更不会产生令人困扰的摺痕！显色度极佳，可单独或搭配其他眼彩使用，让妳任意打造轻透或是浓艳妆效，风格独具不设限！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991457)
+body: {"name":"Mac-Burgundytimesnine九色眼影盘","attr":"Mac-Burgundytimesnine九色眼影盘","catid":1,"images":"/mfzmanage/1499769656_1.jpg","price":25,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991555)
+body: {"name":"Chanel（香奈儿）202#山茶花眼影","attr":"Chanel（香奈儿）202#山茶花眼影","catid":1,"images":"/mfzmanage/1499769821_香奈儿202山茶花.jpg","price":30,"descs":"全新改良配方蕴含高纯度色素成分，带来浓淡相宜的多重妆效搭配，不但令上妆更加柔和便捷，更表现出前所未有的色彩张力，保持均匀、一致、长效的明亮妆效，打造持久纯粹的理想妆容。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991584)
+body: {"name":"CD（迪奥）586#腮红","attr":"CD（迪奥）586#腮红","catid":1,"images":"manage/1501470984_CD腮红586.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991584)
+body: {"name":"Mac（魅可）Burgundytimesnine九色眼影盘","attr":"Mac（魅可）Burgundytimesnine九色眼影盘","catid":1,"images":"manage/1501214391_Burgundytimesnine九色眼影盘.jpg,manage/1501214397_Burgundytimesnine九色眼影盘展示图.jpg,manage/1501219204_Burgundytimesnine九色眼影盘4.jpg","price":25,"descs":"酒红色调的魅可眼影盘，提供了无数眼影颜色组合。从哑光，绒光到闪亮星泽，适合打造一系列的日常和夜间妆容。饱和，柔软，光滑的色调都组合在一个眼影盘中，便于携带。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991584)
+body: {"name":"Chanel（香奈儿）204#芳登眼影","attr":"Chanel（香奈儿）204#芳登眼影","catid":1,"images":"/mfzmanage/1499769920_香奈儿204芳登.jpg","price":30,"descs":"全新改良配方蕴含高纯度色素成分，带来浓淡相宜的多重妆效搭配，不但令上妆更加柔和便捷，更表现出前所未有的色彩张力，保持均匀、一致、长效的明亮妆效，打造持久纯粹的理想妆容。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991628)
+body: {"name":"CD（迪奥）156#色彩眼影","attr":"CD（迪奥）156#色彩眼影","catid":1,"images":"manage/1501212259_CD眼影156.jpg,/mfzmanage/1499769969_CD眼影156.jpg","price":30,"descs":"真实延续Dior迪奥王国中的前卫色调，五款色彩完美相谐，为您呈现独一无二的绚彩世界。一款色调置于中心，作为整个眼妆盘的标志性色彩，另外四款辅色调环绕周围，各种妆感缤纷辉映双眸，双重妆效随心幻变，或自然或华美，打造唯你专属的耀目眼妆。  "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991675)
+body: {"name":"CD（迪奥）166#色彩眼影","attr":"CD（迪奥）166#色彩眼影","catid":1,"images":"manage/1501212232_CD眼影166.jpg,/mfzmanage/1499770064_CD眼影166.jpg","price":30,"descs":"真实延续Dior迪奥王国中的前卫色调，五款色彩完美相谐，为您呈现独一无二的绚彩世界。一款色调置于中心，作为整个眼妆盘的标志性色彩，另外四款辅色调环绕周围，各种妆感缤纷辉映双眸，双重妆效随心幻变，或自然或华美，打造唯你专属的耀目眼妆。  "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991710)
+body: {"name":"CD（迪奥）646#色彩眼影","attr":"CD（迪奥）646#色彩眼影","catid":1,"images":"manage/1501212203_CD眼影646.jpg,/mfzmanage/1499770135_CD眼影646.jpg","price":30,"descs":"真实延续Dior迪奥王国中的前卫色调，五款色彩完美相谐，为您呈现独一无二的绚彩世界。一款色调置于中心，作为整个眼妆盘的标志性色彩，另外四款辅色调环绕周围，各种妆感缤纷辉映双眸，双重妆效随心幻变，或自然或华美，打造唯你专属的耀目眼妆。  "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991711)
+body: {"name":"Chanel（香奈儿）228#康朋街眼影","attr":"Chanel（香奈儿）228#康朋街眼影","catid":1,"images":"/mfzmanage/1499770144_香奈儿228康朋街.jpg","price":30,"descs":"全新改良配方蕴含高纯度色素成分，带来浓淡相宜的多重妆效搭配，不但令上妆更加柔和便捷，更表现出前所未有的色彩张力，保持均匀、一致、长效的明亮妆效，打造持久纯粹的理想妆容。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991713)
+body: {"name":"Shu Uemura（植村秀）375#塑颜粉底","attr":"Shu Uemura（植村秀）375#塑颜粉底","catid":1,"images":"manage/1501050663_植村秀.jpg,/mfzmanage/1499770267_植村秀375.jpg","price":20,"descs":"众多美容达人和美容编辑的必备！护肤保养型粉底，质地清新，即刻隐匿毛孔和细纹的。贴合肌肤，毫无负担感。将面部的立体轮廓充分展现的同时，赋予肌肤柔和匀润的质感，指尖一旦触碰便想立即拥有！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991736)
+body: {"name":"CD（迪奥）656#腮红","attr":"CD（迪奥）656#腮红","catid":1,"images":"manage/1501470996_CD腮红656.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991777)
+body: {"name":"CD（迪奥）846#色彩眼影","attr":"CD（迪奥）846#色彩眼影","catid":1,"images":"manage/1501212168_CD眼影846.jpg,/mfzmanage/1499770216_CD眼影846.jpg","price":30,"descs":"真实延续Dior迪奥王国中的前卫色调，五款色彩完美相谐，为您呈现独一无二的绚彩世界。一款色调置于中心，作为整个眼妆盘的标志性色彩，另外四款辅色调环绕周围，各种妆感缤纷辉映双眸，双重妆效随心幻变，或自然或华美，打造唯你专属的耀目眼妆。  "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991792)
+body: {"name":"Shu Uemura（植村秀）364#塑颜粉底","attr":"Shu Uemura（植村秀）364#塑颜粉底","catid":1,"images":"manage/1501050646_植村秀.jpg,/mfzmanage/1499770360_植村秀364.jpg","price":20,"descs":"众多美容达人和美容编辑的必备！护肤保养型粉底，质地清新，即刻隐匿毛孔和细纹的。贴合肌肤，毫无负担感。将面部的立体轮廓充分展现的同时，赋予肌肤柔和匀润的质感，指尖一旦触碰便想立即拥有！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991792)
+body: {"name":"CD（迪奥）876#色彩眼影","attr":"CD（迪奥）876#色彩眼影","catid":1,"images":"manage/1501212135_CD眼影色彩876.jpg,/mfzmanage/1499770312_CD眼影色彩876.jpg","price":30,"descs":"真实延续Dior迪奥王国中的前卫色调，五款色彩完美相谐，为您呈现独一无二的绚彩世界。一款色调置于中心，作为整个眼妆盘的标志性色彩，另外四款辅色调环绕周围，各种妆感缤纷辉映双眸，双重妆效随心幻变，或自然或华美，打造唯你专属的耀目眼妆。  "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991792)
+body: {"name":"CD（迪奥）676#腮红","attr":"CD（迪奥）676#腮红","catid":1,"images":"manage/1501471008_CD腮红676.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991883)
+body: {"name":"Chanel（香奈儿）268#CANDEUR ET EXPERIENCE眼影","attr":"Chanel（香奈儿）268#CANDEUR ET EXPERIENCE眼影","catid":1,"images":"/mfzmanage/1499770388_香奈儿268号.jpg","price":30,"descs":"全新改良配方蕴含高纯度色素成分，带来浓淡相宜的多重妆效搭配，不但令上妆更加柔和便捷，更表现出前所未有的色彩张力，保持均匀、一致、长效的明亮妆效，打造持久纯粹的理想妆容。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991914)
+body: {"name":"KATE（凯朵）BR-1自然棕眼线笔","attr":"KATE（凯朵）BR-1自然棕眼线笔","catid":1,"images":"/mfzmanage/1499770434_KATE自然棕色.jpg","price":10,"descs":"出水流畅，可粗可细，力道自由掌控，轻松描绘粗细均匀眼线，长久持妆，大开双眼，彰显魅力色彩"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991943)
+body: {"name":"KISS ME眼线液笔","attr":"KISS ME眼线液笔","catid":1,"images":"/mfzmanage/1499770483_KISS眼线液笔.jpg,manage/1501153089_KISS眼线液笔展示图.jpg","price":10,"descs":"能顺滑描绘的弹性极细笔头，能精准描绘睫毛间隙与勾勒的眼尾，萃取洋甘，山茶花油，保湿不晕妆"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991944)
+body: {"name":"CD（迪奥）756#腮红","attr":"CD（迪奥）756#腮红","catid":1,"images":"manage/1501471022_CD腮红756.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:31(1512960991981)
+body: {"name":"MAKEUPFOREVER （玫珂菲）R250粉底霜","attr":"MAKEUPFOREVER （玫珂菲）R250粉底霜","catid":1,"images":"manage/1501051165_玫珂菲.jpg,manage/1501053082_玫珂菲展示图.jpg,/mfzmanage/1499770672_玫珂菲R250.jpg","price":50,"descs":"升级版全新WATER BLEND双用水粉霜，水感轻薄的同时加强了持久度和遮盖力，带来超乎以往的水润裸妆体验"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992008)
+body: {"name":"NEO-日抛巨目棕美瞳","attr":"NEO-日抛巨目棕美瞳","catid":1,"images":"/mfzmanage/1499770722_NEO日抛巨目棕.jpg,manage/1501223638_NEO日抛展示图1.jpg,manage/1501223340_NEO日抛展示图.jpg","price":28,"descs":"巨目棕色，增大不突兀甜美时尚的气质，人群中你就是最引人注目的"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992012)
+body: {"name":"NEO-日抛巧克力美瞳","attr":"NEO-日抛巧克力美瞳","catid":1,"images":"/mfzmanage/1499770781_NEO日抛巧克力.jpg,manage/1501223631_NEO日抛展示图1.jpg,manage/1501223327_NEO日抛展示图.jpg","price":28,"descs":"甜美的巧克力色，带上它，你就是甜心公主，大美目让人为之倾倒"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992028)
+body: {"name":"NEO-日抛自然黑美瞳","attr":"NEO-日抛自然黑美瞳","catid":1,"images":"/mfzmanage/1499770850_NEO日抛自然黑.jpg,manage/1501223623_NEO日抛展示图1.jpg,manage/1501223309_NEO日抛展示图.jpg","price":28,"descs":"闪亮的双眸总会格外引起人们的注目，流露出迷人的炫目光芒"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992059)
+body: {"name":"Mac（魅可）眉粉Porcelaine双色","attr":"Mac（魅可）眉粉Porcelaine双色","catid":1,"images":"/mfzmanage/1499770894_Mac眉粉Porcelaine双色.jpg","price":30,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992082)
+body: {"name":"MAKEUPFOREVER （玫珂菲）R330粉底霜","attr":"MAKEUPFOREVER （玫珂菲）R330粉底霜","catid":1,"images":"manage/1501051148_玫珂菲.jpg,manage/1501053070_玫珂菲展示图.jpg,/mfzmanage/1499770987_玫珂菲R330.jpg","price":50,"descs":"升级版全新WATER BLEND双用水粉霜，水感轻薄的同时加强了持久度和遮盖力，带来超乎以往的水润裸妆体验"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992113)
+body: {"name":"强生-日抛黑色艾姗美瞳","attr":"强生-日抛黑色艾姗美瞳","catid":1,"images":"manage/1501229828_强生日抛黑色艾姗展示图.jpg,manage/1501228661_强生日抛黑色艾姗.jpg,manage/1501228690_强生展示图.jpg","price":38,"descs":"盈动优雅，自然闪耀，清晰勾勒，双眸盈动，愈见明晰优雅，特有半透明黑色圆环"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992129)
+body: {"name":"NARS（纳斯）Isolde3067眼影","attr":"NARS（纳斯）Isolde3067眼影","catid":1,"images":"/mfzmanage/1499771006_nars眼影Isolde3067.jpg","price":40,"descs":"让人意想不到的新潮眼影色彩组合。这个双色眼影的微细粉体具长效持妆，更不会产生令人困扰的摺痕！显色度极佳，可单独或搭配其他眼彩使用，让妳任意打造轻透或是浓艳妆效，风格独具不设限！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992144)
+body: {"name":"强生-日抛灰金炫闪美瞳","attr":"强生-日抛灰金炫闪美瞳","catid":1,"images":"manage/1501229358_强生日抛VIVID.jpg,manage/1501227473_强生日抛SHINE展示图.jpg,manage/1501227488_强生展示图.jpg","price":38,"descs":"魅力精致，自然闪耀，灰金炫闪，双眸精致，俞见魅力闪耀，特有半透明灰色圆环映衬金色高光"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992218)
+body: {"name":"MAKEUPFOREVER （玫珂菲）Y215粉底霜","attr":"MAKEUPFOREVER （玫珂菲）Y215粉底霜","catid":1,"images":"manage/1501051128_玫珂菲.jpg,manage/1501053057_玫珂菲展示图.jpg,/mfzmanage/1499771181_玫珂菲Y215.jpg","price":50,"descs":"升级版全新WATER BLEND双用水粉霜，水感轻薄的同时加强了持久度和遮盖力，带来超乎以往的水润裸妆体验"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992230)
+body: {"name":"CD（迪奥）829#腮红","attr":"CD（迪奥）829#腮红","catid":1,"images":"manage/1501471036_CD腮红829.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992245)
+body: {"name":"NARS（纳斯）Kuala-lumpur3079眼影","attr":"NARS（纳斯）Kuala-lumpur3079眼影","catid":1,"images":"/mfzmanage/1499771152_2.jpg","price":40,"descs":"让人意想不到的新潮眼影色彩组合。这个双色眼影的微细粉体具长效持妆，更不会产生令人困扰的摺痕！显色度极佳，可单独或搭配其他眼彩使用，让妳任意打造轻透或是浓艳妆效，风格独具不设限！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992288)
+body: {"name":"NARS眼影Portobello3063","attr":"NARS眼影Portobello3063","catid":1,"images":"/mfzmanage/1499771224_NARS眼影Portobello3063.jpg","price":30,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992288)
+body: {"name":"CD（迪奥）846#腮红","attr":"CD（迪奥）846#腮红","catid":1,"images":"manage/1501471049_CD腮红846.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992351)
+body: {"name":"MAKEUPFOREVER （玫珂菲）Y245粉底霜","attr":"MAKEUPFOREVER （玫珂菲）Y245粉底霜","catid":1,"images":"manage/1501051097_玫珂菲.jpg,manage/1501053035_玫珂菲展示图.jpg,/mfzmanage/1499771444_玫珂菲Y245.jpg","price":50,"descs":"升级版全新WATER BLEND双用水粉霜，水感轻薄的同时加强了持久度和遮盖力，带来超乎以往的水润裸妆体验"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992382)
+body: {"name":"Mac-duskyroserimesnine眼影","attr":"Mac-duskyroserimesnine眼影","catid":1,"images":"/mfzmanage/1499771470_Mac眼影duskyroserimesnine.jpg","price":25,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992384)
+body: {"name":"CD（迪奥）856#腮红","attr":"CD（迪奥）856#腮红","catid":1,"images":"manage/1501471061_CD腮红856.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992412)
+body: {"name":"Shu Uemura（植村秀）新假睫毛粘胶","attr":"Shu Uemura（植村秀）新假睫毛粘胶","catid":1,"images":"/mfzmanage/1499771488_植村秀白色睫毛胶.jpg","price":1,"descs":"源自京东的专业彩妆的匠心力作，快速易干自然放大"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992412)
+body: {"name":"Shu Uemura（植村秀）砍刀眉笔黑色","attr":"Shu Uemura（植村秀）砍刀眉笔黑色","catid":1,"images":"/mfzmanage/1499771592_植村秀砍刀眉笔黑色.jpg","price":1,"descs":"植村秀品牌专注匠心的传承之物， 独特的砍刀造型，无限接近真眉毛般1mm极细笔锋， 轻松拉画出根根自然精细线条，缔造栩栩如生的绒毛质感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992471)
+body: {"name":"CD（迪奥）861#腮红","attr":"CD（迪奥）861#腮红","catid":1,"images":"manage/1501471073_CD腮红861.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992510)
+body: {"name":"MAKEUPFOREVER （玫珂菲）修容","attr":"MAKEUPFOREVER （玫珂菲）修容","catid":1,"images":"manage/1504247328_玫珂菲02双修.jpg,manage/1504247328_玫珂菲02修容.jpg,manage/1504247328_玫珂菲02修容展示图1.jpg,manage/1504247328_玫珂菲02修容展示图2.jpg,manage/1504247328_玫珂菲02修容展示图3.jpg","price":30,"descs":"颠覆传统复杂修容产品，多效合一轻松玩转，自然塑造高光+阴影+腮红，线条柔和，妆容轻薄自然"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992510)
+body: {"name":"Shu Uemura（植村秀）砍刀眉笔灰色","attr":"Shu Uemura（植村秀）砍刀眉笔灰色","catid":1,"images":"/mfzmanage/1499771659_植村秀砍刀眉笔灰色.jpg","price":1,"descs":"植村秀品牌专注匠心的传承之物， 独特的砍刀造型，无限接近真眉毛般1mm极细笔锋， 轻松拉画出根根自然精细线条，缔造栩栩如生的绒毛质感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992530)
+body: {"name":"CD（迪奥）881#腮红","attr":"CD（迪奥）881#腮红","catid":1,"images":"manage/1501471085_CD腮红881.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992530)
+body: {"name":"Shu Uemura（植村秀）砍刀眉笔咖色","attr":"Shu Uemura（植村秀）砍刀眉笔咖色","catid":1,"images":"/mfzmanage/1499771728_植村秀砍刀眉笔咖色.jpg","price":1,"descs":"植村秀品牌专注匠心的传承之物， 独特的砍刀造型，无限接近真眉毛般1mm极细笔锋， 轻松拉画出根根自然精细线条，缔造栩栩如生的绒毛质感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992595)
+body: {"name":"Armani（阿玛尼）设计师04#粉底","attr":"Armani（阿玛尼）设计师04#粉底","catid":1,"images":"/mfzmanage/1499771934_阿玛尼设计师04号.jpg","price":25,"descs":"阿玛尼采用Micro–fil™超微研粉技术，轻薄，在肌肤表面形成超细致的透气粉质网膜，贴合肌肤，糅合量身定制的普鲁士珠光调色微粒，赋予产品高强度的深度和光泽感，纠正肤色不均，紧致提拉肌肤，塑造面部轮廓，重现年轻肌肤，在淡化细纹的同时提亮肤色。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992612)
+body: {"name":"CD（迪奥）889#腮红","attr":"CD（迪奥）889#腮红","catid":1,"images":"manage/1501471097_CD腮红889.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992612)
+body: {"name":"Armani（阿玛尼）设计师03#粉底","attr":"Armani（阿玛尼）设计师03#粉底","catid":1,"images":"/mfzmanage/1499771988_阿玛尼设计师03号.jpg,/mfzmanage/1499771975_1.jpg","price":25,"descs":"阿玛尼采用Micro–fil™超微研粉技术，轻薄，在肌肤表面形成超细致的透气粉质网膜，贴合肌肤，糅合量身定制的普鲁士珠光调色微粒，赋予产品高强度的深度和光泽感，纠正肤色不均，紧致提拉肌肤，塑造面部轮廓，重现年轻肌肤，在淡化细纹的同时提亮肤色。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992628)
+body: {"name":"CD（迪奥）896#腮红","attr":"CD（迪奥）896#腮红","catid":1,"images":"manage/1501471110_CD腮红896.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992628)
+body: {"name":"Armani（阿玛尼）设计师02#粉底","attr":"Armani（阿玛尼）设计师02#粉底","catid":1,"images":"/mfzmanage/1499772097_阿玛尼设计师02号.jpg","price":25,"descs":"阿玛尼采用Micro–fil™超微研粉技术，轻薄，在肌肤表面形成超细致的透气粉质网膜，贴合肌肤，糅合量身定制的普鲁士珠光调色微粒，赋予产品高强度的深度和光泽感，纠正肤色不均，紧致提拉肌肤，塑造面部轮廓，重现年轻肌肤，在淡化细纹的同时提亮肤色。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992708)
+body: {"name":"NARS（纳斯）ADORATION腮红","attr":"NARS（纳斯）ADORATION腮红","catid":1,"images":"/mfzmanage/1499772040_NARS腮红ADORATION.jpg","price":30,"descs":"全新星灿奢华双色腮红的干湿双用技术，使粉质细致如丝，带动彩妆新潮流。干擦呈现健康色泽，湿擦让肌肤呈现半透明感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992734)
+body: {"name":"Armani（阿玛尼）大师04#粉底","attr":"Armani（阿玛尼）大师04#粉底","catid":1,"images":"/mfzmanage/1499772204_阿玛尼大师04.jpg,/mfzmanage/1499772184_2.jpg,/mfzmanage/1499772184_1.jpg","price":25,"descs":"创新「融萃粉妆技术」，轻抹瞬间，好似羽幻纱般丝柔轻盈。蕴含莲花植萃精华，涂抹起来顺滑、不油腻，既清爽滋润，又无瑕持妆，打造自然无瑕肤质。易于涂抹、简单上妆、轻松叠加及补妆。无论何时何地，阿玛尼粉底小滴管都能打造快速轻盈质感的妆效，令你持妆无忧！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992734)
+body: {"name":"Armani（阿玛尼）大师03#粉底","attr":"Armani（阿玛尼）大师03#粉底","catid":1,"images":"/mfzmanage/1499772340_阿玛尼大师03.jpg","price":25,"descs":"创新「融萃粉妆技术」，轻抹瞬间，好似羽幻纱般丝柔轻盈。蕴含莲花植萃精华，涂抹起来顺滑、不油腻，既清爽滋润，又无瑕持妆，打造自然无瑕肤质。易于涂抹、简单上妆、轻松叠加及补妆。无论何时何地，阿玛尼粉底小滴管都能打造快速轻盈质感的妆效，令你持妆无忧！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992750)
+body: {"name":"NARS（纳斯）PANIC腮红","attr":"NARS（纳斯）PANIC腮红","catid":1,"images":"/mfzmanage/1499772312_NARS腮红PANIC.jpg","price":30,"descs":"全新星灿奢华双色腮红的干湿双用技术，使粉质细致如丝，带动彩妆新潮流。干擦呈现健康色泽，湿擦让肌肤呈现半透明感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992750)
+body: {"name":"Armani（阿玛尼）大师02#粉底","attr":"Armani（阿玛尼）大师02#粉底","catid":1,"images":"/mfzmanage/1499772476_阿玛尼大师02.jpg","price":25,"descs":"创新「融萃粉妆技术」，轻抹瞬间，好似羽幻纱般丝柔轻盈。蕴含莲花植萃精华，涂抹起来顺滑、不油腻，既清爽滋润，又无瑕持妆，打造自然无瑕肤质。易于涂抹、简单上妆、轻松叠加及补妆。无论何时何地，阿玛尼粉底小滴管都能打造快速轻盈质感的妆效，令你持妆无忧！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992812)
+body: {"name":"YSL（圣罗兰）23#杏色府绸","attr":"YSL（圣罗兰）23#杏色府绸","catid":1,"images":"/mfzmanage/1499854130_圣罗兰23号.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992828)
+body: {"name":"YSL（圣罗兰）17#嫣粉纱丽","attr":"YSL（圣罗兰）17#嫣粉纱丽","catid":1,"images":"/mfzmanage/1499854268_圣罗兰17号.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:32(1512960992875)
+body: {"name":"Tom Ford（TF）黑管07哑光正红色口红","attr":"Tom Ford（TF）黑管07哑光正红色口红","catid":1,"images":"/mfzmanage/1499854219_TF黑管07哑光正红色.jpg,manage/1500975224_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993012)
+body: {"name":"YSL（圣罗兰）13#正橘色","attr":"YSL（圣罗兰）13#正橘色","catid":1,"images":"/mfzmanage/1499854343_圣罗兰13号.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993028)
+body: {"name":"YSL（圣罗兰）9#色绛紫丝绒","attr":"YSL（圣罗兰）9#色绛紫丝绒","catid":1,"images":"/mfzmanage/1499854437_圣罗兰9号色.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993028)
+body: {"name":"YSL（圣罗兰）1#色正红色","attr":"YSL（圣罗兰）1#色正红色","catid":1,"images":"/mfzmanage/1499854517_圣罗兰1号色.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993028)
+body: {"name":"Chanel（香奈儿）507#口红","attr":"Chanel（香奈儿）507#口红","catid":1,"images":"/mfzmanage/1499854554_香奈儿507.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993028)
+body: {"name":"Chanel（香奈儿）497#口红","attr":"Chanel（香奈儿）497#口红","catid":1,"images":"/mfzmanage/1499854613_香奈儿497号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993114)
+body: {"name":"Tom Ford（TF）黑管08粉色口红","attr":"Tom Ford（TF）黑管08粉色口红","catid":1,"images":"/mfzmanage/1499854534_TF黑管08粉色.jpg,manage/1500975190_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993161)
+body: {"name":"Armani（阿玛尼）500#唇彩","attr":"Armani（阿玛尼）500#唇彩","catid":1,"images":"/mfzmanage/1499854668_阿玛尼500.jpg,/manage/1500279523_0.jpg,/manage/1500279523_000.jpg,/manage/1500279523_00.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993161)
+body: {"name":"Chanel（香奈儿）124#口红","attr":"Chanel（香奈儿）124#口红","catid":1,"images":"/mfzmanage/1499854681_香奈儿124号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993161)
+body: {"name":"Chanel（香奈儿）122#口红","attr":"Chanel（香奈儿）122#口红","catid":1,"images":"/mfzmanage/1499854734_香奈儿122号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993161)
+body: {"name":"Armani（阿玛尼）414#唇彩","attr":"Armani（阿玛尼）414#唇彩","catid":1,"images":"/mfzmanage/1499854766_阿玛尼414.jpg,/manage/1500279509_000.jpg,/manage/1500279509_0.jpg,/manage/1500279509_00.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993227)
+body: {"name":"Chanel（香奈儿）114#口红","attr":"Chanel（香奈儿）114#口红","catid":1,"images":"/mfzmanage/1499854786_香奈儿114.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993243)
+body: {"name":"Mac（魅可）口红-vegasvolt润泽","attr":"Mac（魅可）口红-vegasvolt润泽","catid":1,"images":"/mfzmanage/1499854819_vegasvolt润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993259)
+body: {"name":"Chanel（香奈儿）97#口红","attr":"Chanel（香奈儿）97#口红","catid":1,"images":"/mfzmanage/1499854880_香奈儿97号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993259)
+body: {"name":"Mac（魅可）口红-Sweetsakura润泽","attr":"Mac（魅可）口红-Sweetsakura润泽","catid":1,"images":"/mfzmanage/1499854930_Sweetsakura润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993259)
+body: {"name":"Chanel（香奈儿）91#口红","attr":"Chanel（香奈儿）91#口红","catid":1,"images":"/mfzmanage/1499854962_香奈儿91号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993323)
+body: {"name":"Chanel（香奈儿）87#口红","attr":"Chanel（香奈儿）87#口红","catid":1,"images":"/mfzmanage/1499855011_香奈儿87号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993339)
+body: {"name":"Mac（魅可）口红-Touch润泽","attr":"Mac（魅可）口红-Touch润泽","catid":1,"images":"/mfzmanage/1499855042_Touch润泽.jpg","price":25,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993357)
+body: {"name":"Chanel（香奈儿）79#口红","attr":"Chanel（香奈儿）79#口红","catid":1,"images":"/mfzmanage/1499855132_香奈儿79号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993360)
+body: {"name":"Tom Ford（TF）新白管07口红","attr":"Tom Ford（TF）新白管07口红","catid":1,"images":"/mfzmanage/1499855146_TF新白管07.jpg","price":25,"descs":"润滑质地，一抹遮盖唇色， 呈现高饱和色泽！赋予双唇靓丽色泽，令唇膏丰富绚丽，闪烁美丽色泽。隐隐约约的性感唇色，将TA不自觉斩入怀中。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993361)
+body: {"name":"Mac（魅可）口红-Sushikiss润泽","attr":"Mac（魅可）口红-Sushikiss润泽","catid":1,"images":"/mfzmanage/1499855049_Sushikiss润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993421)
+body: {"name":"Tom Ford（TF）新白管05口红","attr":"Tom Ford（TF）新白管05口红","catid":1,"images":"/mfzmanage/1499855253_TF新白管05.png","price":25,"descs":"润滑质地，一抹遮盖唇色， 呈现高饱和色泽！赋予双唇靓丽色泽，令唇膏丰富绚丽，闪烁美丽色泽。隐隐约约的性感唇色，将TA不自觉斩入怀中。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993454)
+body: {"name":"Mac（魅可）口红-Sunnyseoul润泽","attr":"Mac（魅可）口红-Sunnyseoul润泽","catid":1,"images":"/mfzmanage/1499855308_Sunnyseoul润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993454)
+body: {"name":"Chanel（香奈儿）69#口红","attr":"Chanel（香奈儿）69#口红","catid":1,"images":"/mfzmanage/1499855251_香奈儿69号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993455)
+body: {"name":"Chanel（香奈儿）62#口红","attr":"Chanel（香奈儿）62#口红","catid":1,"images":"/mfzmanage/1499855406_香奈儿62号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993455)
+body: {"name":"Tom Ford（TF）新白管04口红","attr":"Tom Ford（TF）新白管04口红","catid":1,"images":"/mfzmanage/1499855384_TF新白管04.jpg","price":25,"descs":"润滑质地，一抹遮盖唇色， 呈现高饱和色泽！赋予双唇靓丽色泽，令唇膏丰富绚丽，闪烁美丽色泽。隐隐约约的性感唇色，将TA不自觉斩入怀中。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993480)
+body: {"name":"Tom Ford（TF）新白管03口红","attr":"Tom Ford（TF）新白管03口红","catid":1,"images":"/mfzmanage/1499855455_TF新白管03.jpg","price":25,"descs":"润滑质地，一抹遮盖唇色， 呈现高饱和色泽！赋予双唇靓丽色泽，令唇膏丰富绚丽，闪烁美丽色泽。隐隐约约的性感唇色，将TA不自觉斩入怀中。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993539)
+body: {"name":"Mac（魅可）口红-Steadygoing哑光","attr":"Mac（魅可）口红-Steadygoing哑光","catid":1,"images":"/mfzmanage/1499855406_Steadygoing哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993539)
+body: {"name":"Chanel（香奈儿）57#口红","attr":"Chanel（香奈儿）57#口红","catid":1,"images":"/mfzmanage/1499855473_香奈儿57号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993540)
+body: {"name":"Chanel（香奈儿）55#口红","attr":"Chanel（香奈儿）55#口红","catid":1,"images":"/mfzmanage/1499855593_香奈儿55号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993543)
+body: {"name":"Tom Ford（TF）黑管16古典猩红色口红","attr":"Tom Ford（TF）黑管16古典猩红色口红","catid":1,"images":"/mfzmanage/1499855600_TF黑管16古典猩红.jpg,manage/1500975241_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993618)
+body: {"name":"Chanel（香奈儿）54#口红","attr":"Chanel（香奈儿）54#口红","catid":1,"images":"/mfzmanage/1499855630_香奈儿54号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993634)
+body: {"name":"Chanel（香奈儿）46#口红","attr":"Chanel（香奈儿）46#口红","catid":1,"images":"/mfzmanage/1499855734_香奈儿46号.jpg","price":30,"descs":"随你每一次的心情变奏，释放多重华丽光色：迷惑、雅趣、夜幕、纵情！展现丝绒般的轻软舒适，留下浓郁华美色泽与柔亮妆效。拥有同炫亮魅力唇膏一样的滋润度，且如第二层肌肤般轻若无物。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993634)
+body: {"name":"Tom Ford（TF）黑管15橘红色口红","attr":"Tom Ford（TF）黑管15橘红色口红","catid":1,"images":"manage/1500975310_TF黑管15橘红色.jpg,manage/1500975250_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993634)
+body: {"name":"Tom Ford（TF）黑管10大红色口红","attr":"Tom Ford（TF）黑管10大红色口红","catid":1,"images":"/mfzmanage/1499855869_TF黑管10大红色.jpg,manage/1500975327_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993634)
+body: {"name":"YSL（圣罗兰）56#橙红织棉","attr":"YSL（圣罗兰）56#橙红织棉","catid":1,"images":"/mfzmanage/1499855874_圣罗兰56号.jpg","price":30,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993726)
+body: {"name":"YSL（圣罗兰）52#星星色","attr":"YSL（圣罗兰）52#星星色","catid":1,"images":"/mfzmanage/1499856003_圣罗兰52号.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993751)
+body: {"name":"Tom Ford（TF）黑管09哑光正红色口红","attr":"Tom Ford（TF）黑管09哑光正红色口红","catid":1,"images":"/mfzmanage/1499856020_TF黑管09哑光正红色.jpg,manage/1500975345_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993751)
+body: {"name":"Mac（魅可）口红-Starmagnolia","attr":"Mac（魅可）口红-Starmagnolia","catid":1,"images":"/mfzmanage/1499855705_Starmagnolia.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993751)
+body: {"name":"YSL（圣罗兰）51#莹亮珊瑚橙","attr":"YSL（圣罗兰）51#莹亮珊瑚橙","catid":1,"images":"/mfzmanage/1499856064_圣罗兰51号.jpg","price":25,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993751)
+body: {"name":"Tom Ford（TF）黑管09珊瑚色口红","attr":"Tom Ford（TF）黑管09珊瑚色口红","catid":1,"images":"manage/1500976257_TF黑管09珊瑚色.jpg,/mfzmanage/1499856101_TF黑管09珊瑚色.jpg,manage/1500975353_1.jpg","price":25,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993820)
+body: {"name":"YSL（圣罗兰）36#珊瑚雪纺","attr":"YSL（圣罗兰）36#珊瑚雪纺","catid":1,"images":"/mfzmanage/1499856103_圣罗兰36号.jpg","price":30,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993835)
+body: {"name":"Mac（魅可）口红-Shanghaispice润泽","attr":"Mac（魅可）口红-Shanghaispice润泽","catid":1,"images":"/mfzmanage/1499856121_Shanghaispice润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993835)
+body: {"name":"Mac（魅可）口红-mocha 润泽","attr":"Mac（魅可）口红-mocha 润泽","catid":1,"images":"/mfzmanage/1499856327_mocha润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993835)
+body: {"name":"Mac（魅可）口红-Sees heer润泽","attr":"Mac（魅可）口红-Sees heer润泽","catid":1,"images":"/mfzmanage/1499856297_Seesheer润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993835)
+body: {"name":"Mac（魅可）口红-Lustering润泽","attr":"Mac（魅可）口红-Lustering润泽","catid":1,"images":"/mfzmanage/1499856382_Mac口红Lustering润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993913)
+body: {"name":"Mac（魅可）口红-Saigonsummer润泽","attr":"Mac（魅可）口红-Saigonsummer润泽","catid":1,"images":"/mfzmanage/1499856430_Saigonsummer润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993920)
+body: {"name":"Mac（魅可）口红-Runwayhit哑光","attr":"Mac（魅可）口红-Runwayhit哑光","catid":1,"images":"/mfzmanage/1499856537_Runwayhit哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993920)
+body: {"name":"Mac（魅可）口红-Ruby woo哑光","attr":"Mac（魅可）口红-Ruby woo哑光","catid":1,"images":"/mfzmanage/1499856863_Rubywoo哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993920)
+body: {"name":"Mac（魅可）口红-Prettyboy润泽","attr":"Mac（魅可）口红-Prettyboy润泽","catid":1,"images":"/mfzmanage/1499857078_Prettyboy润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993920)
+body: {"name":"Mac（魅可）口红-Razzledazzler润泽","attr":"Mac（魅可）口红-Razzledazzler润泽","catid":1,"images":"/mfzmanage/1499856945_Razzledazzler润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993972)
+body: {"name":"Mac（魅可）口红-Pinkplaid哑光","attr":"Mac（魅可）口红-Pinkplaid哑光","catid":1,"images":"/mfzmanage/1499857224_Pinkplaid哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993980)
+body: {"name":"Mac（魅可）口红-Naturallyt ransformed哑光","attr":"Mac（魅可）口红-Naturallyt ransformed哑光","catid":1,"images":"/mfzmanage/1499857556_naturallytransformed哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993980)
+body: {"name":"Mac（魅可）口红-Morange润泽","attr":"Mac（魅可）口红-Morange润泽","catid":1,"images":"/mfzmanage/1499857744_morange润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993980)
+body: {"name":"Mac（魅可）口红-Persistence哑光","attr":"Mac（魅可）口红-Persistence哑光","catid":1,"images":"/mfzmanage/1499857403_Persistence哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:33(1512960993980)
+body: {"name":"Mac（魅可）口红-mocha润泽","attr":"Mac（魅可）口红-mocha润泽","catid":1,"images":"/mfzmanage/1499857867_mocha润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994036)
+body: {"name":"Mac（魅可）口红-Lustering润泽","attr":"Mac（魅可）口红-Lustering润泽","catid":1,"images":"/mfzmanage/1499857983_Mac口红Lustering润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994054)
+body: {"name":"Mac（魅可）口红-Ladydanger哑光","attr":"Mac（魅可）口红-Ladydanger哑光","catid":1,"images":"/mfzmanage/1499858595_Ladydanger哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994052)
+body: {"name":"Mac（魅可）口红-Dfordanger哑光","attr":"Mac（魅可）口红-Dfordanger哑光","catid":1,"images":"/mfzmanage/1499858067_Mac口红dfordanger哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994053)
+body: {"name":"Mac（魅可）口红-Littlebuddha润泽","attr":"Mac（魅可）口红-Littlebuddha润泽","catid":1,"images":"/mfzmanage/1499858488_Littlebuddha润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994054)
+body: {"name":"Mac（魅可）口红-M.a.cred润泽","attr":"Mac（魅可）口红-M.a.cred润泽","catid":1,"images":"/mfzmanage/1499858222_M.a.cred润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994090)
+body: {"name":"Mac（魅可）口红-Ladybug润泽","attr":"Mac（魅可）口红-Ladybug润泽","catid":1,"images":"/mfzmanage/1499858737_Ladybug润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994121)
+body: {"name":"Mac（魅可）口红-Koicoral润泽","attr":"Mac（魅可）口红-Koicoral润泽","catid":1,"images":"/mfzmanage/1499858811_Koicoral润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994121)
+body: {"name":"Mac（魅可）口红-Fusionpink润泽","attr":"Mac（魅可）口红-Fusionpink润泽","catid":1,"images":"/mfzmanage/1499858920_Fusionpink润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994121)
+body: {"name":"Mac（魅可）口红-Dozen carnations润泽","attr":"Mac（魅可）口红-Dozen carnations润泽","catid":1,"images":"/mfzmanage/1499859016_Dozencarnations润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994121)
+body: {"name":"Mac（魅可）口红-Dareyou润泽","attr":"Mac（魅可）口红-Dareyou润泽","catid":1,"images":"/mfzmanage/1499859190_Dareyou润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994181)
+body: {"name":"Mac（魅可）口红-Dangerous哑光","attr":"Mac（魅可）口红-Dangerous哑光","catid":1,"images":"/mfzmanage/1499859307_Dangerous哑光.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994193)
+body: {"name":"Mac（魅可）口红-Cosmo润泽","attr":"Mac（魅可）口红-Cosmo润泽","catid":1,"images":"/mfzmanage/1499859392_Cosmo润泽.jpg","price":20,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994194)
+body: {"name":"Mac（魅可）Coralbliss润泽口红","attr":"Mac（魅可）Coralbliss润泽口红","catid":1,"images":"/mfzmanage/1499859455_Coralbliss润泽.jpg","price":20,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994194)
+body: {"name":"Mac（魅可）Cockney润泽口红","attr":"Mac（魅可）Cockney润泽口红","catid":1,"images":"/mfzmanage/1499859547_Cockney润泽.jpg","price":20,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994195)
+body: {"name":"Mac（魅可）Chili哑光口红","attr":"Mac（魅可）Chili哑光口红","catid":1,"images":"/mfzmanage/1499859603_Chili哑光.jpg","price":20,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994217)
+body: {"name":"Mac（魅可）Candy yum yum哑光口红","attr":"Mac（魅可）Candy yum yum哑光口红","catid":1,"images":"/mfzmanage/1499859699_Candyyumyum哑光.jpg","price":20,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994219)
+body: {"name":"Mac（魅可）Brave red润泽口红","attr":"Mac（魅可）Brave red润泽口红","catid":1,"images":"/mfzmanage/1499859747_Bravered润泽.jpg","price":20,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994220)
+body: {"name":"Armani（阿玛尼）502#唇彩","attr":"Armani（阿玛尼）502#唇彩","catid":1,"images":"/mfzmanage/1499859920_阿玛尼502.jpg,/manage/1500279485_0.jpg,/manage/1500279485_000.jpg,/manage/1500279485_00.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994495)
+body: {"name":"OPI指甲油缤纷绚彩色","attr":"OPI指甲油缤纷绚彩色","catid":1,"images":"/mfzmanage/1499942803_OPI指甲油缤纷绚彩色展示图.png,/mfzmanage/1500016888_0.jpg,/mfzmanage/1499942800_OPI指甲油缤纷绚彩色.png","price":68,"descs":"热爱摇滚，金属质感的女性偏爱，金属色系奢华冷艳，无论是浅金色、绚丽金、闪银色都是非常让人瞩目的颜色，指尖上的璀璨人生，搭配金属色为造型增添亮点，打造华丽风格。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994654)
+body: {"name":"OPI指甲油心动闪银色","attr":"OPI指甲油心动闪银色","catid":1,"images":"/mfzmanage/1499943149_OPI指甲油心动闪银色展示图.png,/mfzmanage/1500016927_0.jpg,/mfzmanage/1499943145_OPI指甲油心动闪银色.png","price":68,"descs":"热爱摇滚，金属质感的女性偏爱，金属色系奢华冷艳，无论是浅金色、绚丽金、闪银色都是非常让人瞩目的颜色，指尖上的璀璨人生，搭配金属色为造型增添亮点，打造华丽风格。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994903)
+body: {"name":"OPI指甲油怀旧铁锈花色","attr":"OPI指甲油怀旧铁锈花色","catid":1,"images":"/mfzmanage/1499944840_NLF15怀旧铁锈花色.jpg,/mfzmanage/1500016353_00.jpg,/mfzmanage/1499943620_OPI指甲油怀旧铁锈花色.png","price":68,"descs":"无彩色系，清新淡雅，不挑肤色，经典百搭。已是各大时装，T台上下红毯内外的一抹色彩 回忆、品质，指尖上的本色展现，淡雅裸色以法式优雅衬托你的气质，可自然淡雅、可经典不朽，可百搭随心。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:34(1512960994965)
+body: {"name":"OPI指甲油亮薰衣草紫","attr":"OPI指甲油亮薰衣草紫","catid":1,"images":"/mfzmanage/1499944959_OPI指甲油亮薰衣草紫展示图.png,/mfzmanage/1499943664_0.jpg,/mfzmanage/1499944959_OPI指甲油亮薰衣草紫.png","price":68,"descs":"知性，梦幻，指尖上的感性演绎，美丽紫色，已成为众多名媛及时尚达人们的必选色之一，极具神秘与富贵，悠远迷幻令人迷思，优雅高贵又给人以沉稳感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995437)
+body: {"name":"OPI指甲油葡萄深紫色","attr":"OPI指甲油葡萄深紫色","catid":1,"images":"/mfzmanage/1499944848_OPI指甲油葡萄深紫色展示图.png,/mfzmanage/1499944133_0.jpg,/mfzmanage/1499944848_OPI指甲油葡萄深紫色.png","price":68,"descs":"知性，梦幻，指尖上的感性演绎，美丽紫色，已成为众多名媛及时尚达人们的必选色之一，极具神秘与富贵，悠远迷幻令人迷思，优雅高贵又给人以沉稳感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995545)
+body: {"name":"OPI指甲油紫色系木槿紫","attr":"OPI指甲油紫色系木槿紫","catid":1,"images":"/mfzmanage/1499944797_OPI指甲油紫色系木槿紫展示图.png,/mfzmanage/1499944511_0.jpg,/mfzmanage/1499944797_OPI指甲油紫色系木槿紫.png","price":68,"descs":"知性，梦幻，指尖上的感性演绎，美丽紫色，已成为众多名媛及时尚达人们的必选色之一，极具神秘与富贵，悠远迷幻令人迷思，优雅高贵又给人以沉稳感。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995589)
+body: {"name":"月儿公主-0.5CM假睫毛","attr":"月儿公主-0.5CM假睫毛","catid":1,"images":"/manage/1500273658_月儿公主.jpg,/manage/1500273681_3.jpg,/manage/1500273681_4.jpg,/manage/1500273681_5.jpg","price":15,"descs":"从眼头到眼尾，完整找过每根睫毛，自然纤长，浓密丰盈，改善稀疏睫毛，自然增长效果，打造小鹿般的俏丽双眸，让人怦然心动，适合自然日常妆容"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995647)
+body: {"name":"月儿公主-0.6CM假睫毛","attr":"月儿公主-0.6CM假睫毛","catid":1,"images":"/manage/1500273822_3.jpg,/manage/1500273822_4.jpg,/manage/1500273822_1.jpg,/manage/1500273822_2.jpg,/manage/1500273822_5.jpg","price":15,"descs":"从眼头到眼尾，完整找过每根睫毛，自然纤长，浓密丰盈，改善稀疏睫毛，自然增长效果，打造小鹿般的俏丽双眸，让人怦然心动，适合自然日常妆容"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995775)
+body: {"name":"月儿公主-0.7CM假睫毛","attr":"月儿公主-0.7CM假睫毛","catid":1,"images":"/manage/1500274373_1.jpg,/manage/1500274373_2.jpg,/manage/1500274373_3.jpg,/manage/1500274373_4.jpg,/manage/1500274373_5.jpg","price":15,"descs":"从眼头到眼尾，完整找过每根睫毛，自然纤长，浓密丰盈，改善稀疏睫毛，自然增长效果，打造小鹿般的俏丽双眸，让人怦然心动，适合自然日常妆容"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995775)
+body: {"name":"月儿公主-0.9CM假睫毛","attr":"月儿公主-0.9CM假睫毛","catid":1,"images":"/manage/1500274650_1.jpg,/manage/1500274650_2.jpg,/manage/1500274650_3.jpg,/manage/1500274650_4.jpg,/manage/1500274650_5.jpg","price":15,"descs":"从眼头到眼尾，完整找过每根睫毛，自然纤长，浓密丰盈，改善稀疏睫毛，自然增长效果，打造小鹿般的俏丽双眸，让人怦然心动，适合自然日常妆容"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995775)
+body: {"name":"Armani（阿玛尼）400#唇彩","attr":"Armani（阿玛尼）400#唇彩","catid":1,"images":"/manage/1500279602_阿玛尼400唇彩.jpg,/manage/1500279540_000.jpg,/manage/1500279540_00.jpg,/manage/1500279540_0.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995775)
+body: {"name":"月儿公主-0.8CM假睫毛","attr":"月儿公主-0.8CM假睫毛","catid":1,"images":"/manage/1500274563_1.jpg,/manage/1500274563_2.jpg,/manage/1500274563_3.jpg,/manage/1500274563_4.jpg,/manage/1500274563_5.jpg","price":15,"descs":"从眼头到眼尾，完整找过每根睫毛，自然纤长，浓密丰盈，改善稀疏睫毛，自然增长效果，打造小鹿般的俏丽双眸，让人怦然心动，适合自然日常妆容"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995806)
+body: {"name":"Armani（阿玛尼）401#唇彩","attr":"Armani（阿玛尼）401#唇彩","catid":1,"images":"/manage/1500280446_阿玛尼401唇彩.jpg,/manage/1500280406_000.jpg,/manage/1500280406_00.jpg,/manage/1500280406_0.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995835)
+body: {"name":"Armani（阿玛尼）402#唇彩","attr":"Armani（阿玛尼）402#唇彩","catid":1,"images":"/manage/1500280558_阿玛尼402唇彩.jpg,/manage/1500280567_000.jpg,/manage/1500280567_0.jpg,/manage/1500280567_00.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:35(1512960995837)
+body: {"name":"Armani（阿玛尼）501#唇彩","attr":"Armani（阿玛尼）501#唇彩","catid":1,"images":"/manage/1500281463_阿玛尼501唇彩.jpg,/manage/1500281433_000.jpg,/manage/1500281433_00.jpg,/manage/1500281433_0.jpg","price":30,"descs":"阿玛尼臻致丝绒哑光系列，阿玛尼首只兼具丝绒质地和光泽感的唇釉，一抹即使唇部饱满水润、光泽立现。不粘稠的质地却能保持唇部在涂抹后长效保湿。唇色焕发光彩的同时，散发热情和诱人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996095)
+body: {"name":"时尚项链forever","attr":"时尚项链forever","catid":1,"images":"/manage/1500623271_3.jpg,/manage/1500623271_5.jpg,/manage/1500623271_4.jpg,/manage/1500623271_1.jpg,/manage/1500623271_2.jpg","price":164,"descs":"星光闪耀，百搭身形，光泽明亮，怦然心动，散发迷人魅力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996581)
+body: {"name":"西装领宽松系带风衣外套","attr":"西装领宽松系带风衣外套","catid":1,"images":"/manage/1500635211_18.jpg,/manage/1500635222_3287.jpg","price":328,"descs":"风衣是A字版型，手感丝滑垂坠，上身以后会很有型。立体剪裁，上身非常显瘦。在办公室常备一件肯定没错，两侧有口袋，实用性极佳。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996596)
+body: {"name":"CD（迪奥）887#单色眼影","attr":"CD（迪奥）887#单色眼影","catid":1,"images":"manage/1501211018_CD眼影单色887.jpg,/manage/1500636753_CD单色887.jpg","price":30,"descs":"沿用自家标志性浮雕图案装饰，Dior迪奥创意总监Tyen亲自打造产品外观造型，为时尚追随者订立眼影造型新基调。选自三种色系的眼影，打造全新玩味迷惑的自然妆容。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996631)
+body: {"name":"Lancome（兰蔻）小黑瓶大眼精华眼霜眼部肌底液","attr":"Lancome（兰蔻）小黑瓶大眼精华眼霜眼部肌底液","catid":1,"images":"/manage/1500697780_兰蔻小黑瓶大眼精华眼霜眼部肌底液.jpg,manage/1501061486_兰蔻小黑瓶大眼精华眼霜眼部肌底液展示图.jpg,/manage/1500697796_兰蔻小黑瓶大眼精华眼霜眼部肌底液展示图.jpg","price":40,"descs":"革命性360°弹力按摩亮珠light-pearl ™，使眼周护理更精准、灵活、深入。 轻柔按摩间，激活眼周内循环和吸收力，弹力按摩直达肌底，淡褪黑眼圈、减淡/缓解眼袋、平滑细纹，紧致双眸，让你的眼睛更大，更清澈，更年轻。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996647)
+body: {"name":"Lancome（兰蔻）梦魅睛灵防水睫毛膏","attr":"Lancome（兰蔻）梦魅睛灵防水睫毛膏","catid":1,"images":"manage/1501061631_兰蔻梦魅睛灵防水睫毛膏.jpg,/manage/1500697911_兰蔻梦魅睛灵防水睫毛膏展示图2.jpg,/manage/1500697911_兰蔻梦魅睛灵防水睫毛膏展示图.jpg","price":25,"descs":"昵称“大眼娃娃”睫毛膏，让睫毛卷翘动人，“宛如娃娃般旋翘浓密”。 浓密、纤长、卷翘……魔法轻施，晴灵双眸即刻放大。 大眼娃娃圆锥形睫毛刷，一刷轻盈飞翘，呈现根根分明，翘楚的睫毛形态。防水配方，持久妆效。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996675)
+body: {"name":"Lancome（兰蔻）清滢柔肤水400ML","attr":"Lancome（兰蔻）清滢柔肤水400ML","catid":1,"images":"manage/1501059252_清滢柔肤水400ML.jpg,manage/1501059237_清滢柔肤水400ML展示图.jpg,/manage/1500698063_清滢柔肤水400ML展示图.jpg","price":30,"descs":"乳状的化妆水能净澈清洁却不刺激脆弱敏感的肌肤，肌肤变得如玫瑰花般紧实润泽，并且富有弹性。同时能给予肌肤滋润，帮助后续保养品的吸收。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996700)
+body: {"name":"Lancome（兰蔻）小黑瓶精华肌肤底液","attr":"Lancome（兰蔻）小黑瓶精华肌肤底液","catid":1,"images":"manage/1501058690_兰蔻小黑瓶精华肌肤底液展示图2.jpg,/manage/1500698190_兰蔻小黑瓶精华肌肤底液.jpg,/manage/1500698190_兰蔻小黑瓶精华肌肤底液展示图.jpg","price":70,"descs":"以7项创新专利和生物科技获取的活性成份，深入肌底修护，激活年轻蛋白活性；以超小的精华分子，超快渗透修护肌底，使肌肤追溯到年轻状态，让肌肤柔软细腻摸得到，弹润透亮看的见，一日日，年轻光芒由内闪耀！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996735)
+body: {"name":"CPB（肌肤之钥）精华肌底液","attr":"CPB（肌肤之钥）精华肌底液","catid":1,"images":"/manage/1500707935_CPB精华肌底液1.jpg,/manage/1500707957_CPB精华肌底液.jpg","price":30,"descs":"舒颜焕肤的肌底精华液，给肌肤补充水润、活力与光彩。富含浓缩滋养成分，提升皮肤自然活力，挖掘您的美丽潜能。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996767)
+body: {"name":"CPB（肌肤之钥）光采保湿露（湿润型）","attr":"CPB（肌肤之钥）光采保湿露（湿润型）","catid":1,"images":"/manage/1500709524_CPB妆前水乳光采保湿露湿润型.jpg","price":35,"descs":"滋养肌肤亮采水润。运用肌肤内在的水润使肌肤由内而外焕发光彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996767)
+body: {"name":"CD（迪奥）惊艳浓密旋翘睫毛膏","attr":"CD（迪奥）惊艳浓密旋翘睫毛膏","catid":1,"images":"/manage/1500710606_CD惊艳浓密旋翘睫毛膏.jpg,/manage/1500710606_CD惊艳浓密旋翘睫毛膏展示图.jpg,/manage/1500710606_CD惊艳浓密旋翘睫毛膏1.jpg","price":40,"descs":"Dior迪奥惊艳旋翘睫毛膏带来卷曲度极致完美的俏丽睫毛。 富含K复合物，带来浓密、防护及定型效果，丰盈配方能使睫毛绽现惊人卷翘。全新睫毛护理成分深层滋养双睫，倍显迷人卷翘。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996767)
+body: {"name":"SHISEIDO（资生堂）至美浓密睫毛膏","attr":"SHISEIDO（资生堂）至美浓密睫毛膏","catid":1,"images":"/manage/1500715313_资生堂至美浓密睫毛膏.jpg","price":15,"descs":"优型刷头设计，让睫毛愈显卷翘，根根分明。 柔滑浓密粉末，令睫毛膏更滑顺好刷。 打造令人惊艳的浓密妆效，让睫毛看起来更富魅力。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996828)
+body: {"name":"SK-II 护肤精华露（神仙水®）","attr":"SK-II 护肤精华露（神仙水®）","catid":1,"images":"/manage/1500716534_SKIIskii神仙水套装1.jpg,/manage/1500716534_SKIIskii神仙水套装2.jpg,/manage/1500716534_SKIIskii神仙水套装.jpg","price":50,"descs":"备受瞩目、畅销全球的 SK-II 护肤精华露（神仙水®）蕴含超过90%的天然生物成分PITERA™，集维生素、矿物质和氨基酸等多种微量营养素于一身，令肌肤变得晶莹剔透，嫩滑、紧致、焕发动人光彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996843)
+body: {"name":"Bobbi Brown（芭比波朗）流云眉粉眉笔","attr":"Bobbi Brown（芭比波朗）流云眉粉眉笔","catid":1,"images":"/manage/1500718244_芭比波朗流云眉粉眉笔.jpg,/manage/1500718244_芭比波朗流云眉粉眉笔展示图.jpg","price":15,"descs":"兼具眉笔的方便及眉粉的自然，迅速描绘精致眉型，持久配方，即使是油性肤质也不易脱妆。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996843)
+body: {"name":"Bobbi Brown（芭比波朗）流云随心造型眉笔","attr":"Bobbi Brown（芭比波朗）流云随心造型眉笔","catid":1,"images":"/manage/1500718930_芭比波朗流云随心造型眉笔1.jpg,/manage/1500718924_芭比波朗流云随心造型眉笔.jpg","price":15,"descs":"兼具眉笔的方便及眉粉的自然，迅速描绘精致眉型，持久配方，即使是油性肤质也不易脱妆。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996843)
+body: {"name":"Bobbi Brown（芭比波朗）流云眼线膏","attr":"Bobbi Brown（芭比波朗）流云眼线膏","catid":1,"images":"/manage/1500720250_芭比波朗流云眼线膏.jpg,/manage/1500720250_芭比波朗流云眼线膏展示图1.jpg","price":15,"descs":"膏体质地可轻松描绘如眼线液般精致的线条，快速简单。色泽浓郁饱满，膏体柔滑易上妆，快干持久配方，保持眼部妆容清新不脱妆。使用时配合精细眼线刷，取适量后在手背蘸取均匀上妆，快干配方不易晕染。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996906)
+body: {"name":"Bobbi Brown（芭比波朗）保湿眼霜","attr":"Bobbi Brown（芭比波朗）保湿眼霜","catid":1,"images":"/manage/1500721602_芭比波朗持久保湿眼霜1.jpg,/manage/1500721602_芭比波朗持久保湿眼霜.jpg,/manage/1500721602_芭比波朗持久保湿眼霜2.jpg,/manage/1500721602_芭比波朗持久保湿眼霜3.jpg","price":8,"descs":"丰富的水溶性矿物质，使肌肤健康，保湿滋养，保湿因子及多种维他命能够持久保湿眼部周围较脆弱的肌肤，可令眼部底妆服帖持久。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996906)
+body: {"name":"Chanel（香奈儿）5#淡香水50ML","attr":"Chanel（香奈儿）5#淡香水50ML","catid":1,"images":"/manage/1500877587_香奈儿5号淡香水50ML.jpg,/manage/1500877579_香奈儿5号淡香水50ML展示图.jpg,/manage/1500877579_香奈儿5号淡香水50ML展示图2.jpg","price":1,"descs":"香奈儿5号香水是一支乙醛花香调的香水，它的香味由法国南部Grass的五月玫瑰、茉莉花、乙醛等80种成分组合而成，清幽的繁花香气凸现出女性的万般娇柔妩媚。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996994)
+body: {"name":"Chanel（香奈儿）5#香水低调奢华版50ML","attr":"Chanel（香奈儿）5#香水低调奢华版50ML","catid":1,"images":"/manage/1500879731_香奈儿5号香水低调奢华版50ML.jpg,/manage/1500879731_香奈儿5号香水低调奢华版50ML展示图2.jpg,/manage/1500879731_香奈儿5号香水低调奢华版50ML展示图.jpg","price":1,"descs":"全球第一只乙醛花香调的香水，以现代花香系列为号召，首先闻到的是摩登——现代香系列中的新鲜花香（包括伊兰花及苦橘）的香首，然后香体由玫瑰和茉莉带出，最后以白檀香为基底衬托。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:36(1512960996994)
+body: {"name":"Dior（迪奥）真我香水系列真我香水75ML","attr":"Dior（迪奥）真我香水系列真我香水75ML","catid":1,"images":"/manage/1500880793_迪奥真我香水系列真我香水75ML.jpg,/manage/1500880793_迪奥真我香水系列真我香水75ML展示图3.jpg,/manage/1500880793_迪奥真我香水系列真我香水75ML展示图.jpg,/manage/1500880793_迪奥真我香水系列真我香水75ML展示图2.jpg","price":1,"descs":"大马士革玫瑰的花束花香调，金色瓶身，女性气质的表达与象征，外形的设计还是香味都有时尚气息。清新纯净，自信优雅，这是一种令人愉悦的甜蜜"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997065)
+body: {"name":"Dior（迪奥）真我心悦香水75ML","attr":"Dior（迪奥）真我心悦香水75ML","catid":1,"images":"/manage/1500882176_迪奥真我心悦香水75ML.jpg,/manage/1500882176_迪奥真我心悦香水75M展示图.jpg,/manage/1500882176_迪奥真我心悦香水75M展示图2.jpg","price":1,"descs":"依兰精萃出色映衬，海盐香调，令盐之花清新绽放，伴随着沙巴茉莉及多汁蜜桃，清咸花蜜邂逅清甜鲜果，花香。果香、海盐香谐美交融惊艳感官"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997083)
+body: {"name":"巴宝莉红粉恋歌女士香氛","attr":"巴宝莉红粉恋歌女士香氛","catid":1,"images":"/manage/1500883756_巴宝莉红粉恋歌女士香氛100ML.jpg,/manage/1500883756_巴宝莉红粉恋歌女士香氛100ML展示图.jpg,/manage/1500883747_1.jpg","price":1,"descs":"明亮悦心的果香调香氛，散发出轻柔飘然的芬芳气息。香调糅合明媚娇柔的粉牡丹香前调、自由浪漫的黑葡萄香中调与馥郁沉稳的麝香基调，丝缕萦绕的魅力芳香让人品味低回。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997083)
+body: {"name":"Gucci-Guilty(古驰)-绚丽栀子香型女用淡香水","attr":"Gucci-Guilty(古驰)-绚丽栀子香型女用淡香水","catid":1,"images":"/manage/1500885317_古驰绚丽栀子香型女用淡香水.jpg,/manage/1500885317_古驰绚丽栀子香型女用淡香水展示图2.jpg,/manage/1500885317_古驰绚丽栀子香型女用淡香水展示图.jpg","price":1,"descs":"为嗅觉而生的艺术，像一部精彩的小说，一段美妙的史诗，在粉嫩的香氛弥漫的一触即发，馥郁后持久留香，就像少女虽娇柔，体内却蕴含强大的爆发力。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997099)
+body: {"name":"Gucci-Guilty(古驰)-女士淡香水","attr":"Gucci-Guilty(古驰)-女士淡香水","catid":1,"images":"/manage/1500886547_古驰GucciGuilty女士淡香水.jpg,/manage/1500886547_古驰GucciGuilty女士淡香水展示图.jpg","price":1,"descs":"灵感来源于摩登的反派，专为时尚达人设计了这款大胆的香氛。追求过去，向往未来。她摆脱束缚，在高节奏的生活中设定目标，岁是准备迎接挑战。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997415)
+body: {"name":"强生-日抛摩卡棕晶曦美瞳","attr":"强生-日抛摩卡棕晶曦美瞳","catid":1,"images":"manage/1501229338_强生日抛摩卡曦.jpg,manage/1501226474_强生日抛摩卡棕晶曦.jpg,manage/1501226620_强生展示图.jpg","price":38,"descs":"明亮点睛，双眸迷人，明亮双眸，愈见闪耀迷人， 融合深摩卡色，棕色及琥珀色的清透色调"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997415)
+body: {"name":"强生-日抛深灰金晶茜美瞳","attr":"强生-日抛深灰金晶茜美瞳","catid":1,"images":"manage/1501229643_强生日抛深灰金晶茜.jpg,manage/1501227167_强生日抛深灰金晶茜展示图.jpg,manage/1501227167_强生展示图.jpg","price":38,"descs":"深邃妩媚，自然闪耀，深邃双眸，愈见妩媚，清透花纹与深蜜色高光，浅灰底色相互辉映"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997415)
+body: {"name":"强生-日抛棕色妍妍美瞳","attr":"强生-日抛棕色妍妍美瞳","catid":1,"images":"manage/1501229303_强生日抛棕色妍妍展示图.jpg,manage/1501227850_强生日抛棕色妍妍.jpg,manage/1501227841_强生展示图.jpg","price":38,"descs":"灵动俏丽，自然闪耀，悦目彰显，双目灵动，愈见俏丽闪耀，特有柔和棕色花纹"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997513)
+body: {"name":"青春就是孩子dress","attr":"青春就是孩子dress","catid":1,"images":"manage/1501482828_1.jpg,manage/1501482828_2.jpg","price":328,"descs":"美丽优雅，其实很简单。本套装不挑人穿，线条大气流畅，修身显瘦，在整个夏天都清爽迷人！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997707)
+body: {"name":" Givenchy（纪梵希）四宫格定妆粉","attr":" Givenchy（纪梵希）四宫格定妆粉","catid":1,"images":"manage/1501496185_纪梵希四宫格定妆粉.png,manage/1501496185_纪梵希四宫格定妆粉展示图.png,manage/1501496185_纪梵希四宫格定妆粉展示图2.png","price":15,"descs":"粉质更加细腻丝滑，在皮肤上呈现出淡淡的光泽感，很是提亮肤色，给人一种无瑕裸妆的既视感"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997707)
+body: {"name":"Mac（魅可）晶亮润肤乳","attr":"Mac（魅可）晶亮润肤乳","catid":1,"images":"manage/1501494936_魅可晶亮润肤乳.png,manage/1501494936_魅可晶亮润肤乳展示图.png,manage/1501494936_魅可晶亮润肤乳展示图1.png","price":25,"descs":"魅可晶亮润肤乳能立刻解决肌肤问题。其超能力来自专利植物性药材；而它所富含的维他命元素和绿茶因子则能立刻唤醒肌肤，提亮肤色并为肌肤补充足够的水分。其漫散射微粒和抗氧化剂能纯净提亮肤色。无论您在阳光中还是镁光灯下，都能提升面部的光感效果。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997740)
+body: {"name":"YSL圣罗兰反转巴黎女士香水","attr":"YSL圣罗兰反转巴黎女士香水","catid":1,"images":"manage/1501574850_圣罗兰反转巴黎女士香水.png,manage/1501574850_圣罗兰反转巴黎女士香水展示图.png","price":720,"descs":"源于恋爱浪漫之都巴黎，让你感受疯狂，炙热的爱。 神秘明亮的曼陀罗与深邃强烈的广藿香，打造出圣罗兰第一支百花西普调香水，如同爱情的味道。爱，是抛却一切的沉迷。爱，就要天翻地覆。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997740)
+body: {"name":"YSL圣罗兰黑鸦片香水","attr":"YSL圣罗兰黑鸦片香水","catid":1,"images":"manage/1501574945_圣罗兰黑鸦片香水.png,manage/1501574945_圣罗兰黑鸦片香水展示图.png","price":720,"descs":"独特的黑色浓郁咖啡香调，喷上后就有种Rock n roll 的沉醉感觉，然后是印度茉莉和白色橙花的温婉清新，最后是甜蜜的香草调，轻柔优雅。只轻轻触碰，如咖啡因般令人上瘾！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997829)
+body: {"name":"YSL圣罗兰13#正橘色","attr":"YSL圣罗兰13#正橘色","catid":1,"images":"manage/1501577895_圣罗兰13号.jpg","price":285,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997829)
+body: {"name":"YSL圣罗兰圆管46#口红","attr":"YSL圣罗兰圆管46#口红","catid":1,"images":"manage/1501579834_YSL圣罗兰口红圆管461.png,manage/1501579882_YSL圣罗兰口红圆管462.png,manage/1501579907_YSL圣罗兰口红圆管46.png","price":285,"descs":"圣罗兰纯口红，真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997845)
+body: {"name":"YSL圣罗兰12#镜面唇釉","attr":"YSL圣罗兰12#镜面唇釉","catid":1,"images":"manage/1501580902_YSL圣罗兰镜面唇釉12.png,manage/1501580902_YSL圣罗兰镜面唇釉12展示图.png","price":285,"descs":"高级定制般扁平状唇刷，细致尖端易描绘出精确的轮廓线，斜面设计更可精确地掌控用量，并确保上色更均匀，令唇色在霎那与永恒相连。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997899)
+body: {"name":"Mac Ruby woo哑光口红","attr":"Mac Ruby woo哑光口红","catid":1,"images":"manage/1501582056_Rubywoo哑光.jpg","price":188,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997914)
+body: {"name":"Mac ladybug润泽口红","attr":"Mac ladybug润泽口红","catid":1,"images":"manage/1501582327_ladybug润泽.jpg","price":188,"descs":"色泽鲜艳，高度显色，让双唇闪亮动人。醇香奶油味，丝质哑光，一抹优雅一丝甜蜜，为双唇带来色泽和质感，透过精细雕琢的妆容与肌理天然的质感，更突显出轮廓与生俱来的风采，使您成为焦点，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997929)
+body: {"name":"Mac cb96#口红","attr":"Mac cb96#口红","catid":1,"images":"manage/1501582949_cb96.png","price":188,"descs":"此款唇膏醇香奶油味唇膏，一抹优雅一丝甜蜜。为双唇带来色泽和质感。成为焦点的同时，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997952)
+body: {"name":"Mac brick-o-la口红","attr":"Mac brick-o-la口红","catid":1,"images":"manage/1501582784_brickola.png","price":188,"descs":"此款唇膏醇香奶油味唇膏，一抹优雅一丝甜蜜。为双唇带来色泽和质感。成为焦点的同时，也令魅可大放异彩。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997959)
+body: {"name":"TF黑管16古典猩红口红","attr":"TF黑管16古典猩红口红","catid":1,"images":"manage/1501648951_TF黑管16古典猩红色.jpg","price":380,"descs":"娇嫩甜美双唇自信刷出来。双芯科技，唇色自然饱满，呵护唇部娇嫩肌肤。馥郁色泽一抹尽显，双唇立体炫亮，唯美诱惑。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:37(1512960997982)
+body: {"name":"阿玛尼红管500#口红","attr":"阿玛尼红管500#口红","catid":1,"images":"manage/1501584814_阿玛尼红管500.png","price":298,"descs":"真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998007)
+body: {"name":"阿玛尼红管402#口红","attr":"阿玛尼红管402#口红","catid":1,"images":"manage/1501584906_阿玛尼红管402.png","price":298,"descs":"真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998013)
+body: {"name":"阿玛尼黑管502#口红","attr":"阿玛尼黑管502#口红","catid":1,"images":"manage/1501585141_阿玛尼黑管502.png","price":338,"descs":"真正为优雅美丽高级定制的口红！融合纯正色彩、耀眼光泽和滋润质地于一身，赋予双唇丝缎般细腻与浓郁的色泽质感。金色方管高定设计，如珠宝般纯粹高贵。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998176)
+body: {"name":"Dior(迪奥)烈焰蓝金唇膏999#口红","attr":"Dior(迪奥)烈焰蓝金唇膏999#口红","catid":1,"images":"manage/1501647746_Dior999.png,manage/1501647805_Dior999展示图.png","price":268,"descs":"这款全新唇膏暗藏玄机的全新金属外壳独具非凡吸引力：为了彰显一抹个性奢华魅力，唇膏盖内皆以Dior迪奥的经典迷人色彩——#传奇红唇（#999）的色彩装点。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998205)
+body: {"name":"Dior(迪奥)877#口红","attr":"Dior(迪奥)877#口红","catid":1,"images":"manage/1501648573_Dior877.png,manage/1501648302_Dior877展示图.png,manage/1501648302_Dior740展示图2.png","price":285,"descs":"全新Dior迪奥魅惑釉唇膏，Dior迪奥首款“固体唇釉”，兼具液态唇釉的浓郁漆光亮泽，与固态唇膏舒适润唇感受。质地顺滑易涂，轻盈持妆。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998206)
+body: {"name":"Dior(迪奥)740#口红","attr":"Dior(迪奥)740#口红","catid":1,"images":"manage/1501648429_Dior740.png,manage/1501648429_Dior740展示图.png,manage/1501648429_Dior740展示图2.png","price":285,"descs":"全新Dior迪奥魅惑釉唇膏，Dior迪奥首款“固体唇釉”，兼具液态唇釉的浓郁漆光亮泽，与固态唇膏舒适润唇感受。质地顺滑易涂，轻盈持妆。 "}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998207)
+body: {"name":"德国天然牛油果滋润保湿面膜","attr":"德国天然牛油果滋润保湿面膜","catid":1,"images":"manage/1502110462_1.jpg,manage/1502110462_2.jpg","price":130,"descs":"精选天然牛油果精华，结合全新德国萃取工艺，渗透滋润持久保证肌肤水嫩、通透有光泽"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:38(1512960998223)
+body: {"name":"德国天然牛油果滋润保湿面膜（体验装）","attr":"德国天然牛油果滋润保湿面膜（体验装）","catid":1,"images":"manage/1502111302_1.jpg,manage/1502111302_2.jpg","price":15,"descs":"精选天然牛油果精华，结合全新德国萃取工艺，渗透滋润持久保证肌肤水嫩、通透有光泽"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999081)
+body: {"name":"粉嫩甜美拼色蝴蝶结手腕巾","attr":"粉嫩甜美拼色蝴蝶结手腕巾","catid":1,"images":"manage/1503387121_000.jpg,manage/1503387121_0.jpg,manage/1503387121_00.jpg","price":68,"descs":"蝴蝶搭配"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999096)
+body: {"name":"韩国时尚山茶花防晒披肩","attr":"韩国时尚山茶花防晒披肩","catid":1,"images":"manage/1503388584_0.jpg,manage/1503388584_000.jpg,manage/1503388584_00.jpg","price":68,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999177)
+body: {"name":"素雅时尚百搭拼色小方巾","attr":"素雅时尚百搭拼色小方巾","catid":1,"images":"manage/1503388823_00.jpg,manage/1503388823_000.jpg,manage/1503388823_0.jpg","price":48,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999186)
+body: {"name":"雪纺时尚女士百搭小丝巾","attr":"雪纺时尚女士百搭小丝巾","catid":1,"images":"manage/1503389078_000.jpg,manage/1503389078_0.jpg,manage/1503389078_00.jpg","price":48,"descs":"一块清爽活力的几何方巾，不仅让身体变得修长，还能让性感魅力倍增，让人群中保持持久关注"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999213)
+body: {"name":"韩国ulzzang新款名媛信封包","attr":"韩国ulzzang新款名媛信封包","catid":1,"images":"manage/1503389988_00.jpg,manage/1503389988_0.jpg,manage/1503389988_00000.jpg,manage/1503389988_000.jpg,manage/1503389988_0000.jpg","price":268,"descs":"流苏在任何季节都让人爱不释手，闪耀五金流苏出其不意的形成包身一大点缀，叛逆的演绎着现代女性魅力和充满创意的大胆个性"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999223)
+body: {"name":"Viney新款真皮铆钉手提包","attr":"Viney新款真皮铆钉手提包","catid":1,"images":"manage/1503393773_0.jpg,manage/1503393773_0000.jpg,manage/1503393773_000.jpg,manage/1503393773_00.jpg","price":228,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999403)
+body: {"name":"黑色甜美蝴蝶结一字扣高跟鞋","attr":"黑色甜美蝴蝶结一字扣高跟鞋","catid":1,"images":"manage/1503454177_0.jpg,manage/1503454177_000.jpg,manage/1503454177_00.jpg","price":360,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999432)
+body: {"name":"红色甜美蝴蝶结一字扣高跟鞋","attr":"红色甜美蝴蝶结一字扣高跟鞋","catid":1,"images":"manage/1503454291_11.jpg,manage/1503454291_12.jpg,manage/1503454291_13.jpg","price":360,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999580)
+body: {"name":"IPSA（茵芙莎）三色遮瑕膏","attr":"IPSA（茵芙莎）三色遮瑕膏","catid":1,"images":"manage/1504172034_IPSA茵芙莎三色遮瑕膏.png,manage/1504172034_IPSA茵芙莎三色遮瑕膏展示图1.png,manage/1504172034_IPSA茵芙莎三色遮瑕膏展示图2.png","price":30,"descs":"混合三种颜色，调出合适自己的肌肤，修饰局部瑕疵，遮盖肌肤不均，持续实现透明妆感面"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999580)
+body: {"name":"Mac（魅可） 定制遮瑕修容组01 ","attr":"Mac（魅可） 定制遮瑕修容组01 ","catid":1,"images":"manage/1504174820_MAC魅可定制遮瑕修容组png.png,manage/1504174820_MAC魅可定制遮瑕修容组展示图1png.png,manage/1504174820_MAC魅可定制遮瑕修容组展示图2png.png","price":25,"descs":"四款丝柔遮瑕膏 - NC15、NC20、NW10、NW20和两款控色膏-浅黄、浅粉组成的专业彩妆盘。富含独特的抗氧化配方，适合各种肤质，单独或搭配使用可完美匹配任何肤色。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999671)
+body: {"name":"Givenchy（纪梵希）四宫格腮红1#","attr":"Givenchy（纪梵希）四宫格腮红1#","catid":1,"images":"manage/1504182392_纪梵希四宫格定妆粉1.png,manage/1504182385_纪梵希四宫格定妆粉展示图3.png,manage/1504182385_纪梵希四宫格定妆粉展示图4.png,manage/1504182385_纪梵希四宫格定妆粉展示图.png,manage/1504182385_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999673)
+body: {"name":"Givenchy（纪梵希）四宫格腮红2#","attr":"Givenchy（纪梵希）四宫格腮红2#","catid":1,"images":"manage/1504183243_纪梵希四宫格定妆粉2.png,manage/1504183255_纪梵希四宫格定妆粉展示图3.png,manage/1504183255_纪梵希四宫格定妆粉展示图4.png,manage/1504183255_纪梵希四宫格定妆粉展示图.png,manage/1504183255_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999690)
+body: {"name":"Givenchy（纪梵希）四宫格腮红3#","attr":"Givenchy（纪梵希）四宫格腮红3#","catid":1,"images":"manage/1504183415_纪梵希四宫格定妆粉3.png,manage/1504183423_纪梵希四宫格定妆粉展示图4.png,manage/1504183423_纪梵希四宫格定妆粉展示图3.png,manage/1504183423_纪梵希四宫格定妆粉展示图.png,manage/1504183423_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999692)
+body: {"name":"Givenchy（纪梵希）四宫格腮红4#","attr":"Givenchy（纪梵希）四宫格腮红4#","catid":1,"images":"manage/1504183665_纪梵希四宫格定妆粉4.png,manage/1504183693_纪梵希四宫格定妆粉展示图4.png,manage/1504183693_纪梵希四宫格定妆粉展示图3.png,manage/1504183693_纪梵希四宫格定妆粉展示图.png,manage/1504183693_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999692)
+body: {"name":"Givenchy（纪梵希）四宫格腮红22#","attr":"Givenchy（纪梵希）四宫格腮红22#","catid":1,"images":"manage/1504183843_纪梵希四宫格定妆粉22.png,manage/1504183850_纪梵希四宫格定妆粉展示图4.png,manage/1504183850_纪梵希四宫格定妆粉展示图3.png,manage/1504183850_纪梵希四宫格定妆粉展示图2.png,manage/1504183850_纪梵希四宫格定妆粉展示图.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999731)
+body: {"name":"Givenchy（纪梵希）四宫格腮红23#","attr":"Givenchy（纪梵希）四宫格腮红23#","catid":1,"images":"manage/1504184143_纪梵希四宫格定妆粉23.png,manage/1504184151_纪梵希四宫格定妆粉展示图4.png,manage/1504184151_纪梵希四宫格定妆粉展示图3.png,manage/1504184151_纪梵希四宫格定妆粉展示图.png,manage/1504184151_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:39(1512960999732)
+body: {"name":"Givenchy（纪梵希）四宫格腮红25#","attr":"Givenchy（纪梵希）四宫格腮红25#","catid":1,"images":"manage/1504184307_纪梵希四宫格定妆粉展示图4.png,manage/1504184307_纪梵希四宫格定妆粉展示图3.png,manage/1504184307_纪梵希四宫格定妆粉展示图.png,manage/1504184307_纪梵希四宫格定妆粉展示图2.png","price":40,"descs":"时尚的外观，简约的线条，彰显大气，新一代魅力蜜彩粉盒能增添肌肤亮度，让肌肤展示前所未有的光彩，赋予肌肤无以伦比的健康亮度，将是你艳光四射的秘密武器"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000066)
+body: {"name":"angelababy丸子头","attr":"angelababy丸子头","catid":1,"images":"manage/1504579819_7.jpg,manage/1504579819_8.jpg","price":68,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000144)
+body: {"name":"Mac(魅可)清爽净妆油","attr":"Mac(魅可)清爽净妆油","catid":1,"images":"manage/1504582400_MAC魅可清爽净妆油.png,manage/1504582400_MAC魅可清爽净妆油展示图1.png","price":1,"descs":"蕴含海草精华、桃树叶提取物，柑橘精粹带有柚子香味，混合葡萄籽油，橄榄叶，向日葵，熏衣草中萃取的植物油，配方纯粹温和，不含矿物油。用完之后用水冲洗。卸完妆之后肌肤感觉干净舒服放松，柔软无比。对干性成熟，日常压力大的肌肤效果特别好。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000144)
+body: {"name":"Tom Ford（TF）黑管44#橘闪口红","attr":"Tom Ford（TF）黑管44#橘闪口红","catid":1,"images":"manage/1504583880_TF黑管44橘闪.png,manage/1504583883_1.jpg","price":25,"descs":"对于TOM FORD，没有比完美的LIP更多的动态附件。这是脸的焦点，它有能力来定义女人的全貌。每个LIP颜色是TOM FORD的一个基本的制作沙发的现代理想。稀有和特殊的成分，包括SOJA种子提取物，巴西MURUMURU BUTTER和CHAMOMILLA花卉油创造一个具有不可思议的平滑应用的超级纹理。特殊处理的彩色颜料被混合以提供纯色，只需要平衡亮度"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000144)
+body: {"name":"Shu Uemura（植村秀）WN245口红","attr":"Shu Uemura（植村秀）WN245口红","catid":1,"images":"manage/1504592883_植村秀WN245口红.png,manage/1504592883_植村秀WN245口红1.png","price":25,"descs":"霓虹般绚烂般注入全新色调，仅涂抹一次即可展现清晰惊艳着色力，随时随地，轻松享受幻变风格，轻透顺滑质地漫射出晶莹光泽，任何角度，唇瓣闪烁熠熠亮采。蕴含天然护唇成分，顷刻隐匿唇纹，令双唇经久滋润舒适。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000227)
+body: {"name":"NARS（纳斯）ORGASMNARS高潮腮红","attr":"NARS（纳斯）ORGASMNARS高潮腮红","catid":1,"images":"manage/1504602541_NARS深喉腮红DEEPTHROAT.jpg,manage/1504601234_NARS高潮腮红ORGASM.jpg,manage/1504601234_NARS高潮腮红ORGASM2.jpg","price":30,"descs":"NARS是腮红产品中的极品权威，提供颊彩品牌中最经典色彩。炫色腮红能创造出自然健康的妆感，让双颊瞬间变得亮丽活泼；即使轻轻扫上一层最深的色调，颜色也不会过重，依然呈现自然泛红的色泽。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000303)
+body: {"name":"CD（迪奥）943#腮红","attr":"CD（迪奥）943#腮红","catid":1,"images":"manage/1504605531_CD腮红943.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000289)
+body: {"name":"NARS（纳斯）DEEP-THROAT深喉腮红","attr":"NARS（纳斯）DEEP-THROAT深喉腮红","catid":1,"images":"manage/1504602625_NARS深喉腮红DEEPTHROAT.jpg,manage/1504602192_NARS高潮腮红ORGASM2.jpg","price":30,"descs":"NARS是腮红产品中的极品权威，提供颊彩品牌中最经典色彩。炫色腮红能创造出自然健康的妆感，让双颊瞬间变得亮丽活泼；即使轻轻扫上一层最深的色调，颜色也不会过重，依然呈现自然泛红的色泽。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000306)
+body: {"name":"刺绣连衣裙白色款","attr":"刺绣连衣裙白色款","catid":1,"images":"manage/1505724481_1.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000400)
+body: {"name":"优雅露肩上衣","attr":"优雅露肩上衣","catid":1,"images":"manage/1505724971_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000401)
+body: {"name":"少女情怀","attr":"少女情怀","catid":1,"images":"manage/1505725026_1.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000402)
+body: {"name":"bu ling buling ","attr":"bu ling buling ","catid":1,"images":"manage/1505725072_1.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000402)
+body: {"name":"休闲件套","attr":"休闲件套","catid":1,"images":"manage/1505725136_4.png","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000403)
+body: {"name":"轻复古旗袍","attr":"轻复古旗袍","catid":1,"images":"manage/1505725265_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000302)
+body: {"name":"NARS（纳斯）Portobello3063眼影","attr":"NARS（纳斯）Portobello3063眼影","catid":1,"images":"manage/1504603483_NARS眼影Portobello3063.jpg,manage/1504603565_nars眼影展示图.jpg","price":40,"descs":"让人意想不到的新潮眼影色彩组合。这个双色眼影的微细粉体具长效持妆，更不会产生令人困扰的摺痕！显色度极佳，可单独或搭配其他眼彩使用，让妳任意打造轻透或是浓艳妆效，风格独具不设限！"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000409)
+body: {"name":"改良刺绣旗袍","attr":"改良刺绣旗袍","catid":1,"images":"manage/1505725437_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000411)
+body: {"name":"改良旗袍","attr":"改良旗袍","catid":1,"images":"manage/1505725481_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000413)
+body: {"name":"轻熟套裙","attr":"轻熟套裙","catid":1,"images":"manage/1505725533_1.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000304)
+body: {"name":"裙子","attr":"裙子","catid":1,"images":"manage/1505723903_1.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000303)
+body: {"name":"CD（迪奥）821#腮红","attr":"CD（迪奥）821#腮红","catid":1,"images":"manage/1504604275_CD腮红821.jpg","price":40,"descs":"Dior迪奥王国的标志性腮红，Diorblush亮釆腮红在肌肤留下4种透薄轻盈的纯净色彩（粉红色、红色、珊瑚色以及裸色），全新色彩系列为妆容增添无与伦比的时尚感，在全新的主题下，爆发无可比拟的色彩力量，成为彩妆造型的完美点睛。"}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000415)
+body: {"name":"优雅一字肩","attr":"优雅一字肩","catid":1,"images":"manage/1505725748_7.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000414)
+body: {"name":"印花裙","attr":"印花裙","catid":1,"images":"manage/1505725660_2.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000414)
+body: {"name":"上下两件套","attr":"上下两件套","catid":1,"images":"manage/1505725727_1.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000416)
+body: {"name":"连衣裙两件套","attr":"连衣裙两件套","catid":1,"images":"manage/1505725796_1.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000416)
+body: {"name":"花花姑娘","attr":"花花姑娘","catid":1,"images":"manage/1505725835_1.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000409)
+body: {"name":"旗袍","attr":"旗袍","catid":1,"images":"manage/1505725322_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000417)
+body: {"name":"文艺套装","attr":"文艺套装","catid":1,"images":"manage/1505874801_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000572)
+body: {"name":"性感小吊带","attr":"性感小吊带","catid":1,"images":"manage/1505874850_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000575)
+body: {"name":"一字肩小礼服","attr":"一字肩小礼服","catid":1,"images":"manage/1505874978_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000576)
+body: {"name":"民国风旗袍","attr":"民国风旗袍","catid":1,"images":"manage/1505875053_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000577)
+body: {"name":"v领小礼服","attr":"v领小礼服","catid":1,"images":"manage/1505875105_1.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000574)
+body: {"name":"礼服","attr":"礼服","catid":1,"images":"manage/1505874954_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000583)
+body: {"name":"ProductManager","attr":"ProductManager","catid":1,"images":"manage/1506680892_1.webp.jpg","price":150,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000587)
+body: {"name":"On Friendship","attr":"On Friendship","catid":1,"images":"manage/1506681050_4.jpg","price":15,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000585)
+body: {"name":"Goods Product","attr":"Goods Product","catid":1,"images":"manage/1506681016_2.webp.jpg","price":10,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000590)
+body: {"name":"Speak to us of Friendship","attr":"Speak to us of Friendship","catid":1,"images":"manage/1506681166_13.jpg","price":211,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000591)
+body: {"name":"Your friend is your needs answered","attr":"Your friend is your needs answered","catid":1,"images":"manage/1506681203_11.jpg","price":211,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000592)
+body: {"name":"He is your field which you sow","attr":"He is your field which you sow","catid":1,"images":"manage/1506681226_10.jpg","price":210,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000592)
+body: {"name":"With love and reap with thanksgiving","attr":"With love and reap with thanksgiving","catid":1,"images":"manage/1506681256_9.jpg","price":213,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000588)
+body: {"name":"And a youth","attr":"And a youth","catid":1,"images":"manage/1506681096_5.jpg","price":15,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000593)
+body: {"name":"And he is your board and your fireside","attr":"And he is your board and your fireside","catid":1,"images":"manage/1506681294_8.jpg","price":158,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000594)
+body: {"name":"and you seek him for peace","attr":"and you seek him for peace","catid":1,"images":"manage/1506681363_6.jpg","price":21,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000597)
+body: {"name":"When your friend speaks his mind","attr":"When your friend speaks his mind","catid":1,"images":"manage/1506681402_12.jpg","price":1000,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000594)
+body: {"name":"For you come to him with your hunger","attr":"For you come to him with your hunger","catid":1,"images":"manage/1506681318_7.jpg","price":12,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000600)
+body: {"name":"网纱公主","attr":"网纱公主","catid":1,"images":"manage/1507280663_26.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000603)
+body: {"name":"淑女套装","attr":"淑女套装","catid":1,"images":"manage/1507280778_28.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000601)
+body: {"name":"红色女孩","attr":"红色女孩","catid":1,"images":"manage/1507280727_27.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000635)
+body: {"name":"【万圣节】噬血特效伤疤女神妆","attr":"【万圣节】噬血特效伤疤女神妆","catid":1,"images":"manage/1508815218_23.png,manage/1508815244_24.png,manage/1508815236_22.png,manage/1508815256_19.png,manage/1508815256_20.png","price":99,"descs":"万圣节当然少不了这个电影般特效的伤疤妆啦，酷炫girl喜欢具有恐怖色彩的伤疤妆。暗黑系的眼影，仿真伤疤，若隐若现的淤青，说，你想吓谁？"}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"百搭卫衣","attr":"百搭卫衣","catid":1,"images":"manage/1511157122_23.jpg,manage/1511157161_1_02.jpg,manage/1511157161_1_03.jpg,manage/1511157161_1_04.jpg,manage/1511157161_1_05.jpg,manage/1511157161_1_06.jpg,manage/1511157161_1_07.jpg,manage/1511157161_1_08.jpg,manage/1511157161_1_09.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"针织时尚毛衣","attr":"针织时尚毛衣","catid":1,"images":"manage/1511157233_24.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"走秀同款","attr":"走秀同款","catid":1,"images":"manage/1511157342_22.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"英伦九分裤","attr":"英伦九分裤","catid":1,"images":"manage/1511157390_2.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"百褶裙","attr":"百褶裙","catid":1,"images":"manage/1511157472_3.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"减龄内搭","attr":"减龄内搭","catid":1,"images":"manage/1511157589_25.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"针织背心","attr":"针织背心","catid":1,"images":"manage/1511157628_4.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"街头卫衣","attr":"街头卫衣","catid":1,"images":"manage/1511157694_26.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"知性包臀裙","attr":"知性包臀裙","catid":1,"images":"manage/1511157747_5.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"卡通印花","attr":"卡通印花","catid":1,"images":"manage/1511157848_27.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"学生裙","attr":"学生裙","catid":1,"images":"manage/1511157893_6.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000651)
+body: {"name":"连帽卫衣","attr":"连帽卫衣","catid":1,"images":"manage/1511157984_28.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000666)
+body: {"name":"肉色T桖","attr":"肉色T桖","catid":1,"images":"manage/1511158027_7.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000666)
+body: {"name":"水洗牛仔裤","attr":"水洗牛仔裤","catid":1,"images":"manage/1511158181_30.jpg","price":329,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"围脖内搭","attr":"围脖内搭","catid":1,"images":"manage/1511158225_8.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"Holl kittty 条纹衬衫","attr":"Holl kittty 条纹衬衫","catid":1,"images":"manage/1511158289_29.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"牛仔衣","attr":"牛仔衣","catid":1,"images":"manage/1511158429_9.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"黑T桖","attr":"黑T桖","catid":1,"images":"manage/1511158504_10.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"修身显瘦背带裙","attr":"修身显瘦背带裙","catid":1,"images":"manage/1511158564_11.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"格子裙","attr":"格子裙","catid":1,"images":"manage/1511158666_12.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"皮草小马甲","attr":"皮草小马甲","catid":1,"images":"manage/1511158680_13.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"水洗牛仔衣","attr":"水洗牛仔衣","catid":1,"images":"manage/1511158779_14.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"皮衣","attr":"皮衣","catid":1,"images":"manage/1511158879_15.jpg","price":428,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"粉条纹衬衫","attr":"粉条纹衬衫","catid":1,"images":"manage/1511158944_16.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"白色宽松衣","attr":"白色宽松衣","catid":1,"images":"manage/1511159043_17.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"外搭小吊带","attr":"外搭小吊带","catid":1,"images":"manage/1511159109_18.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000764)
+body: {"name":"格子衬衫","attr":"格子衬衫","catid":1,"images":"manage/1511159200_19.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000796)
+body: {"name":"V领内搭","attr":"V领内搭","catid":1,"images":"manage/1511159258_20.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000867)
+body: {"name":"连帽字母卫衣","attr":"连帽字母卫衣","catid":1,"images":"manage/1511159304_21.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:40(1512961000867)
+body: {"name":"闺蜜双人套餐","attr":"闺蜜双人套餐","catid":1,"images":"manage/1511333874_详情页图1.jpg","price":168,"descs":"有没有在哪个瞬间，你们也希望能够穿上相似的衣服，拍一组姐妹照？MIMINS推出双人套餐 ，发现不一样的自己，留下两人的美好记忆。套餐提供造型+美妆+整体搭配+摄影等消费项目。"}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001010)
+body: {"name":"英伦圆帽","attr":"英伦圆帽","catid":1,"images":"manage/1511344356_8.jpg","price":198,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001011)
+body: {"name":"中性皮帽","attr":"中性皮帽","catid":1,"images":"manage/1511344399_6.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001012)
+body: {"name":"李小璐同款背后蝴蝶结外套","attr":"李小璐同款背后蝴蝶结外套","catid":1,"images":"manage/1511837883_3.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001033)
+body: {"name":"水洗牛仔衣","attr":"水洗牛仔衣","catid":1,"images":"manage/1511838040_7.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001035)
+body: {"name":"刘雯同款时尚牛仔裤","attr":"刘雯同款时尚牛仔裤","catid":1,"images":"manage/1511838160_2.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001036)
+body: {"name":"欧阳娜娜同款小清新上衣","attr":"欧阳娜娜同款小清新上衣","catid":1,"images":"manage/1511838189_6.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001038)
+body: {"name":"冬款网纱拼接淑女蕾丝连衣裙","attr":"冬款网纱拼接淑女蕾丝连衣裙","catid":1,"images":"manage/1511848619_8.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001013)
+body: {"name":"时尚粉色套头衫","attr":"时尚粉色套头衫","catid":1,"images":"manage/1511837938_5.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001045)
+body: {"name":"时尚军绿色外套","attr":"时尚军绿色外套","catid":1,"images":"manage/1511848716_10.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001047)
+body: {"name":"杨幂同款卫衣","attr":"杨幂同款卫衣","catid":1,"images":"manage/1511848860_11.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001031)
+body: {"name":"韩系首要风衣","attr":"韩系首要风衣","catid":1,"images":"manage/1511837983_4.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001039)
+body: {"name":"运动裤","attr":"运动裤","catid":1,"images":"manage/1511848680_9.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001049)
+body: {"name":"碎花裙","attr":"碎花裙","catid":1,"images":"manage/1511848918_12.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001084)
+body: {"name":"时尚拼接牛仔衣","attr":"时尚拼接牛仔衣","catid":1,"images":"manage/1511838073_1.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001084)
+body: {"name":"港味枫叶南瓜色假两件拼色高领毛衣","attr":"港味枫叶南瓜色假两件拼色高领毛衣","catid":1,"images":"manage/1512184962_1.jpg","price":168,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001084)
+body: {"name":"气质落叶棕镂空雕花连衣裙","attr":"气质落叶棕镂空雕花连衣裙","catid":1,"images":"manage/1512206466_2.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001084)
+body: {"name":"紫色蕾丝袖子丝绒显瘦年会连衣裙","attr":"紫色蕾丝袖子丝绒显瘦年会连衣裙","catid":1,"images":"manage/1512206577_3.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001084)
+body: {"name":"水溶蕾丝欧根纱气质黑镂空透视连衣裙","attr":"水溶蕾丝欧根纱气质黑镂空透视连衣裙","catid":1,"images":"manage/1512206654_4.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001194)
+body: {"name":"樱花粉绒面珍珠绣花连衣裙","attr":"樱花粉绒面珍珠绣花连衣裙","catid":1,"images":"manage/1512380810_11.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001202)
+body: {"name":"青葱军绿硬挺风衣","attr":"青葱军绿硬挺风衣","catid":1,"images":"manage/1512380890_12.jpg","price":298,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001204)
+body: {"name":"丝绒对袖雪纺栗子色衬衫","attr":"丝绒对袖雪纺栗子色衬衫","catid":1,"images":"manage/1512381011_14.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001205)
+body: {"name":"绸面优雅V领裙","attr":"绸面优雅V领裙","catid":1,"images":"manage/1512463826_2.jpg","price":328,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001206)
+body: {"name":"米白秋冬温柔对襟长马甲","attr":"米白秋冬温柔对襟长马甲","catid":1,"images":"manage/1512380709_10.jpg","price":198,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001204)
+body: {"name":"丝绒对袖雪纺虾粉色衬衫","attr":"丝绒对袖雪纺虾粉色衬衫","catid":1,"images":"manage/1512380950_13.jpg","price":228,"descs":""}
+err : {"msg":"ResourceRequest timed out"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001267)
+body: {"name":"韩系小清新王冠眼睛小孩刺绣纯棉TEE","attr":"韩系小清新王冠眼睛小孩刺绣纯棉TEE","catid":1,"images":"manage/1512206947_5.jpg","price":98,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001364)
+body: {"name":"透视网纱打底珍珠马海毛背心两件套","attr":"透视网纱打底珍珠马海毛背心两件套","catid":1,"images":"manage/1512207545_6.jpg","price":328,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001366)
+body: {"name":"婴儿粉水溶蕾丝收腰连衣长裙","attr":"婴儿粉水溶蕾丝收腰连衣长裙","catid":1,"images":"manage/1512380471_7.jpg","price":298,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001367)
+body: {"name":"烟灰蓝绒面珍珠绣花连衣裙","attr":"烟灰蓝绒面珍珠绣花连衣裙","catid":1,"images":"manage/1512380558_8.jpg","price":228,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+
+url : localhost:3000/manage/sku
+time: 2017-12-11 10:56:41(1512961001367)
+body: {"name":"气质干练OL海军蓝马甲修身长裤套装","attr":"气质干练OL海军蓝马甲修身长裤套装","catid":1,"images":"manage/1512380607_9.jpg","price":328,"descs":""}
+err : {"msg":"Data too long for column 'attr' at row 1"}
+

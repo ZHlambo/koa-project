@@ -2,6 +2,9 @@ import http from "http";
 import fs from "fs";
 import querystring from "querystring";
 import request from "../utils/request";
+import {
+  jwtSign
+} from '../utils';
 
 Date.prototype.Format = function(fmt) { //author: meizz
   var o = {
@@ -17,11 +20,12 @@ Date.prototype.Format = function(fmt) { //author: meizz
     fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
   for (var k in o)
     if (new RegExp("(" + k + ")").test(fmt))
-      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1)
-        ? (o[k])
-        : (("00" + o[k]).substr(("" + o[k]).length)));
+      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ?
+        (o[k]) :
+        (("00" + o[k]).substr(("" + o[k]).length)));
   return fmt;
 }
+
 
 let limit = 100;
 let postToMysql = (dataSource) => {
@@ -29,7 +33,7 @@ let postToMysql = (dataSource) => {
     let date = new Date().Format("yyyy-MM-dd hh:mm:ss"),
       url = "http://localhost:3000/manage/sku",
       data = {
-        title: dataSource[i].name,
+        name: dataSource[i].name,
         attr: dataSource[i].name,
         catid: 1,
         images: dataSource[i].images,
@@ -38,7 +42,7 @@ let postToMysql = (dataSource) => {
       };
     request.post(url, {
       headers: {
-        'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFtYm8iLCJ0eXBlIjoibWFuYWdlIiwiaWF0IjoxNTEwMTEwMDg2LCJleHAiOjE1MTAxOTY0ODZ9.-epEzgSjqn8v0yt5yxaPVJ9LBSyA7CFeZ4I2rbDwRbY'
+        'Authorization': "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibGFtYm8iLCJ0eXBlIjoibWFuYWdlIiwiaWF0IjoxNTEyOTYwMDY4LCJleHAiOjE1MTMwNDY0Njh9.Wo-cpk2htc-m6U20JYbQ4UfhT9R9K48x75t2snlGVLA"
       },
       data
     }).then(body => {
@@ -50,8 +54,7 @@ let postToMysql = (dataSource) => {
           console.log('写文件操作失败');
         else
           console.log('写文件操作成功', str);
-        }
-      );
+      });
     })
   }
 }

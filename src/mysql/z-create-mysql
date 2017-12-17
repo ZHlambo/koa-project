@@ -1,0 +1,7 @@
+create table cat(id int(10) not null primary key auto_increment, name varchar(100) not null, parentid int (10), level int(2) not null, createdAt timestamp default current_timestamp, updatedAt timestamp default current_timestamp, deletedAt timestamp default current_timestamp);
+
+create table sku(id int(10) not null primary key auto_increment, name varchar(100) not null, attr varchar(10) not null, catid int (10) not null, price int(10) not null, images text, descs text, createdAt timestamp default current_timestamp, updatedAt timestamp default current_timestamp, deletedAt timestamp default current_timestamp);
+
+create table user(id int(10) not null primary key auto_increment, name varchar(100) not null, image text, phonenum varchar(25) not null, password varchar(256) not null, createdAt timestamp default current_timestamp, updatedAt timestamp default current_timestamp, deletedAt timestamp default current_timestamp);
+
+create table log(id int(10) not null primary key auto_increment, ip varchar(25) not null, method varchar(5) not null, body text, response text, url text, createdAt timestamp default current_timestamp, updatedAt timestamp default current_timestamp, deletedAt timestamp default current_timestamp);
