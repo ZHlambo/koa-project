@@ -160,4 +160,19 @@ module.exports = (koaRouter) => {
       ('${data.s_uuid}', '${JSON.stringify(data.skus)}', '${data.receive_mobile}', '${data.receive_address}', '${data.note || null}', '${order_no}', 10)`)
     ctx.success({...order,order_no_:order_no});
   });
+
+
+  koaRouter.post("/client/order/pay", async (ctx) => {
+    let data = ctx.request.body;
+    let order = (await mysql(`select * from orders where order_no='${data.order_no}'`))[0];
+    if (!order) {
+      ctx.fail({code: 4001, msg: "订单不存在"});
+      return ;
+    } else if (order.status != 10) {
+      ctx.fail({code: 4002, msg: "订单不是未付款状态，不能支付"});
+      return ;
+    }
+    let operateOrder = await mysql(`update orders set status=20 where order_no='${data.order_no}'`);
+    ctx.success({msg: "付款成功"});
+  });
 };
