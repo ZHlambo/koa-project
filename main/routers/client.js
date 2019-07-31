@@ -161,18 +161,59 @@ module.exports = (koaRouter) => {
     ctx.success({...order,order_no_:order_no});
   });
 
+  const operations = [
+    { action: "pay", current: "10", err: "订单不是未付款状态，不能支付", success: "付款成功", update: async (ctx, order) => {
+      let order_history = order.order_history;
+      order_history.push({name: "xxx", status: 20, createdAt: new Date().getTime()})
+      let operateOrder = await mysql(`update orders set status=20, order_history='${JSON.string(order_history)}' where order_no='${order.order_no}'`);
+    }},
+    { action: "cancel", current: "10", err: "订单不是未付款状态，不能取消订单", success: "取消订单成功", update: async () => {
+      let operateOrder = await mysql(`update orders set status=11 where order_no='${order_no}'`);
+    }},
+    { action: "refund", current: "20", err: "订单不是待收货状态，不能退款", success: "申请退款成功", update: async () => {
+      let operateOrder = await mysql(`update orders set status=21 where order_no='${order_no}'`);
+    }},
+    { action: "return", current: "30,40", err: "订单不是收货状态或已收货状态，不能退货", success: "申请退货成功", update: async () => {
+      let data = ctx.request.body;
+      let temp = {
+        type: {enum: [0,1]}
+      };
+      if (data.type == 1) {// NOTE: 收到货退货
+        temp = {
+          ...temp,
+          r_carrier_no: {must: true, max: 30},
+          r_carrier_compony: {must: true, max: 10},
+          r_carrier_compony_no: {must: true, max: 10},
+        }
+      }
+      let err = check(data, temp);
+      if (err) return ctx.fail(err);
 
-  koaRouter.post("/client/order/pay", async (ctx) => {
-    let data = ctx.request.body;
-    let order = (await mysql(`select * from orders where order_no='${data.order_no}'`))[0];
-    if (!order) {
-      ctx.fail({code: 4001, msg: "订单不存在"});
-      return ;
-    } else if (order.status != 10) {
-      ctx.fail({code: 4002, msg: "订单不是未付款状态，不能支付"});
-      return ;
-    }
-    let operateOrder = await mysql(`update orders set status=20 where order_no='${data.order_no}'`);
-    ctx.success({msg: "付款成功"});
-  });
+      let operateOrder = await mysql(`update orders set status=31 where order_no='${order_no}'`);
+    }},
+    { action: "update", current: "10,20", err: "订单已完成或已发货，不能修改收货人信息", success: "修改收货人信息成功", update: async () => {
+      let operateOrder = await mysql(`update orders set status=20 where order_no='${order_no}'`);
+    }},
+  ];
+  operations.forEach(operation => {
+    koaRouter.post(`/client/order/:order_no/${operation.action}`, async (ctx) => {
+      let order_no = ctx.params.order_no;
+
+      if (ctx.request.body.next) {
+        await mysql(`update orders set status=${ctx.request.body.next} where order_no='${order_no}'`);
+      }
+
+      let data = ctx.request.body;
+      let order = (await mysql(`select * from orders where order_no='${order_no}'`))[0];
+      if (!order) {
+        ctx.fail({code: 4001, msg: "订单不存在"});
+        return ;
+      } else if (operation.current.indexOf(order.status + "") == -1) {
+        ctx.fail({code: 4002, msg: operation.err});
+        return ;
+      }
+
+      ctx.success({msg: operation.success, status: (await mysql(`select * from orders where order_no='${order_no}'`))[0].status});
+    });
+  })
 };

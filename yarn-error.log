@@ -1,20 +1,26 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/Cellar/yarn/1.13.0/libexec/bin/yarn.js upgrade
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
 
 PATH: 
-  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/mysql/bin
+  C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\atom\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\Administrator\AppData\Local\Yarn\bin;C:\Program Files (x86)\Fiddler2
 
 Yarn version: 
-  1.13.0
+  1.12.3
 
 Node version: 
-  11.10.0
+  10.8.0
 
 Platform: 
-  darwin x64
+  win32 x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/lx/Desktop/self/fvc/node_modules/@koa/cors/History.md'
+  SyntaxError: C:\Users\Administrator\Desktop\fvc\package.json: Unexpected token 
+   in JSON at position 740
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1631:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
 
 npm manifest: 
   {
@@ -25,6 +31,7 @@ npm manifest:
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "dev": "nodemon --exec babel-node src/app.js",
+      "start": "nodemon --exec babel-node main/main.js",
       "mfzspider": "babel-node src/spider/mfz.js"
     },
     "author": "",
@@ -32,17 +39,17 @@ npm manifest:
     "dependencies": {
       "@koa/cors": "^2.2.1",
       "babel-cli": "^6.26.0",
+      "babel-preset-es2015": "^6.24.1",
       "jsonwebtoken": "^8.1.0",
       "koa": "^2.3.0",
       "koa-body": "^2.5.0",
       "koa-body-parser": "^1.1.2",
       "koa-bodyparser": "^4.2.0",
       "koa-router": "^7.2.1",
+      "md5": "^2.2.1",
       "mysql2": "^1.4.2",
       "node-xlsx": "^0.11.0",
-      "nodemon": "^1.12.1",
-      "babel-cli": "^6.26.0",
-      "babel-preset-es2015": "^6.24.1"
+      "nodemon": "^1.12.1
     }
   }
 
