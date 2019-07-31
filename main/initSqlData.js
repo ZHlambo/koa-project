@@ -10,11 +10,11 @@ const host = "http://localhost:8000";
 //       name: "商品名",
 //       images: "http://static.d.intbee.com/FgsRkZVilAzM9bqVz0q7C390bpMu;http://static.d.intbee.com/FgsRkZVilAzM9bqVz0q7C390bpMu;http://static.d.intbee.com/FgsRkZVilAzM9bqVz0q7C390bpMu",
 //       descs: "描述",
-//       stocks: [
-//         {standard: [{key:"颜色",value:"白色"},{key:"尺寸",value:10}], quantity: 10, },
-//         {standard: [{key:"颜色",value:"白色1"},{key:"尺寸",value:101}], quantity: 101, },
-//         {standard: [{key:"颜色",value:"白色2"},{key:"尺寸",value:102}], quantity: 102, },
-//         {standard: [{key:"颜色",value:"白色3"},{key:"尺寸",value:103}], quantity: 103, },
+//       skus: [
+//         {"standard": [{"key":"颜色","value":"白色"},{"key":"尺寸","value":10}], "quantity": 10, },
+//         {"standard": [{"key":"颜色","value":"白色1"},{"key":"尺寸","value":101}], "quantity": 101, },
+//         {"standard": [{"key":"颜色","value":"白色2"},{"key":"尺寸","value":102}], "quantity": 102, },
+//         {"standard": [{"key":"颜色","value":"白色3"},{"key":"尺寸","value":103}], "quantity": 103, },
 //       ]
 //     }),
 //     headers: {

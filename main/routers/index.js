@@ -1,16 +1,28 @@
 import Router from "koa-router";
 import managerRouter from "./manager";
 import clientRouter from "./client";
+import spreaderRouter from "./spreader";
 
 var koaRouter = new Router();
 const middle = async function (func, params) {
+  let ctx = params[0];
   try {
-    params[0].set('Content-Type', 'application/json');
+    ctx.set('Content-Type', 'application/json');
+    ctx.success = (data, status) => {
+      ctx.response.status = status || 200;
+      ctx.response.body = JSON.stringify({
+        code: 0,
+        result: data,
+      });
+    }
+    ctx.fail = (err, status) => {
+      ctx.response.status = status || 200;
+      ctx.response.body = JSON.stringify(err);
+    }
     await func(...params);
   } catch (e) {
-    let ctx = params[0];
     ctx.response.status = 200;
-    ctx.response.body = JSON.stringify({msg: "系统出错", err: e.toString()});
+    ctx.response.body = JSON.stringify({msg: "系统出错", err: e.stack});
     return ;
   }
 }
@@ -38,5 +50,6 @@ var router = {
 }
 managerRouter(router);
 clientRouter(router);
+spreaderRouter(router);
 
 module.exports = koaRouter.routes();

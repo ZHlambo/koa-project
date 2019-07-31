@@ -1,4 +1,6 @@
 import mysql from "../mysql";
+import {getId} from "../utils";
+
 
 module.exports = (koaRouter) => {
   koaRouter.get("/manager/products", (ctx, status, body) => {
@@ -8,25 +10,24 @@ module.exports = (koaRouter) => {
   })
 
   koaRouter.post("/manager/product", async (ctx, status, body) => {
-    console.log(body, ctx.request.body || {});
     let data = ctx.request.body;
-    console.log(mysql);
-    let product = await mysql(`INSERT INTO
-      product(name, images, descs, status)
-      values
-      ('${data.name}', '${data.images}', '${data.descs}', '${data.status || 0}')`);
-    let productid = product.insertId;
-    console.log(`productid=${productid}`);
+    // NOTE: 生成product_id
+    let product_id = await getId("product");
 
-    let insertStocks = await data.stocks.map(async stock => {
+    let product = await mysql(`INSERT INTO
+      product(name, images, descs, status, product_id)
+      values
+      ('${data.name}', '${data.images}', '${data.descs}', ${data.status || 0},  '${product_id}')`);
+
+    let insertskus = await data.skus.map(async sku => {
       return await mysql(`INSERT INTO
-        stock(productid, standard, quantity)
+        sku(product_id, standard, quantity)
         values
-        ('${productid}', '${stock.standard.map(e=>`${e.key}:${e.value}`).join(";")}', '${stock.quantity}')`);
+        ('${product_id}', '${sku.standard.map(e=>`${e.key}:${e.value}`).join(";")}', '${sku.quantity}')`);
     })
-    console.log(`stocks=${insertStocks}`);
+
     ctx.response.status = 200;
-    ctx.response.body = productid;
+    ctx.response.body = {product_id};
     return;
   })
   koaRouter.get("/manager/product/:id", (ctx, status, body) => {
