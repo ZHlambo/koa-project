@@ -2,16 +2,19 @@ import Router from "koa-router";
 import merchantRouter from "./merchant";
 import clientRouter from "./client";
 import spreaderRouter from "./spreader";
+import * as utils from "../utils";
 
 var koaRouter = new Router();
 const middle = async function (func, params) {
   let ctx = params[0];
   try {
     ctx.set('Content-Type', 'application/json');
+    ctx.utils = utils;
     ctx.success = (data, status) => {
       ctx.response.status = status || 200;
       ctx.response.body = JSON.stringify({
         code: 0,
+        msg: data.msg,
         result: data,
       });
     }

@@ -34,9 +34,6 @@ export const check = (data, checkTemplate, parent) => {
             err = err.concat(childErr.err);
           }
         } else if (data[key] instanceof Array) {
-          if (key === "standard") {
-            console.log(parent, key);
-          }
           for (let i = 0; i < data[key].length; i++) {
             // let childErr = check(data[key][i], checkTemplate[key].child, (parent ? `${parent}.` : "") + `${key}[${i}]`);
             let childErr = check(data[key][i], checkTemplate[key].child, (parent ? `${parent}.` : "") + `${key}`);
@@ -152,6 +149,56 @@ export const parseExcel = (path) => {
     }
   }
   return array;
+}
+export const formatDate = (time, format = "YYYY-MM-DD hh:mm:ss") => {
+  if (time == '' || time == null || time == undefined)
+    return ''
+  time = new Date(time)
+  const datetime = new Date()
+  datetime.setTime(time)
+  const year = datetime.getFullYear()
+  const month = datetime.getMonth() + 1 < 10
+    ? '0' + (
+    datetime.getMonth() + 1)
+    : datetime.getMonth() + 1
+  const date = datetime.getDate() < 10
+    ? '0' + datetime.getDate()
+    : datetime.getDate()
+  const hour = datetime.getHours() < 10
+    ? '0' + datetime.getHours()
+    : datetime.getHours()
+  const minute = datetime.getMinutes() < 10
+    ? '0' + datetime.getMinutes()
+    : datetime.getMinutes()
+  const second = datetime.getSeconds() < 10
+    ? '0' + datetime.getSeconds()
+    : datetime.getSeconds()
+  const timeArr = [
+    year,
+    month,
+    date,
+    hour,
+    minute,
+    second
+  ]
+  let _mapper = {};
+  [
+    'YYYY',
+    'MM',
+    'DD',
+    'hh',
+    'mm',
+    'ss'
+  ].forEach((_symbol, i) => (_mapper[_symbol] = timeArr[i]))
+  if (format) {
+    const matchArr = format.match(/\w+/g)
+    matchArr.forEach(match => {
+      format = format.replace(match, _mapper[match])
+    })
+    return format
+  } else {
+    return (year + '月' + month + '月' + date + '日 ' + ' ' + hour + ':' + minute)
+  }
 }
 // NOTE: 32位系统唯一ID
 export const getUuid = async () => {

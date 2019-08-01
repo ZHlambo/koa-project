@@ -37,9 +37,9 @@ db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
     images text comment '产品图片：以;分割的图片数组',
     descs text comment '产品详情：可以为富文本',
     tested int(1) default 0 comment '产品是否可以使用:0不可试用；1可试用',
-    createdAt timestamp default current_timestamp comment '创建时间',
-    updatedAt timestamp default current_timestamp comment '更新时间',
-    deletedAt timestamp comment '删除时间'
+    createdAt datetime default current_timestamp comment '创建时间',
+    updatedAt datetime default current_timestamp comment '更新时间',
+    deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品表';`;
   if (err) {
     create(sql);
@@ -52,9 +52,9 @@ db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
 //     product_id int(15) not null comment '产品product_id',
 //     name varchar(100) not null comment '规格名称',
 //     value text comment '规格数组：以;分割的规格数组',
-//     createdAt timestamp default current_timestamp comment '创建时间',
-//     updatedAt timestamp default current_timestamp comment '更新时间',
-//     deletedAt timestamp comment '删除时间'
+//     createdAt datetime default current_timestamp comment '创建时间',
+//     updatedAt datetime default current_timestamp comment '更新时间',
+//     deletedAt datetime comment '删除时间'
 //   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品规格表';`;
 //   if (err) {
 //     create(sql);
@@ -69,9 +69,9 @@ db.query(`SELECT id FROM sku LIMIT 0,1`, (err,res) => {
     status int(1) default 1 comment '库存状态：0不可销售；1可销售',
     quantity int(10) default 0 comment '库存总数量',
     saled int(10) default 0 comment '库存已售数量',
-    createdAt timestamp default current_timestamp comment '创建时间',
-    updatedAt timestamp default current_timestamp comment '更新时间',
-    deletedAt timestamp comment '删除时间'
+    createdAt datetime default current_timestamp comment '创建时间',
+    updatedAt datetime default current_timestamp comment '更新时间',
+    deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品规格表';`;
   if (err) {
     create(sql);
@@ -91,9 +91,9 @@ db.query(`SELECT id FROM user LIMIT 0,1`, (err,res) => {
     roles varchar(10) default 'c' comment '用户角色：c,s',
     shop_name varchar(20) comment '店铺名称',
     shop_icon varchar(100) comment '店铺头像',
-    createdAt timestamp default current_timestamp comment '创建时间',
-    updatedAt timestamp default current_timestamp comment '更新时间',
-    deletedAt timestamp comment '删除时间'
+    createdAt datetime default current_timestamp comment '创建时间',
+    updatedAt datetime default current_timestamp comment '更新时间',
+    deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='用户表（用户注册必须有手机号码或者小程序open_id）';`;
   if (err) {
     create(sql);
@@ -107,9 +107,9 @@ db.query(`SELECT id FROM goods LIMIT 0,1`, (err,res) => {
     goods_id varchar(15) not null comment '商品goods_id',
     s_uuid varchar(32) not null comment 'spreader用户uuid',
     status int(1) default 1 comment '商品状态：0终止；1上架；2下架',
-    createdAt timestamp default current_timestamp comment '创建时间',
-    updatedAt timestamp default current_timestamp comment '更新时间',
-    deletedAt timestamp comment '删除时间'
+    createdAt datetime default current_timestamp comment '创建时间',
+    updatedAt datetime default current_timestamp comment '更新时间',
+    deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品表';`;
   if (err) {
     create(sql);
@@ -131,9 +131,9 @@ db.query(`SELECT id FROM orders LIMIT 0,1`, (err,res) => {
     carrier_compony varchar(10) comment '发货物流公司名',
     carrier_compony_no varchar(10) comment '发货物流公司key',
     note varchar(100) comment '订单备注',
-    createdAt timestamp default current_timestamp comment '创建时间',
-    updatedAt timestamp default current_timestamp comment '更新时间',
-    deletedAt timestamp comment '删除时间'
+    createdAt datetime default current_timestamp comment '创建时间',
+    updatedAt datetime default current_timestamp comment '更新时间',
+    deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='订单表';`;
   if (err) {
     create(sql);
