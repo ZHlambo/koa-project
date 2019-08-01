@@ -1,5 +1,5 @@
 import Router from "koa-router";
-import managerRouter from "./manager";
+import merchantRouter from "./merchant";
 import clientRouter from "./client";
 import spreaderRouter from "./spreader";
 
@@ -48,7 +48,7 @@ var router = {
     });
   },
 }
-managerRouter(router);
+merchantRouter(router);
 clientRouter(router);
 spreaderRouter(router);
 

@@ -4,7 +4,7 @@ const host = "http://localhost:8000";
 //
 // (async function () {
 //   await request({
-//     url: `${host}/manager/product`,
+//     url: `${host}/merchant/product`,
 //     method: "POST",
 //     body: JSON.stringify({
 //       name: "商品名",

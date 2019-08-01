@@ -36,6 +36,7 @@ db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
     status int(1) default 0 comment '产品状态：0下架；1上架',
     images text comment '产品图片：以;分割的图片数组',
     descs text comment '产品详情：可以为富文本',
+    tested int(1) default 0 comment '产品是否可以使用:0不可试用；1可试用',
     createdAt timestamp default current_timestamp comment '创建时间',
     updatedAt timestamp default current_timestamp comment '更新时间',
     deletedAt timestamp comment '删除时间'
@@ -119,12 +120,13 @@ db.query(`SELECT id FROM orders LIMIT 0,1`, (err,res) => {
   let sql = `CREATE TABLE orders(
     id int(12) not null primary key auto_increment comment '订单id',
     order_no varchar(32) not null comment '订单编号',
+    c_uuid varchar(32) not null comment 'client端消费者uuid',
     s_uuid varchar(32) not null comment 'spreader用户uuid',
     skus json not null comment '下单sku数据{sku.id,sku.standard,quantity,product_id,product_name,product_images}',
     order_history json comment '订单操作历史',
     status int(2) comment '订单状态：10待付款;11取消订单;20待发货;21申请退款;30待收货;31未收货退货;32收货退货;40已收货;50订单完成;51已退款;52已退货',
     receive_mobile varchar(11) not null comment '收货手机号码',
-    receive_address varchar(30) not null comment '收货地址 "省市区 详细地址"',
+    receive_address varchar(50) not null comment '收货地址 "省市区 详细地址"',
     carrier_no varchar(30) comment '发货物流单号',
     carrier_compony varchar(10) comment '发货物流公司名',
     carrier_compony_no varchar(10) comment '发货物流公司key',

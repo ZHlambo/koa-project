@@ -29,15 +29,19 @@ export const check = (data, checkTemplate, parent) => {
       // NOTE: object 继续深层解析
       if (checkTemplate[key].child) {
         if (checkTemplate[key].type == "object") {
-          let childErr = check(data[key], checkTemplate[key].child, key);
+          let childErr = check(data[key], checkTemplate[key].child, (parent ? `${parent}.` : "") + key);
           if (childErr) {
-            err.push({msg: childErr.msg, err: childErr.err});
+            err = err.concat(childErr.err);
           }
         } else if (data[key] instanceof Array) {
+          if (key === "standard") {
+            console.log(parent, key);
+          }
           for (let i = 0; i < data[key].length; i++) {
-            let childErr = check(data[key][i], checkTemplate[key].child, key);
+            // let childErr = check(data[key][i], checkTemplate[key].child, (parent ? `${parent}.` : "") + `${key}[${i}]`);
+            let childErr = check(data[key][i], checkTemplate[key].child, (parent ? `${parent}.` : "") + `${key}`);
             if (childErr) {
-              err.push({msg: childErr.msg, err: childErr.err});
+              err = err.concat(childErr.err);
               break;
             }
           }
