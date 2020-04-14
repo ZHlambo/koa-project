@@ -24,8 +24,8 @@ const productRule = {
   }
 };
 
-const product =  (koaRouter) => {
-  koaRouter.get("/merchant/products", async ctx => {
+module.exports =  (koaRouter) => {
+  koaRouter.get("/client/products", async ctx => {
     let query = ctx.query || {};
     query.offset = query.offset || 0;
     query.limit = query.limit || 10;
@@ -42,50 +42,18 @@ const product =  (koaRouter) => {
     ctx.success({...query, list: products, total});
   });
 
-  koaRouter.post("/merchant/product", async ctx => {
-    let data = ctx.request.body || {};
-    let temp = {
-      name: {must: true, ...productRule.name},
-      images: {must: true, ...productRule.images},
-      descs: {must: true, ...productRule.descs},
-      skus: {must: true, ...productRule.skus},
-    };
-    let err = check(data, temp);
-    if (err) return ctx.fail(err);
-
-    data.skus.forEach(sku => sku.standard = sku.standard.map(e=>`${e.key}:${e.value}`).join(";"));
-
-    // NOTE: 生成product_no
-    let product_no = await getIdNo("product");
-
-    let product = await mysql(`INSERT INTO
-      product(name, images, descs, status, product_no)
-      values
-      ('${data.name}', '${data.images}', '${data.descs}', ${data.status || 0},  '${product_no}')`);
-
-    let insertskus = await data.skus.map(async sku => {
-      return await mysql(`INSERT INTO
-        sku(product_no, standard, quantity, saled)
-        values
-        ('${product_no}', '${sku.standard}', '${sku.quantity}', 0)`);
-    })
-
-    ctx.response.status = 200;
-    ctx.response.body = {product_no};
-    return;
-  })
-
-  koaRouter.get("/merchant/product/:product_no", async ctx => {
+  koaRouter.get("/client/product/:product_no", async ctx => {
     let product_no = ctx.params.product_no;
     let product = (await mysql(`select * from product where product_no='${product_no}' LIMIT 0,1`))[0];
     if (!product) {
       ctx.fail({code: 5001, msg: "产品不存在"});
       return ;
     }
-    ctx.success(product);
+    let skus = (await mysql(`select * from sku where product_no='${product_no}'`));
+    ctx.success({...product,skus});
   })
 
-  koaRouter.delete("/merchant/product/:product_no", async ctx => {
+  koaRouter.delete("/client/product/:product_no", async ctx => {
     let product_no = ctx.params.product_no;
     let product = (await mysql(`select * from product where product_no='${product_no}' LIMIT 0,1`))[0];
     if (!product) {
@@ -97,7 +65,7 @@ const product =  (koaRouter) => {
     return;
   })
 
-  koaRouter.put("/merchant/product/:product_no", async ctx => {
+  koaRouter.put("/client/product/:product_no", async ctx => {
     let product_no = ctx.params.product_no;
     let product = (await mysql(`select * from product where product_no='${product_no}' LIMIT 0,1`))[0];
     if (!product) {
@@ -168,5 +136,3 @@ const product =  (koaRouter) => {
     ctx.success({product, delSkusSql, featSkus, updateSkus});
   });
 };
-
-module.exports = product;

@@ -1,5 +1,5 @@
 import mysql from "../../mysql";
-import {check, jwtSign, getUuid, getId} from "../../utils"
+import {check, jwtSign, getUuid, getIdNo} from "../../utils"
 
 // // NOTE: table 表 随机生成 最小是8位数 的ID
 // export const getOrderNo = async (table) => {
@@ -21,20 +21,38 @@ import {check, jwtSign, getUuid, getId} from "../../utils"
 
 
 module.exports = (koaRouter) => {
+  const checkOrder = async (ctx, operation) => {
+    let order_no = ctx.params.order_no;
+    let data = ctx.request.body;
+
+    if (ctx.request.body.next) {
+      await mysql(`update orders set status=${ctx.request.body.next} where order_no='${order_no}'`);
+    }
+    let order = (await mysql(`select * from orders where order_no='${order_no}' LIMIT 0,1`))[0];
+    if (!order) {
+      ctx.fail({code: 4001, msg: "订单不存在"});
+      return ;
+    } else if (operation.current.indexOf(order.status + "") == -1) {
+      ctx.fail({code: 4002, msg: operation.err});
+      return ;
+    }
+    return order;
+  }
   // NOTE: 下单
   koaRouter.post("/client/order", async (ctx) => {
     let data = ctx.request.body;
     let temp = {
       s_uuid: {must: true, len: 32},
+      c_uuid: {must: true, len: 32},
       skus: {
         must: true,
         type: "array",
         min: 1,
         child: {
-          sku_id: {must: true, type: "string"},
+          sku_id: {must: true, type: "number"},
           quantity: {must: true, type: "number"},
           // standard: {must: true},
-          // product_id: {must: true, type: "number"},
+          // product_no: {must: true, type: "number"},
           // product_name: {must: true},
           // product_images: {must: true},
         }
@@ -55,47 +73,29 @@ module.exports = (koaRouter) => {
         err = {code: 3002, msg: "sku_id不存在"};
         break;
       } else {
-        product = (await mysql(`select * from product where product_id='${sku.product_id}' LIMIT 0,1`))[0];
+        product = (await mysql(`select * from product where product_no='${sku.product_no}' LIMIT 0,1`))[0];
         if (!product) {
           err = {code: 3003, msg: "数据异常，产品product不存在"};
           break;
         } else {
-          goods = (await mysql(`select * from goods where product_id='${sku.product_id}' and s_uuid='${data.s_uuid}' LIMIT 0,1`))[0];
+          goods = (await mysql(`select * from goods where product_no='${sku.product_no}' and s_uuid='${data.s_uuid}' LIMIT 0,1`))[0];
           if (!goods) {
-            err = {code: 3004, msg: "数据异常，商品goods不存在", product_id: sku.product_id};
+            err = {code: 3004, msg: "数据异常，商品goods不存在", product_no: sku.product_no};
             break;
           }
-          Object.assign(data.skus[i],{standard: sku.standard, product_id: sku.product_id, product_name: product.name, product_images: product.images});
+          Object.assign(data.skus[i],{standard: sku.standard, product_no: sku.product_no, product_name: product.name, product_images: product.images});
         }
       }
     }
     if (err) return ctx.fail(err);
 
-    let order_no = await getId("orders");
+    let order_no = await getIdNo("orders");
     let order = await mysql(`INSERT INTO
-      orders(s_uuid, skus, receive_mobile, receive_address, note, order_no, status)
+      orders(c_uuid, s_uuid, skus, receive_mobile, receive_address, note, order_no, status)
       values
-      ('${data.s_uuid}', '${JSON.stringify(data.skus)}', '${data.receive_mobile}', '${data.receive_address}', '${data.note || null}', '${order_no}', 10)`)
-    ctx.success({...order,order_no_:order_no});
+      ('${data.c_uuid}', '${data.s_uuid}', '${JSON.stringify(data.skus)}', '${data.receive_mobile}', '${data.receive_address}', '${data.note || null}', '${order_no}', 10)`)
+    ctx.success({...order,order_no:order_no});
   });
-
-  const checkOrder = async (ctx, operation) => {
-    let order_no = ctx.params.order_no;
-    let data = ctx.request.body;
-
-    if (ctx.request.body.next) {
-      await mysql(`update orders set status=${ctx.request.body.next} where order_no='${order_no}'`);
-    }
-    let order = (await mysql(`select * from orders where order_no='${order_no}' LIMIT 0,1`))[0];
-    if (!order) {
-      ctx.fail({code: 4001, msg: "订单不存在"});
-      return ;
-    } else if (operation.current.indexOf(order.status + "") == -1) {
-      ctx.fail({code: 4002, msg: operation.err});
-      return ;
-    }
-    return order;
-  }
   // DEBUG: debug接口
   koaRouter.post(`/client/order/:order_no/reset`, async (ctx) => {
     let order_no = ctx.params.order_no;

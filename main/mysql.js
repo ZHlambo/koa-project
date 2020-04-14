@@ -31,7 +31,7 @@ const create = (sql) => {
 db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
   let sql = `CREATE TABLE product(
     id int(12) not null primary key auto_increment comment '产品id',
-    product_id varchar(15) not null comment '产品product_id',
+    product_no varchar(15) not null comment '产品product_no',
     name varchar(100) not null comment '产品名称',
     status int(1) default 0 comment '产品状态：0下架；1上架',
     images text comment '产品图片：以;分割的图片数组',
@@ -43,13 +43,15 @@ db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品表';`;
   if (err) {
     create(sql);
+  // } else {
+  //   create(`ALTER TABLE product change product_id product_no varchar(15) not null comment '产品product_no'`);
   }
 });
 
 // db.query(`SELECT id FROM attr LIMIT 0,1`, (err,res) => {
 //   let sql = `CREATE TABLE attr(
 //     id int(12) not null primary key auto_increment comment '规格id',
-//     product_id int(15) not null comment '产品product_id',
+//     product_no int(15) not null comment '产品product_no',
 //     name varchar(100) not null comment '规格名称',
 //     value text comment '规格数组：以;分割的规格数组',
 //     createdAt datetime default current_timestamp comment '创建时间',
@@ -64,17 +66,21 @@ db.query(`SELECT id FROM product LIMIT 0,1`, (err,res) => {
 db.query(`SELECT id FROM sku LIMIT 0,1`, (err,res) => {
   let sql = `CREATE TABLE sku(
     id int(12) not null primary key auto_increment comment '库存id',
-    product_id varchar(15) not null comment '产品id',
+    product_no varchar(15) not null comment '产品product_no',
     standard text comment '规格数组：以;分割的规格key:value;数组',
     status int(1) default 1 comment '库存状态：0不可销售；1可销售',
     quantity int(10) default 0 comment '库存总数量',
     saled int(10) default 0 comment '库存已售数量',
+    price decimal(5,2) default 10.00 comment '售价',
     createdAt datetime default current_timestamp comment '创建时间',
     updatedAt datetime default current_timestamp comment '更新时间',
     deletedAt datetime comment '删除时间'
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品规格表';`;
   if (err) {
     create(sql);
+  // } else {
+  //   create(`ALTER TABLE sku add price decimal(5,2) default 10.00 comment '售价'`);
+  //   create(`ALTER TABLE sku change product_id product_no varchar(15) not null comment '产品product_no'`);
   }
 });
 
@@ -103,7 +109,7 @@ db.query(`SELECT id FROM user LIMIT 0,1`, (err,res) => {
 db.query(`SELECT id FROM goods LIMIT 0,1`, (err,res) => {
   let sql = `CREATE TABLE goods(
     id int(12) not null primary key auto_increment comment '商品id',
-    product_id varchar(15) not null comment '产品product_id',
+    product_no varchar(15) not null comment '产品product_no',
     goods_id varchar(15) not null comment '商品goods_id',
     s_uuid varchar(32) not null comment 'spreader用户uuid',
     status int(1) default 1 comment '商品状态：0终止；1上架；2下架',
@@ -113,6 +119,8 @@ db.query(`SELECT id FROM goods LIMIT 0,1`, (err,res) => {
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='产品表';`;
   if (err) {
     create(sql);
+  // } else {
+  //   create(`ALTER table goods change product_id product_no varchar(15) not null comment '产品product_no'`);
   }
 });
 
@@ -122,7 +130,7 @@ db.query(`SELECT id FROM orders LIMIT 0,1`, (err,res) => {
     order_no varchar(32) not null comment '订单编号',
     c_uuid varchar(32) not null comment 'client端消费者uuid',
     s_uuid varchar(32) not null comment 'spreader用户uuid',
-    skus json not null comment '下单sku数据{sku.id,sku.standard,quantity,product_id,product_name,product_images}',
+    skus json not null comment '下单sku数据{sku.id,sku.standard,quantity,product_no,product_name,product_images}',
     order_history json comment '订单操作历史',
     status int(2) comment '订单状态：10待付款;11取消订单;20待发货;21申请退款;30待收货;31未收货退货;32收货退货;40已收货;50订单完成;51已退款;52已退货',
     receive_mobile varchar(11) not null comment '收货手机号码',

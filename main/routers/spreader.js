@@ -1,8 +1,8 @@
 import mysql from "../mysql";
-import {check, jwtSign, getId} from "../utils"
+import {check, jwtSign, getIdNo} from "../utils"
 
 const goodsRule = {
-  product_id: { type: "number" },
+  product_no: { type: "number" },
 }
 
 const spreader = (koaRouter) => {
@@ -10,12 +10,12 @@ const spreader = (koaRouter) => {
   koaRouter.post("/spreader/goods", async (ctx) => {
     let data = ctx.request.body;
     var temp = {
-      product_id: { must: true, ...goodsRule.product_id},
+      product_no: { must: true, ...goodsRule.product_no},
     }
     let err = check(data, temp);
     if (err) return ctx.fail(err);
 
-    let checkProductId = (await mysql(`select id from product where product_id='${data.product_id}'`))[0];
+    let checkProductId = (await mysql(`select id from product where product_no='${data.product_no}'`))[0];
     if (!checkProductId || !checkProductId.id) {
       return ctx.fail({code: "2001", msg: "产品不存在"});
     }
@@ -26,7 +26,7 @@ const spreader = (koaRouter) => {
       return  ctx.fail({code: "2002", msg: "用户不存在"});
     }
 
-    let checkGoods = (await mysql(`select * from goods where product_id='${data.product_id}' and s_uuid='${user.uuid}'`))[0];
+    let checkGoods = (await mysql(`select * from goods where product_no='${data.product_no}' and s_uuid='${user.uuid}'`))[0];
     if (checkGoods) {
       if (checkGoods.status == 1) {
         return ctx.fail({code: "2002", msg: "您上架该商品了！"});
@@ -36,12 +36,12 @@ const spreader = (koaRouter) => {
       }
     }
 
-    let goods_id = await getId("goods");
+    let goods_id = await getIdNo("goods");
     let goods = await mysql(`INSERT INTO
-      goods(product_id, s_uuid, status, goods_id)
+      goods(product_no, s_uuid, status, goods_id)
       values
-      ('${data.product_id}', '${user.uuid}', 1, '${goods_id}')`);
-    ctx.success({goods_id, s_uuid: user.uuid, status: 1, product_id: data.product_id, msg: "上架商品成功！"});
+      ('${data.product_no}', '${user.uuid}', 1, '${goods_id}')`);
+    ctx.success({goods_id, s_uuid: user.uuid, status: 1, product_no: data.product_no, msg: "上架商品成功！"});
   });
 
 
@@ -65,7 +65,7 @@ const spreader = (koaRouter) => {
 
     let products = await mysql(`select
       p.*,g.goods_id from product p
-      left join goods g on g.product_id=p.product_id and g.s_uuid='${user.uuid}' and g.deletedAt is not null
+      left join goods g on g.product_no=p.product_no and g.s_uuid='${user.uuid}' and g.deletedAt is not null
       where 1=1 and ${where} limit ${query.offset},${query.limit}`);
     let total = (await mysql(`select count(*) as total from product p where ${where}`))[0].total;
     ctx.success({...query, list: products, total});

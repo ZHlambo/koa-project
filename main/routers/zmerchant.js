@@ -1,5 +1,5 @@
 import mysql from "../mysql";
-import {getId, check} from "../utils";
+import {getIdNo, check} from "../utils";
 
 
 module.exports = (koaRouter) => {
@@ -11,23 +11,23 @@ module.exports = (koaRouter) => {
 
   koaRouter.post("/merchant/product", async (ctx, status, body) => {
     let data = ctx.request.body;
-    // NOTE: 生成product_id
-    let product_id = await getId("product");
+    // NOTE: 生成product_no
+    let product_no = await getIdNo("product");
 
     let product = await mysql(`INSERT INTO
-      product(name, images, descs, status, product_id)
+      product(name, images, descs, status, product_no)
       values
-      ('${data.name}', '${data.images}', '${data.descs}', ${data.status || 0},  '${product_id}')`);
+      ('${data.name}', '${data.images}', '${data.descs}', ${data.status || 0},  '${product_no}')`);
 
     let insertskus = await data.skus.map(async sku => {
       return await mysql(`INSERT INTO
-        sku(product_id, standard, quantity)
+        sku(product_no, standard, quantity)
         values
-        ('${product_id}', '${sku.standard.map(e=>`${e.key}:${e.value}`).join(";")}', '${sku.quantity}')`);
+        ('${product_no}', '${sku.standard.map(e=>`${e.key}:${e.value}`).join(";")}', '${sku.quantity}')`);
     })
 
     ctx.response.status = 200;
-    ctx.response.body = {product_id};
+    ctx.response.body = {product_no};
     return;
   })
   koaRouter.get("/merchant/product/:id", (ctx, status, body) => {

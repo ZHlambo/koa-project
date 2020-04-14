@@ -1,5 +1,5 @@
 import mysql from "../mysql";
-import {check, jwtSign, getUuid, getId} from "../utils"
+import {check, jwtSign, getUuid, getIdNo} from "../utils"
 
 // // NOTE: table 表 随机生成 最小是8位数 的ID
 // export const getOrderNo = async (table) => {
@@ -101,7 +101,7 @@ module.exports = (koaRouter) => {
     let err = check(data, temp);
     if (err) return ctx.fail(err);
   });
-  // sku.id,sku.standard,quantity,product_id,product_name,product_images
+  // sku.id,sku.standard,quantity,product_no,product_name,product_images
   koaRouter.get("/client/orders", async (ctx) => {
     let orders = await mysql(`select * from orders LIMIT 0,10`);
     ctx.success(orders);
@@ -122,7 +122,7 @@ module.exports = (koaRouter) => {
           sku_id: {must: true, type: "string"},
           quantity: {must: true, type: "number"},
           // standard: {must: true},
-          // product_id: {must: true, type: "number"},
+          // product_no: {must: true, type: "number"},
           // product_name: {must: true},
           // product_images: {must: true},
         }
@@ -143,23 +143,23 @@ module.exports = (koaRouter) => {
         err = {code: 3002, msg: "sku_id不存在"};
         break;
       } else {
-        product = (await mysql(`select * from product where product_id='${sku.product_id}' LIMIT 0,1`))[0];
+        product = (await mysql(`select * from product where product_no='${sku.product_no}' LIMIT 0,1`))[0];
         if (!product) {
           err = {code: 3003, msg: "数据异常，产品product不存在"};
           break;
         } else {
-          goods = (await mysql(`select * from goods where product_id='${sku.product_id}' and s_uuid='${data.s_uuid}' LIMIT 0,1`))[0];
+          goods = (await mysql(`select * from goods where product_no='${sku.product_no}' and s_uuid='${data.s_uuid}' LIMIT 0,1`))[0];
           if (!goods) {
-            err = {code: 3004, msg: "数据异常，商品goods不存在", product_id: sku.product_id};
+            err = {code: 3004, msg: "数据异常，商品goods不存在", product_no: sku.product_no};
             break;
           }
-          Object.assign(data.skus[i],{standard: sku.standard, product_id: sku.product_id, product_name: product.name, product_images: product.images});
+          Object.assign(data.skus[i],{standard: sku.standard, product_no: sku.product_no, product_name: product.name, product_images: product.images});
         }
       }
     }
     if (err) return ctx.fail(err);
 
-    let order_no = await getId("orders");
+    let order_no = await getIdNo("orders");
     let order = await mysql(`INSERT INTO
       orders(s_uuid, skus, receive_mobile, receive_address, note, order_no, status)
       values

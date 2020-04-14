@@ -207,7 +207,7 @@ export const getUuid = async () => {
   return uuid.uuid;
 }
 // NOTE: table 表 随机生成 最小是8位数 1开头 的ID
-export const getId = async (table) => {
+export const getIdNo = async (table) => {
   let result = await mysql(`select id from ${table} order by id DESC limit 1`);
   let id = result[0] && result[0].id || 1;
   // NOTE: id 至少为4位
