@@ -1,4 +1,5 @@
 var jwt = require('jsonwebtoken');
+import mysql from "../mysql";
 //  自定义中间件
 module.exports = async function(ctx, next) {
   let {response, request} = ctx;
@@ -22,14 +23,23 @@ module.exports = async function(ctx, next) {
   // }
 
   /* token: 解析token并重新赋值给request.data    */
-  let token = request.header.authorization,
-    user;
-  try {
-    user = jwt.verify(token, 'secret');
-    ctx.user = user;
-  } catch (e) {
-    // console.log(e, "catch");
-  } finally {};
+  let token = request.header.token, user;
+  if (token) {
+    try {
+      user = jwt.verify(token, 'secret');
+      let sql_user = (await mysql(`select * from product where id='${user.id}' LIMIT 0,1`))[0];
+      user = {...sql_user,...user};
+      ctx.user = user;
+    } catch (e) {
+      console.log("解析token失败", e);
+    } finally {};
+  }
+  // NOTE: 根据url path 鉴权
+  if (request.url.indexOf(`/order`) != -1 && (!user || request.url.indexOf(`/${user.type}`) != 0)) {
+    response.status = 200;
+    response.body = {code: 401, msg: '请登录，再操作'};
+    return ;
+  }
 
   /* 工具类函数: 定义ctx.send 回包请求  */
   ctx.send = function(status, body, html) {

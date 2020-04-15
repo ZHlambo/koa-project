@@ -1,7 +1,7 @@
 import koa from "koa";
 import fs from "fs";
 import bodyParser from "koa-bodyparser";
-// import parseMiddleware from "./utils/parseMiddleware";
+import parseMiddleware from "./utils/parseMiddleware";
 // import logMiddleware from "./utils/logMiddleware";
 import cors from '@koa/cors';
 import routers from "./routers";
@@ -17,7 +17,7 @@ let sendResbond = (ctx, status, body) => {
 let app = new koa();
 app.use(bodyParser());
 // 中间件  自定义的中间件
-// app.use(parseMiddleware);
+app.use(parseMiddleware);
 // 中间件  解决跨域
 app.use(cors());
 

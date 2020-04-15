@@ -60,7 +60,7 @@ module.exports = (koaRouter) => {
     let err = check(data, temp);
     if (err) return ctx.fail(err);
 
-    let result = await mysql(`select * from user where mobile=${data.mobile}`);
+    let result = await mysql(`select * from user where mobile='${data.mobile}'`);
     result = result[0];
     if (result && result.id) {
       if (result.password === data.password) {

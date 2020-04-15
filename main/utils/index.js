@@ -75,7 +75,7 @@ export const jwtSign = (data, time = 7) => {
   let token;
   try {
     token = jwt.sign(data, 'secret', {
-      expiresIn: time || 60 * 60 * 24
+      expiresIn: time * 60 * 60 * 24
     })
   } catch (e) {} finally {};
   return token;

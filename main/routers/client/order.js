@@ -40,10 +40,11 @@ module.exports = (koaRouter) => {
   }
   // NOTE: 下单
   koaRouter.post("/client/order", async (ctx) => {
-    let data = ctx.request.body;
+    console.log(ctx.user);
+    let c_uuid = ctx.user.uuid;
+    let data = ctx.request.body || {};
     let temp = {
       s_uuid: {must: true, len: 32},
-      c_uuid: {must: true, len: 32},
       skus: {
         must: true,
         type: "array",
@@ -63,7 +64,8 @@ module.exports = (koaRouter) => {
     }
     let err = check(data, temp);
     if (err) return ctx.fail(err);
-
+    
+    data.c_uuid = c_uuid;
     let spreader = await mysql(`select * from user where uuid='${data.s_uuid}'`);
     if (!spreader || !spreader[0]) return ctx.fail({code: 3001, msg: "传播者不存在"});
 

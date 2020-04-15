@@ -9,16 +9,11 @@ const apiHelper = function(url) {
     }
 };
 
-// const token = "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOm51bGwsImF1ZCI6IjEwMSIsInN1YiI6IjVhY2VjNThhZWM2OGE4NGJjN2MxYjQ5NSIsImFwcGlkIjoiMTAxIiwiZXhwIjoxNTU2NTI5NTA5LCJqdGkiOiJXSnF5X1JKbDJ1ZDBVOWNkaFd1S3d3IiwiaWF0IjoxNTU1OTI0NzA5fQ.MSdIggBW6XzOBw417YblPHKbHFDGM0k3iaTNKtFkNys";
 // DEBUG:
-let user = uni.getStorageSync("user") || {};
-const token = user.access_token;
-
 let defaultOpts = {
   header: {
     'Content-Type': 'application/json; charset=utf-8',
-    access_token: uni.getStorageSync("user").access_token || token,
-    Authorization: `bearer ${uni.getStorageSync("user").access_token || token}`,
+    token: (uni.getStorageSync("user") || {}).token || '',
   }
 };
 
@@ -26,9 +21,8 @@ const setDefault = function (options = {}) {
   defaultOpts = Object.assign(defaultOpts, options);
 };
 
-const setToken = function (token) {
-  defaultOpts.header.access_token = token;
-  defaultOpts.header.Authorization = `bearer ${token}`;
+const setToken = function (user) {
+  defaultOpts.header.token = user.token;
 }
 
 const requestPromise = (url, method, data, options) => {
@@ -53,17 +47,17 @@ const requestPromise = (url, method, data, options) => {
                         }
                     },
                     fail: function(e) {
-						// #ifdef MP-ALIPAY
-							let statusCode = e.statusCode;
-							if (statusCode === 401) {
-							  uni.removeStorageSync("user");
-							  console.log('denglu')
-							  isLogin().then(res => {
-							    resolve(requestPromise(url, method, data, options));
-							  });
-							  return
-							}
-						// #endif
+						// // #ifdef MP-ALIPAY
+						// 	let statusCode = e.statusCode;
+						// 	if (statusCode === 401) {
+						// 	  uni.removeStorageSync("user");
+						// 	  console.log('denglu')
+						// 	  isLogin().then(res => {
+						// 	    resolve(requestPromise(url, method, data, options));
+						// 	  });
+						// 	  return
+						// 	}
+						// // #endif
 
                         const errMsg = '服务器繁忙, 请稍后再试';
                         if (

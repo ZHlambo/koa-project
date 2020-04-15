@@ -41,7 +41,6 @@
 		data() {
 			return {
         s_uuid: '582c0749b47111e98c43107b44809a04',
-        c_uuid: '582c0749b47111e98c43107b44809a04',
         skus: '',
         product: '',
         receive_mobile: '19900000000',
@@ -74,15 +73,15 @@
     },
 		methods: {
       order_on: async function () {
-        let {skus,s_uuid,c_uuid,receive_mobile,receive_address,note} = this;
+        let {skus,s_uuid,receive_mobile,receive_address,note} = this;
         if (!/^((13[0-9])|(14[0-9])|(15([0-9]))|(166)|(17[0-9])|(18[0-9])|(19[8,9]))\d{8}$/.test(receive_mobile)) {
-          return this.$toast("请输入收货手机号码");
+          return this.$toast("请输入正确的11位手机号码");
         }
         if (!receive_address) {
           return this.$toast("请输入收货地址");
         }
         let res = await this.$http.post('/client/order', {
-          s_uuid, c_uuid, skus: skus.map(e => ({sku_id: e.id, quantity: e.buy_num})),
+          s_uuid, skus: skus.map(e => ({sku_id: e.id, quantity: e.buy_num})),
           receive_mobile,receive_address,note
         });
         if (res.code) {
